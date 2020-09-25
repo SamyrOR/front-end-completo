@@ -1,0 +1,37 @@
+span, .multiplos {
+    font-weight: bold;
+}
+.exemplo2{
+    color: pink;
+}
+#exemplo3{
+    color: blue;
+}
+.div{
+    background-color: red;
+    color: white;
+}
+.exemplo4{
+    color: white;
+    font-weight: normal;
+    background-color: blue;
+}
+.bordas{
+    border: 1px solid red;
+}
+.bordas2{
+    border: 2px dotted blue;
+
+}
+.bordas3{
+    border: 3px dashed yellow;
+}
+.bordas4{
+    border: 4px double green;
+}
+.geader > span {
+ color:blue
+}
+.geader > p > span {
+    color:red
+   }

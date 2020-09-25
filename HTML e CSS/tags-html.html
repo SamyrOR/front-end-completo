@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
-    <title>Front-End Completo HTML e CSS</title>
+    <title>TAGS HTML</title>
 </head>
 <body>
     <section>
@@ -17,6 +17,7 @@
         <p><sub>Subscrito</sub> com a tag < sub ></p>
         <p><strike>Tachado</strike> com a tag strike</p>
     </section>
+    <hr>
     <section>
         <h1>Exemplos de listas</h1>
         <h3>Lista não ordenada (tag < ul >)</ul></h3>
@@ -28,12 +29,13 @@
         <h3>Lista Ordenada (tag < ol >)</h3>
         <ol>
             <li>Item com a tag < li >, sinalizado com números (padrão, type = "1")</li>
-            <li type="A">Item com a tag < li >, sinalizado com letras maisculas (type = "A")</li>
-            <li type="a">Item com a tag < li >, sinalizado com letras minusculas (type = "a")</li>
+            <li type="A">Item com a tag < li >, sinalizado com letras maiúsculas (type = "A")</li>
+            <li type="a">Item com a tag < li >, sinalizado com letras minúsculas (type = "a")</li>
             <li type="I">Item com a tag < li >, sinalizado com com algarismos romanos em caixa alta (type = "I")</li>
             <li type="i">Item com a tag < li >, sinalizado com com algarismos romanos em caixa baixa (type = "i")</li>
         </ol>
     </section>
+    <hr>
     <section>
         <h1>Imagens (tag < img >) </h1>
         <p> 
@@ -44,6 +46,7 @@
         </p>
         <img width="400px" src="https://pbs.twimg.com/media/EgdVpDJWoAAmgRY?format=png&name=small" alt="Anatomia do boneco de fall guys" title="Anatomia do boneco de fall guys">
     </section>
+    <hr>
     <section>
         <h1>Exemplos de link com a tag < a ></h1>
         <p>A tag < a > é responsável por ancorar links, tanto internos como externos dentro do atributo href, sem o atributo target, ela acessa o site na mesma página, o o atributo target="_blank", é aberto outra aba</p>
@@ -61,6 +64,7 @@
             <a href="download.pdf" download="">Exemplo da tag para baixar o arquivo com a tag download</a>
         </p>
     </section>
+    <hr>
     <section>
         <h1>Exemplos de tabelas com a tag < table > </h1>
         <p>Para criação de tabelas, como elemento pai, devemos usar a tag table, e para cada linha que nossa tabela venha ter, devemos utilizar a tag < tr > e para cada coluna dentro da linha devemos utilizar a tag < td > dentro da row que está dentro da table, tambem é possível manipular altura e largura com os atributos width e height na tag table, junto com a borda do atributo border="".
@@ -111,10 +115,11 @@
             </tr>
         </table>
     </section>
+    <hr>
     <section>
         <h1>Exemplos de formulários com a tag < form >  e o < input ></h1>
         <p>
-            Para o formulario temos vários tipos de input diferentes, que serão listados a seguir, todos deve incluir o atributo name="" para que possa ser enviado os dados, podemos utilizar o form tanto com o atributo method="", que são basicamente dois, o POST que envia os dados por baixo dos panos, mais usado com o atributo action="" que indica para qual página será enviado os dados, método mais utilizados em logins e afins, e o GET que envia os dados na URL para fins mais de pesquisa. 
+            Para o formulário temos vários tipos de input diferentes, que serão listados a seguir, todos deve incluir o atributo name="" para que possa ser enviado os dados, podemos utilizar o form tanto com o atributo method="", que são basicamente dois, o POST que envia os dados por baixo dos panos, mais usado com o atributo action="" que indica para qual página será enviado os dados, método mais utilizados em logins e afins, e o GET que envia os dados na URL para fins mais de pesquisa. 
         </p>
         <form action="">
             <p>
@@ -179,5 +184,29 @@
         </p>
         </form>
     </section>
+    <hr>
+    <section>
+        <h1>Exemplos da tag < iframe ></h1>
+        <p>Esta tag nos permite abrir uma outra página dentro da nossa página, devemos adiconar o  atributo src="", que é a pagina destino, podemos tambem definir altura e larguta com o height e with, e tambem se há bordas ou não com o frameboarder="" e o número de px da borda</p>
+        <iframe src="https://www.terra.com.br" frameborder="0" width="300" height="300" ></iframe>
+    </section>
+    <hr>
+    <section>
+        <h1> Exemplos de eventos do mouse como atributo onclick="", onmouseover="", onmouseout=""</h1>
+        <p>Para eventos de mouse, temos tais atributos adicionados a diversas tags, que por sua vez realizan o evento, de acordo com o código javascript disponivel dentro do página e invocado dentro do atributo</p>
+        <span>
+            Exemplo de onclick (clickar) 
+            <img onclick="alert('fui clickado')" src="https://ecommerce-platforms.com/wp-content/uploads/2014/08/Pay-Per-Click-PPC.png" alt="mouse clicando" title="mouse clicando" width="100">
+        </span>
+        <span>
+            Exemplo de onmouseover (passar ou mouse por cima) 
+            <img onmouseover="alert('passou o mouse em cima')" src="https://ecommerce-platforms.com/wp-content/uploads/2014/08/Pay-Per-Click-PPC.png" alt="mouse clicando" title="mouse clicando" width="100">
+        </span>
+        <span>
+            Exemplo de onmouseout (ao retirar o mouse de cima) 
+            <img onmouseout="alert('tirou o mouse de cima')" src="https://ecommerce-platforms.com/wp-content/uploads/2014/08/Pay-Per-Click-PPC.png" alt="mouse clicando" title="mouse clicando" width="100">
+        </span>
+    </section>
+    <hr>
 </body>
 </html>

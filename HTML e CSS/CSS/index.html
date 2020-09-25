@@ -1,0 +1,69 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>O HTML é equivale a estrutura da página e o CSS o acabamento, temos 3 tipos diferentes de declarar o estilo da página, sendo o CSS inline (com o atributo style="" definir o estilo diretamente na tag do elemento, a tag  style  dentro da tag  head , e o arquivo css externo chamado via tag  link, toda cor declarada no css pode ser via rgb (), hexadecimal #ff00ff e escrita em inglês "red"</h3>
+    <p style="color: #ff0000; font-weight:bold;">Exemplo de estilo inline com a tag style="color: red;" alterando a cor do texto para vermelho</p>
+    <hr>    
+    <p>Na estrutura dos arquivos CSS externos, temos os seletores, que são divididos em nome do seletor, classe do elemento(.nomedaclasse) e id (#nomedoid), sendo que, se utilizado o nome do elemento, todos os elementos correspondentes serão alterados de acordo com  o estilo, se utilizarmos a classe, apenas os elementos contidos na classe terão tal estilo, e devemos evitar o uso do ID, pois é um identificado único do elemento que trás as informações do elemento </p>
+    <div>
+        <span>Identificador pelo elemento < span > ; </span>
+        <span class="exemplo2">Identificador pela classe .class="exemplo2" ; </span>
+        <span id="exemplo3">Identificador pelo ID, #exemplo3</span>
+    </div>
+    <hr>
+        <p>
+            Dentro do CSS podemos lidar com tags que tem formas de se mostrar, como a tag < div > que funciona como um bloco, se se parando de qualquer conteúdo a sua volta, e do outro lado temos tags como a < span > que se mostra na mesma linha que outros componentes
+        </p>
+        <div class="div">
+            Exemplo de uma div
+        </div>
+        <div>
+            <span class='exemplo4'> Exemplo de span</span>
+            <span class='exemplo4'> Exemplo de span</span>
+        </div>
+        <hr>
+        <p>
+            Tambem teremos as bordas do elemento, praticamente todo elemento pode ter borda, que pode ser definida  como border: tamanho estilo cor;
+        </p>
+        <p>
+            <span class="bordas"> Exemplo de borda 1px solid red</span>
+            <span class="bordas2"> Exemplo de borda 2px dotted blue</span>
+            <span class="bordas3"> Exemplo de borda 3px dashed yellow</span>
+            <span class="bordas4"> Exemplo de borda 4px double green</span>
+        </p>
+        <hr>
+        <p>
+            Podemos e tambem devemos, utilizar seletores múltiplos:
+            <p class="multiplos">"elemento1, elemento2, elemento3 {</p>
+            <p class="multiplos">font-weight: bold</p>
+            <p class="multiplos">}"</p>
+            <p>Aplicando os efeitos de estilo em todos os elementos informados ( atenção para a virgula separando os elementos</p>
+        </p>
+        <hr>
+        <p>
+            Temos e tambem devemos, utilizar seletores internos:
+            <p class="multiplos">"elementopai elementofilho {</p>
+            <p class="multiplos">font-weight: bold</p>
+            <p class="multiplos">}"</p>
+            <p>
+                Aplicando os efeitos de estilo em todos os elementos que estão abaixo do primeiro elemento (elemento pai), independente se está dentro de outro elemento ou não
+            </p>
+        </p>
+        <p>
+           Outro seletor, é o por herança, muito similar ao interno:
+            <p class="multiplos">"elementopai > elementofilho {</p>
+            <p class="multiplos">font-weight: bold</p>
+            <p class="multiplos">}"</p>
+            <p>
+                Porem, este aplica o efeito de estilo somente e diretamente no elemento filho especifico, sem atingir os elementos que são filhos de outros
+            </p>
+        </p>
+        <hr>
+
+</body>
+</html>
