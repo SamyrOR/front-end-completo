@@ -9,7 +9,7 @@
 <body>
     <section>
         <h1>Hello World</h1>
-        <p>Texto base</p>
+        <h2>Texto base</h2>
         <p><strong>Em negrito com a tag < strong > </strong></p>
         <p><i>Em itálico com a tag < i ></i></p>
         <p><u>Sublinhado com a tag < u > </u></p>
@@ -43,6 +43,141 @@
             Temos tambem os atributos width="" que adicionado isoladamente, altera a largura mantendo a proporção original, mas se adicionado com o atributo height="" pode distorcer a imagem, isoladamente se comporta como o width, aumentado o tamanho da imagem proporcionalmente 
         </p>
         <img width="400px" src="https://pbs.twimg.com/media/EgdVpDJWoAAmgRY?format=png&name=small" alt="Anatomia do boneco de fall guys" title="Anatomia do boneco de fall guys">
+    </section>
+    <section>
+        <h1>Exemplos de link com a tag < a ></h1>
+        <p>A tag < a > é responsável por ancorar links, tanto internos como externos dentro do atributo href, sem o atributo target, ela acessa o site na mesma página, o o atributo target="_blank", é aberto outra aba</p>
+        <p>
+            <a href="https://www.google.com">Exemplo da tag direcionando para o google sem o atributo target</a>
+        </p>
+        <p>
+            <a href="https://www.google.com" target="_blank">Exemplo da tag direcionando para o google com o atributo target</a>
+        </p>
+        <p>A tag tambem permite abrir e realizar o download dos itens.</p>
+        <p>
+            <a href="download.pdf" >Exemplo da tag para abrir o arquivo sem a tag download</a>
+        </p>
+        <p>
+            <a href="download.pdf" download="">Exemplo da tag para baixar o arquivo com a tag download</a>
+        </p>
+    </section>
+    <section>
+        <h1>Exemplos de tabelas com a tag < table > </h1>
+        <p>Para criação de tabelas, como elemento pai, devemos usar a tag table, e para cada linha que nossa tabela venha ter, devemos utilizar a tag < tr > e para cada coluna dentro da linha devemos utilizar a tag < td > dentro da row que está dentro da table, tambem é possível manipular altura e largura com os atributos width e height na tag table, junto com a borda do atributo border="".
+        </p>
+        <table width="300" border="1">
+            <tr>
+                <td>Nome</td>
+                <td>Idade</td>
+            </tr>
+            <tr>
+                <td>Samyr</td>
+                <td>24</td>
+            </tr>
+        </table>
+        <p>
+            Para manter a boa pratica, devemos sempre utilizar o mesmo número de células que consta na primeira linha, e caso a célula precise ocupar mais de um espaço para preencher o vazio, podemos utiliza o atributo colspan="" com o número de células que se deseja preencher.
+        </p>
+        <table width="500" border="1">
+            <tr>
+                <td>Produto</td>
+                <td>Quantidade</td>
+                <td>Preço</td>
+            </tr>
+            <tr>
+                <td>Papel</td>
+                <td>3</td>
+                <td>R$ 4,50</td>
+            </tr>
+            <tr>
+                <td>Tesoura</td>
+                <td>1</td>
+                <td>R$ 10,00</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">Subtotal</td>
+                <td>R$ 14,50</td>
+            </tr>
+        </table>
+        <p>Podemos tambem pintar as linhas ou cada coluna, com o atributo bgcolor="" e a cor desejada</p>
+        <table border="1">
+            <tr>
+                <td bgcolor="yellow">Amarelo</td>
+                <td bgcolor="orange">Laranja</td>
+                <td bgcolor="red">Vermelho</td>
+            </tr>
+            <tr bgcolor="gray">
+                <td colspan="3">Linha inteira cinza</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h1>Exemplos de formulários com a tag < form >  e o < input ></h1>
+        <p>
+            Para o formulario temos vários tipos de input diferentes, que serão listados a seguir, todos deve incluir o atributo name="" para que possa ser enviado os dados, podemos utilizar o form tanto com o atributo method="", que são basicamente dois, o POST que envia os dados por baixo dos panos, mais usado com o atributo action="" que indica para qual página será enviado os dados, método mais utilizados em logins e afins, e o GET que envia os dados na URL para fins mais de pesquisa. 
+        </p>
+        <form action="">
+            <p>
+                Usuário (input de textos):
+                <input type="text" name="user" id="">
+            </p>
+            <p>
+                Senha (input criptografado para senha)
+                <input type="password" name="" id="">
+            </p>
+            <p>
+                Área designada para textos maiores (tag < textarea >):
+                <p>
+                    <textarea name="bloco" id="" cols="30" rows="10"></textarea>
+                </p>
+            </p>
+            <p>
+                Seletor de itens (tag < select >)
+                <select name="selecionar" id="">
+                    <option value="">Selecione uma opção</option>
+                    <option value="">Opção 1</option>
+                    <option value="">Opção 2</option>
+                    <option value="">Opção 3</option>
+                </select>
+                <p>
+                    Input type="radio", para fins de selecionar apenas um item
+                    <p>
+                        Opção 1
+                        <input type="radio" name="radio">
+                    </p>
+                    <p>
+                        Opção 2
+                        <input type="radio" name="radio">
+                    </p>
+                    <p>
+                        Opção 3
+                        <input type="radio" name="radio">
+                    </p>
+                </p>
+            </p>
+            <p>
+                Input type="checkbox", caixa para assinalar opções
+                <p>
+                    Opção 1
+                    <input type="checkbox" name="checkbox">
+                </p>
+                <p>
+                    Opção 2
+                    <input type="checkbox" name="checkbox">
+                </p>
+                <p>
+                    Opção 3
+                    <input type="checkbox" name="checkbox">
+                </p>
+            </p>
+        </p>
+        <p>
+            Input type="submit", para envio do formulário
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </p>
+        </form>
     </section>
 </body>
 </html>
