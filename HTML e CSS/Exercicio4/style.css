@@ -1,0 +1,15 @@
+div {
+    display: flex;
+    background-color: blue;
+    height: 38px;
+    align-items: center;
+}
+a {
+    padding: 10px;
+    color: white;
+
+}
+a:hover {
+    background-color: white;
+    color: blue
+}

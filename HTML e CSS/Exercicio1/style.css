@@ -1,0 +1,17 @@
+.header {
+    background-color: blue;
+    color: white;
+}
+.header  p {
+    font-size: 40px;
+}
+.header span {
+    font-size: 30px;
+}
+.header + div {
+    background-color: red;
+    font-weight: bold;
+}
+div > strong {
+    color: lime;
+}

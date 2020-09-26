@@ -38,32 +38,111 @@
         </p>
         <hr>
         <p>
-            Podemos e tambem devemos, utilizar seletores múltiplos:
+            ● Podemos e tambem devemos, utilizar seletores múltiplos:
             <p class="multiplos">"elemento1, elemento2, elemento3 {</p>
             <p class="multiplos">font-weight: bold</p>
             <p class="multiplos">}"</p>
             <p>Aplicando os efeitos de estilo em todos os elementos informados ( atenção para a virgula separando os elementos</p>
         </p>
-        <hr>
         <p>
-            Temos e tambem devemos, utilizar seletores internos:
-            <p class="multiplos">"elementopai elementofilho {</p>
-            <p class="multiplos">font-weight: bold</p>
-            <p class="multiplos">}"</p>
-            <p>
+            ● Temos e tambem devemos, utilizar seletores internos:
+            <div class="divcss">
+                <p>  
+                    Código CSS
+                </p>
+                <p class="multiplos">".elementopai .elementosfilhos {</p>
+                <p class="multiplos">font-weight: bold</p>
+                <p class="multiplos">}"</p>
+            </div>
+            <div class="divhtml" >
+                <p>Código HTML</p>
+                <p style="font-weight: bold;">< div class="elementopai"></p>
+                <p style="font-weight: bold;">< span class="elementofilho"> Será aplicado o estilo neste elemento < / span > </p>
+                <p>< p class="outroelemento"> <strong> < span class="elementofilho" > Neste elemento tambem será aplicado < / span ></strong> < / p ></p>
+                <p>< / div ></p>
+            </div>
+            <p style="clear: both;">
                 Aplicando os efeitos de estilo em todos os elementos que estão abaixo do primeiro elemento (elemento pai), independente se está dentro de outro elemento ou não
             </p>
         </p>
         <p>
-           Outro seletor, é o por herança, muito similar ao interno:
-            <p class="multiplos">"elementopai > elementofilho {</p>
-            <p class="multiplos">font-weight: bold</p>
-            <p class="multiplos">}"</p>
-            <p>
+            ● Outro seletor, é o por herança, muito similar ao interno:
+           <div class="divcss">
+                <p>Código HTML</p>
+               <p class="multiplos">"elementopai > elementofilho {</p>
+               <p class="multiplos">font-weight: bold</p>
+               <p class="multiplos">}"</p>
+           </div>
+            <div class="divhtml" >
+                <p>Código HTML</p>
+                <p style="font-weight: bold;">< div class="elementopai"></p>
+                <p style="font-weight: bold;">< span class="elementofilho"> Será aplicado o estilo neste elemento < / span > </p>
+                <p>< p class="outroelemento"> < span class="elementofilho" > Neste elemento o estilo não será aplicado < / span > < / p ></p>
+                <p style="font-weight: bold;">< span class="elementofilho"> Mas neste tambem < / span > </p>
+                <p>< / div ></p>
+            </div>
+            <p style="clear: both;">
                 Porem, este aplica o efeito de estilo somente e diretamente no elemento filho especifico, sem atingir os elementos que são filhos de outros
             </p>
         </p>
+        <p>
+            ● Complementando os tipos de seletores, há o seletor adjacente:
+            <div class="divcss">
+                <p>Código CSS </p>
+                <p class="multiplos">"elementoprecessor + elementoaseraplicado {</p>
+                <p class="multiplos">font-weight: bold</p>
+                <p class="multiplos">}"</p>
+            </div>
+            <div class="divhtml" >
+                <p>Código HTML</p>
+                <p style="font-weight: bold;">< div class="elementoprecessor"></p>
+                <p style="font-weight: bold;">< span class="elementoaseraplicado"> Será aplicado o estilo neste elemento < / span > </p>
+                <p>< p class="outroelemento"> < span class="elementofilho" > Neste elemento o estilo não será aplicado < / span > < / p ></p>
+                <p>< span class="elementofilho"> Neste elemento tambem não será aplicado < / span > </p>
+                <p>< / div ></p>
+            </div>
+            <p style="clear: both;">
+            Este seletor nos permite aplica estilos ao elementos após o sinal +, no código HTML o estilo será aplicado quando o elemento for o primeiro seguido do predecessor, se não for encontrado, o estilo não é aplicado
+            </p>
+        </p>
+        <p>
+            ● Por último tambem temos o seletor hover:
+            <div >
+                <p>Código CSS </p>
+                <p class="multiplos">"elemento:hover{</p>
+                <p class="multiplos">font-weight: bold</p>
+                <p class="multiplos">}"</p>
+            </div>
+            <p>Ao passar o mouse por cima do elemento que tem o seletor hover, os estilo do elemento será mudado de acordo com o desejado durante o hover no css</p>
+         </p>
         <hr>
+        <p>
+            Um recurso muito utilizado dentro do CSS é o atributo "position", como propriedades temos:
+            <p> O position: static; que é o padrão quando nenhum outro é declarado, respeita a ordem de estrutura da página </p>
+            <p> O position: absolute; este dependendo da situação é bastante usado, ele fica flutuando, acima da tela, sobrepondo qualquer elemento. Flutua em posição relativa do elemento anterior a ele  </p>
+            <p> O position: fixed; esta propriedade deixa fixo na tela o elemento tambem sobrepondo outros elementos, e acompanha a barra de rolagem po toda tela. </p>
+            <p> O position: relative; é semelhante ao static porem conseguimos mudar a profundidade e até alterar os elementos. </p>
+        </p>
+        <hr>
+        <p>Outro recurso tambem de suma importância é o atributo "display":</p>
+        <p> O display: none; faz com que o elemento não seja mostrado na tela, como se nem existisse. </p>
+        <p> O display: inline; esta propriedade faz com que o elemento se adapte ao seu conteúdo (impedindo alterações no tamanho e largura), e se mostre na mesma linha de outros elementos inline (como a tag < span >). </p>
+        <p> O display: block; que faz com que o elemento seja mostrado como um bloco, separando-se de outros elementos, podendo ser trabalhado realmente como um bloco, se alterando o seu tamanho, largura, posição, etc... </p>
+        <p> O display: inline-block; por fim, está propriedade nos permite unir a renderização em uma mesma linha como o inline e a customização do atributo como um bloco. </p>
+        <hr>
+        <p>
+            Podemos através do CSS formatar texto, seguem alguns atributos para a edição dos mesmos:
+            <p>.texto {</p>
+                <p>color: cor; (muda a cor do texto)</p>
+                <p>font-size: 10px; (muda o tamanho do texto)</p>
+                <p>font-family: Font; (muda a familia da fonte do texto, podendo conter mais de uma)</p>
+                <p>font-weight: 300; (muda a expessura da font do texto (negrito com bold))</p>
+                <p>text-align: center; (alinha o texto dentro do espaço de acordo com a posição desejada)</p>
+                <p>text-transform: uppercase; (possibilita alteração no texto, deixando-o o em caixa alta, caixa baixa, etc)</p>
+                <p>text-decoration: underline; (adiciona decorações no texto, como o underline(sublinhado))</p>
+            <p>}</p>
+        </p>
+
 
 </body>
 </html>

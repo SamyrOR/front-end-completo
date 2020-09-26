@@ -34,4 +34,10 @@ span, .multiplos {
 }
 .geader > p > span {
     color:red
-   }
+}
+.divcss, .divhtml {
+    float: left;
+}
+.divhtml{
+    margin-left: 40px;
+}
