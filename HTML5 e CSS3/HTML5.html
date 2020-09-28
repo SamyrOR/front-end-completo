@@ -6,13 +6,84 @@
     <title>TAGS HTMl5</title>
 </head>
 <body>
-    <h1>NOVAS TAGS HTML</h1>
-    <p>No HTML5, o ultimo padrão do HTML, temos novas tags que melhoram tanto o SEO, quanto a acessibilidade da nossa página, são algumas delas:</p>
-    <p>A < header > ( não confundir com a tag head). Está tag nos possibilita deixar semântico o cabeçalho da nossa página </p>
-    <p>A tag < nav >, deve ser utilizada para identificar o nosso principal menu de navegação do site (geralmente utilizada aninhada a tag < header ></p>
-    <p>A tag < footer > nos permite definir de forma semântica o rodapé da nossa página</p>
-    <p>A tag < main > que define todo o conteúdo principal da página</p>
-    <p>A tag < article > que deve ser melhor utilizada em artigos, partes da página que são únicas e independentes e sem reslação com outras partes</p>
-    <p>A tag < section > por outro lado nos permite agrupa vários itens correlacionados e definir diversas secções da nossa página</p>
+    <article>
+        <section>
+            <h1>NOVAS TAGS HTML</h1>
+            <p>No HTML5, o ultimo padrão do HTML, temos novas tags que melhoram tanto o SEO, quanto a acessibilidade da nossa página, são algumas delas:</p>
+            <p>A < header > ( não confundir com a tag head). Está tag nos possibilita deixar semântico o cabeçalho da nossa página </p>
+            <p>A tag < nav >, deve ser utilizada para identificar o nosso principal menu de navegação do site (geralmente utilizada aninhada a tag < header ></p>
+            <p>A tag < footer > nos permite definir de forma semântica o rodapé da nossa página</p>
+            <p>A tag < main > que define todo o conteúdo principal da página</p>
+            <p>A tag < article > que deve ser melhor utilizada em artigos, partes da página que são únicas e independentes e sem reslação com outras partes</p>
+            <p>A tag < section > por outro lado nos permite agrupa vários itens correlacionados e definir diversas secções da nossa página</p>
+            <p>A tag < time > com o atributo datetime="ano/mes/dia hora", ajuda a traduzir tempos no nosso texto, para que a máquina saiba a data comentada.</p>
+            <p>O HTML5 tambem nos permite a criação de TAGs personalizadas (nos mesmo colocamos o nome, basta abrir e fechar como qualquer outra tag )e que funcionam, tanto no navegador quanto a aplicação de destilo</p>
+            <hr>
+        </section>
+        <section>
+            <p>HTML5 tambem nos trouxe diversos novos e muito úteis tipos de input, sendo eles: </p>
+            <form action="#">
+                <p><input type="search"> Campo de pesquisa com "X" para apagar o campo.</p>
+                <p><input type="email"> Campo que ja valida se o texto digitado é um e-mail.</p>
+                <p><input type="tel"> Campo que auxilia acessibilidade mostrando apenas o teclado numérico e identifica que o valida digitado é um número de telefone.</p>
+                <p><input type="number"> Campo que ja identifica que o valor é e um número, impede a digitação de letras, adicionando já tambem a funcionalidade de subir ou descer o número com setas no fundo do campo </p>
+                <p><input type="range" min="1" max="85"> Campo do tipo range, que nos permite adicionar um número mínimo e um máximo (min="" max="") e setar dentro destes valores com um campo de range</p>
+                <p><input type="date"> Campo muito útil que ja nos permite identificar e facilmente selecionar datas</p>
+                <p><input type="month">Campo da família date que permite selecionar meses</p>
+                <p><input type="week">Campo da família date que permite selecionar semanas</p>
+                <p><input type="datetime-local">Campo da família date que permite selecionar a data e a hora de uma vez.</p>
+                <p><input type="color">Campo que nos permite selecionar cores</p>
+                <p>Por fim o atributo "required" nos permite impedir o envio de um form que não o campo requerido não esteja preenchido de acordo</p>
+                <input type="submit">
+            </form>
+            <hr>
+        </section>
+        <section>
+            <h1>Atributo data</h1>
+            <p>
+                Temos a inovação do atributo data-nomedesejado, que no s permite adicionar informações dentro do elemento HTML que podem ser resgatadas e utilizadas pelo JavaScript e que ficam apenas no código sem transparecer para o usuário. Recurso muito utilizado por diversos programadores, podendo ser inserido em qualquer tag do HTML.
+            </p>
+            <hr>
+        </section>
+        <section>
+            <h1>Tag < video ></h1>
+            <p>Esta tag como o o próprio nome nos sugere, é utilizada para inserir vídeos na nossa pagina sem ajuda de recurso de terceiros como o falecido flash</p>
+            <p>
+                A tag deve ser utilizada junto de atributos, sendo estes, os de tamanho (width="valor", height="valor"), de controle (controls) que mostra para o usuário um painel com controles do video, "autoplay" como tambem o nome sugere, assim que carregada a página o video ja inicia, o "loop" que assim que o video é finalizado volta a tocar novamente. Dentro da tag < video > devemos inserir a tag < source >, que será a fonte do nosso video com o atributo src="caminho" e o type="video/formato", atualmente sendo suportado 3 tipos de formatos, o mp4, o ogg e webm. Podendo ser adicionada mais de uma tag source caso o browser do usuário não suporte um dos formatos e um texto que irá aparecer caso apenas nenhum dos formatos seja suportado 
+            </p>
+            <video controls  width="300" height="175" loop>
+                <source src="./6 - Tag Vídeo.mp4" type="video/mp4">
+                <source src="./6 - Tag Vídeo.ogg" type="video/ogg">
+                Your browser don't support this file
+            </video>
+            <hr>    
+        </section>
+        <section>
+            <h1>Tag < audio ></h1>
+            <p>
+                Semelhante a declaração da tag < video > a tag audio nos permite a adicionar arquivos de aúdio na nossa página, com as mesmas opções de atributos que a tag < video >, adicionando apenas a muted que inicia o audio com o som mutado e os tipos de arquivos suportado, sendo  eles "audio/mpeg" (o mp3), o "audio/ogg" e o "audio/wav"
+            </p>
+            <hr>    
+        </section>
+        <section>
+            <article>
+                <section>
+                    <h1>O Media query (@media)</h1>
+                    <p>
+                        Esta propriedade do CSS3, é a principal responsável pela possibilidade de criação de design responsivo da nossa página, é a propriedade que altera os estilos css de acordo com a orientação passada, e pra qualquer estilo que desejar.
+                    </p>
+                </section>
+                <section>
+                    <h1>Design Responsivo</h1>
+                    <p>
+                        Design responsivo, é a capacidade da nossa página em se adequar em diferentes tipos de aparelhos (telas), sendo adaptável para qualquer tamanho de tela, passando por celulares, tablets, notebooks, monitores e até televisores.
+                        <p>
+                            Com algumas configurações básicas, como o Media Query (@media), e definição de tamanhos com % (width: 100%;), este responde de forma adaptada ao tamanho da tela da qual se encontra, essencial para conhecimento do programador front-end, pois inúmeros usuários tambem se encontram em outras dispositivos além do pc como ja se foi um dia.
+                        </p>
+                    </p>
+                </section>
+            </article>
+        </section>
+    </article>
 </body>
 </html>
