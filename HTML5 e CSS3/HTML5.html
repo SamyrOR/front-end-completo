@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAGS HTMl5</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <article>
@@ -24,7 +25,7 @@
             <p>HTML5 tambem nos trouxe diversos novos e muito úteis tipos de input, sendo eles: </p>
             <form action="#">
                 <p><input type="search"> Campo de pesquisa com "X" para apagar o campo.</p>
-                <p><input type="email"> Campo que ja valida se o texto digitado é um e-mail.</p>
+                <p><input placeholder="email@email.com" type="email"> Campo que ja valida se o texto digitado é um e-mail.</p>
                 <p><input type="tel"> Campo que auxilia acessibilidade mostrando apenas o teclado numérico e identifica que o valida digitado é um número de telefone.</p>
                 <p><input type="number"> Campo que ja identifica que o valor é e um número, impede a digitação de letras, adicionando já tambem a funcionalidade de subir ou descer o número com setas no fundo do campo </p>
                 <p><input type="range" min="1" max="85"> Campo do tipo range, que nos permite adicionar um número mínimo e um máximo (min="" max="") e setar dentro destes valores com um campo de range</p>
@@ -34,8 +35,9 @@
                 <p><input type="datetime-local">Campo da família date que permite selecionar a data e a hora de uma vez.</p>
                 <p><input type="color">Campo que nos permite selecionar cores</p>
                 <p>Por fim o atributo "required" nos permite impedir o envio de um form que não o campo requerido não esteja preenchido de acordo</p>
-                <input type="submit">
+                <input type="submit" value="Enviar">
             </form>
+            <p>Foi tambem adicionado o atributo placeholder="texto" para os inputs, que nos permite adicionar algum texto dentro do input sem alterar o seu funcionamento e facilitando a identificação do tipo de input. O atributo "autofocus" que nos permite que assim que a página esteja carregada, o input com tal atributo seja focado no navegador do usuário. O atributo size que permite definir o tamanho do input na tela do usuário(pouco utilizado). Outro bom atributo é o maxlength="numero", que nos permite definir uma quantidade máxima de caracteres a serem inseridos no input. Há tambem o autocomplete="on/off", que nos permite ativar ou desativar a funcionalidade de auto completar o texto no input</p>
             <hr>
         </section>
         <section>
@@ -51,9 +53,9 @@
             <p>
                 A tag deve ser utilizada junto de atributos, sendo estes, os de tamanho (width="valor", height="valor"), de controle (controls) que mostra para o usuário um painel com controles do video, "autoplay" como tambem o nome sugere, assim que carregada a página o video ja inicia, o "loop" que assim que o video é finalizado volta a tocar novamente. Dentro da tag < video > devemos inserir a tag < source >, que será a fonte do nosso video com o atributo src="caminho" e o type="video/formato", atualmente sendo suportado 3 tipos de formatos, o mp4, o ogg e webm. Podendo ser adicionada mais de uma tag source caso o browser do usuário não suporte um dos formatos e um texto que irá aparecer caso apenas nenhum dos formatos seja suportado 
             </p>
-            <video controls  width="300" height="175" loop>
-                <source src="./6 - Tag Vídeo.mp4" type="video/mp4">
-                <source src="./6 - Tag Vídeo.ogg" type="video/ogg">
+            <video src="./countdown.mp4" controls  width="300" height="175" loop>
+                <source src="./countdown.mp4" type="video/mp4">
+                <source src="./countdown.ogg" type="video/ogg">
                 Your browser don't support this file
             </video>
             <hr>    
@@ -81,8 +83,59 @@
                             Com algumas configurações básicas, como o Media Query (@media), e definição de tamanhos com % (width: 100%;), este responde de forma adaptada ao tamanho da tela da qual se encontra, essencial para conhecimento do programador front-end, pois inúmeros usuários tambem se encontram em outras dispositivos além do pc como ja se foi um dia.
                         </p>
                     </p>
+                    <p>
+                        Complementando o design responsivo, para que as funcionalidades sejam realizadas em todos os tipos de aparelhos, devemos usar uma tag < meta > dentro da tag do header, com as seguintes propriedades:
+                        <p>
+                            name="viewport" content="width=device-width, initial-scale=1.0"
+                        </p>
+                        <p>
+                            Que fazem com que o conteúdo seja ajustado do tamanho da tela do aparelho permitindo a resposividade de acordo com programação.
+                        </p>
+                    </p>
                 </section>
             </article>
+            <hr>
+        </section>
+        <section>
+            <h1>normalize.css</h1>
+            <p>
+                Um item altamente recomendado para o desenvolvimento de qualquer página, é o uso de css resets, como o normalize.css, resumidamente, ele padroniza todo o css que vem pre definido de cada navegador, diminuindo assim a margem para erros de layout devido a diferença de navegadores.
+            </p>
+            <hr>
+        </section>
+        <section>
+            <h1>Arredondar bordas</h1>
+            <p>
+                Para arredondar bordas com CSS3, temos a propriedade border-radius: 10px;, que define o tamanho do arrendamento da borda, seguem alguns exemplo:
+
+            </p> 
+            <div style="width: 50px; height: 50px; background-color: red; border-radius: 5px; "></div>
+            <p>
+                Para um arrendamento completo do elemento, devemos setar o valor do border-radius para metade do valor de largura do elemento:
+                <div style="width: 50px; height: 50px; background-color: red; border-radius: 25px; "></div>
+            </p>
+            <hr>
+        </section>
+        <section>
+            <h1>Degradê</h1>
+            <p>Para criar efeitos de degradê com o CSS3, podemos utilizar o atributo linear-gradient(posição em graus, primeira cor, segunda cor, etc) exemplo:</p>
+            <div class="girar" style="width: 50px; height: 50px; background:linear-gradient(180deg, red,blue); border-radius: 5px;"></div>
+            <p>background: linear-gradient(180deg, red, blue)</p>
+        </section>
+        <section>
+            <h1>Animações</h1>
+            <p>Graças ao CSS3 podemos animar elementos apenas com CSS, utilizando @keyframes, segue exemplo do código: </p>
+            <p>@keyframes giratorio{</p> 
+                <p>0% {propriedade(s) a ser alterada}</p>
+                <p>25% {propriedade(s) a ser alterada}</p>
+                <p>50% {propriedade(s) a ser alterada}</p>
+                <p>75% {propriedade(s) a ser alterada}</p>
+                <p>100% {propriedade(s) a ser alterada}</p>
+            }
+            <p>E no elemento que devemos utilizar a animação, podemos atribuir a propriedade animation: nomedaanimação duração velocidadedaanimação delay repetições direção(pra frente, de trás pra frente ,etc)</p>
+            <p>animation: giratorio 2seg linear 3seg infinite normal</p>
+            <p>Caso uma das propriedades não sejam setadas, será tomado o valor padrão como base</p>
+            <div class="girar" ></div>
         </section>
     </article>
 </body>
