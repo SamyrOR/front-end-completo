@@ -109,17 +109,17 @@
                 Para arredondar bordas com CSS3, temos a propriedade border-radius: 10px;, que define o tamanho do arrendamento da borda, seguem alguns exemplo:
 
             </p> 
-            <div style="width: 50px; height: 50px; background-color: red; border-radius: 5px; "></div>
+            <div class="quadrado"></div>
             <p>
                 Para um arrendamento completo do elemento, devemos setar o valor do border-radius para metade do valor de largura do elemento:
-                <div style="width: 50px; height: 50px; background-color: red; border-radius: 25px; "></div>
+                <div class="quadrado" style="border-radius: 25px; "></div>
             </p>
             <hr>
         </section>
         <section>
             <h1>Degradê</h1>
             <p>Para criar efeitos de degradê com o CSS3, podemos utilizar o atributo linear-gradient(posição em graus, primeira cor, segunda cor, etc) exemplo:</p>
-            <div class="girar" style="width: 50px; height: 50px; background:linear-gradient(180deg, red,blue); border-radius: 5px;"></div>
+            <div style="width: 50px; height: 50px; background:linear-gradient(180deg, red,blue); border-radius: 5px;"></div>
             <p>background: linear-gradient(180deg, red, blue)</p>
         </section>
         <section>
@@ -136,6 +136,53 @@
             <p>animation: giratorio 2seg linear 3seg infinite normal</p>
             <p>Caso uma das propriedades não sejam setadas, será tomado o valor padrão como base</p>
             <div class="girar" ></div>
+            <hr>
+        </section>
+        <section>
+            <h1>Sombras</h1>
+            <p>Podemos aplicar sombras através do CSS3 , em elementos e textos com a seguinte sintaxe:</p>
+            <p>box-shadow: deslocamentohorizontal descolamentovertical blur cor,</p>
+            <p>box-shadow: 2px 2px 1px black</p>
+            <div class="sombra quadrado"></div>
+            <p>Para texto se aplicam os mesmo atributos, alterando apenas a propriedade para text-shadow</p>
+            <hr>
+        </section>
+        <section>
+            <h1>Transition</h1>
+            <p>Está propriedade do CSS3, nos permite controlar de maneira mais harmoniosa a transição de propriedades o css: </p>
+            <div class="quadrado transition">Passe o mouse</div>
+            <p>Na classe principal do nosso elemento adicionamos: </p>
+            <p>transition: propriedade(ou all para qualquer uma) duração velocidade</p>
+            <p>transition: all 1s linear;</p>
+            <p>Não devemos nos confundir com animações, transições são realizadas apenas para iterações nos elementos, diferente de uma animação</p>
+            <hr>
+        </section>
+        <section>
+            <h1>Prefixos vendor</h1>
+            <p>Cada navegador possui um motor de renderização, fazendo que cada um interprete a sua página a sua maneira, o que pode causar diferenças na página de navegador para navegador:</p>
+            <p>IE = Trindet</p>
+            <p>Edge = EdgeHTML</p>
+            <p>Firefox = Gecko</p>
+            <p>Opera = Webkit</p>
+            <p>Safari = Webkit</p>
+            <p>Chrome = Webkit</p>
+            <p>Para corrigir comportamentos estranhos, podemos e devemos utilizar os prefixos vendor, de cada motor gráfico, para garanti o comportamento desejado</p>
+            <p>-ms- (Internet Explorer)</p>
+            <p>-moz- (Firefox)</p>
+            <p>-o- (Versões antigas do Opera)</p>
+            <p>-webkit- (Chrome, Safari, versões mais recentes do Opera.)</p>
+            <hr>
+        </section>
+        <section>
+            <h1>Word Wrap</h1>
+            <p>Nesta propriedade do CSS3 nos possibilita de maneira eficaz, enquadra o texto dentro da box que o mesmo se encontra, evitando que se ele for muito longo, estoure a caixa de texto, basta adicionar a seguinte linha:</p>
+            <p>word-wrap: break-word;</p>
+            <hr>
+        </section>
+        <section>
+            <h1>Meta tags de Social Sharing</h1>
+            <p>São tags metas adicionadas dentro da tag head, que ajudam a identificação do nosso site dentro da ferramenta que o link foi colado, como facebook, twitter, whatsapp etc. Mostrando informações previas do seu URL</p>
+            <p>Para mais informações <a href="https://github.com/joshbuchea/HEAD" target="_blank">https://github.com/joshbuchea/HEAD</a></p>
         </section>
     </article>
 </body>
