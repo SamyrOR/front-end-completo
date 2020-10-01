@@ -277,9 +277,15 @@ body{
     width: 384px;
     font-size: 30px;
 }
+.menu-mobile {
+    display: none;
+}
 @media (max-width: 1038px) {
     .container {
         max-width: 890px;
+    }
+    #menu-ul {
+        display: block; 
     }
     .container-esquerda {
         width: 600px;
@@ -299,6 +305,9 @@ body{
 @media (max-width: 886px) {
     .container {
         max-width: 768px;
+    }
+    .#menu-ul {
+        display: block !important;
     }
     .banner {
         display: none;
@@ -343,8 +352,28 @@ body{
         float: none;
         margin: auto;
     }
-    .menu-conteudo {
+
+    .menu ul {
+        position: absolute;
+        background-color: red;
+        z-index: 10;
+    }
+    #menu-ul {
         display: none;
+    }
+    .menu li {
+        float: none;
+        height: auto;
+    }
+    .menu li img {
+        display: none;
+    }
+    .submenu {
+        position: static;
+        display: block;
+    }
+    .menu-mobile {
+        display: block;
     }
     .lastnews {
         display: none;

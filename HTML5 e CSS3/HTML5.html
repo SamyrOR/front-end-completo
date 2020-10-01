@@ -183,6 +183,31 @@
             <h1>Meta tags de Social Sharing</h1>
             <p>São tags metas adicionadas dentro da tag head, que ajudam a identificação do nosso site dentro da ferramenta que o link foi colado, como facebook, twitter, whatsapp etc. Mostrando informações previas do seu URL</p>
             <p>Para mais informações <a href="https://github.com/joshbuchea/HEAD" target="_blank">https://github.com/joshbuchea/HEAD</a></p>
+            <hr>
+        </section>
+        <section>
+            <h1>Flexbox!</h1>
+            <p>Esta propriedade do CSS nos permite criar elementos flexíveis dentro de um container, se correlacionado sempre mantendo o padrão, com alguns atributos como opção: </p>
+            <h4>Atributos para o container</h4>
+            <p>flex-direction: row || column;  Nos permite dispor os elementos em linha, ou coluna, se não declarado será o padrão em linha</p>
+            <p>
+                flex-wrap: wrap || nowrap; Quando conteúdo dos elementos é maior do que o container pode suportar, os elementos por padrão tendem a não respeitar o valor definido dele, para que possa se enquadrar no container este atributo com valor wrap, faz com que os elementos respeitem o seu valor definido, quebrando a linha para que possa preencher o seu conteúdo, ja o nowrap é o comportamento padrão, quando os elementos ultrapassam o valor do container, eles nao quebra e ficam com o valor menor para que possa caber no container
+            </p>
+            <p>
+                justify-content:flex-start || center || flex-end || space-around || space-between; Nos permite alinhar os elementos no inicio, meio ou final do container de acordo com a direção, column ou row ja os spaces, around e between, permite que justificamos os elementos com espaçamento em torno deles igual em todas as bordas, ou entre eles iguais entre os elementos porem sem bordas com o container no primeiro e no ultimo elemento
+
+            </p>
+            <p>
+                align-items:flex-start || center || flex-end; Nos permite alinhar os items pela direção contrária definida, ou seja, se estiver padrão(row), alinha a direção vertical, porem se tiver column(coluna), alinha a direção horizontal
+            </p>
+            <p>align-content: flex-start || center || flex-end || space-around || space-between; Quando temos "wrap" dentro do container quebrando os elementos para mais de uma linha, podemos alinhar todo o conteúdo com esta propriedade  </p>
+            <h4>Atributos para elementos</h4>
+            <p>Para os elementos, temos atributos como os:</p>
+            <p>flex: número; Que nos permite definir o quanto do container o elemento deve utilizar</p>
+            <p>align-self: flex-start || center || flex-end; faz com que o elemento com o atributo declarado possa alinhar por si só de acordo com o valor, independente do alinhamento do container. Subscreve o alinhamento do container.</p>
+            <p>
+                order: número; Por padrão a ordem dos itens do HTML é 0, caso seja definido um número maior que 0, o elemento com esta propriedade vira o ultimo elemento mesmo que este esteja escrito no meio do HTML, ja se for definido menor que o (-1...), fica na frente dos elementos com 0, passando a ser o primeiro elemento 
+            </p>
         </section>
     </article>
 </body>
