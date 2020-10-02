@@ -306,7 +306,7 @@ body{
     .container {
         max-width: 768px;
     }
-    .#menu-ul {
+    #menu-ul {
         display: block !important;
     }
     .banner {
