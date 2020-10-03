@@ -5,6 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
         <title>Medicenter</title>
+        <script>
+            window.onload = function() {
+                let menu = document.querySelector('.menu-mobile')
+                menu.addEventListener('click' , function() {
+                    console.log('ul liclado')
+                    let hamburguer = document.querySelector('.menu nav ul')
+                    if (hamburguer.style.display == 'flex') {
+                        hamburguer.style.display = 'none';
+                    } else {
+                        hamburguer.style.display = 'flex';
+                    }
+                });
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -16,6 +30,11 @@
                 </div>
                 <div class="menu">
                     <nav>
+                        <div class="menu-mobile">
+                            <div class="mm-line"></div>
+                            <div class="mm-line"></div>
+                            <div class="mm-line"></div>
+                        </div>
                         <ul>
                             <li class="active"><a href="#">HOME</a></li>
                             <li><a href="#">HOME</a></li>
@@ -91,5 +110,209 @@
                 </div>
             </div>
         </section>
+        <section class="principal">
+            <div class="container">
+                <section>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <div class="widget-title-text">Noticias</div>
+                            <div class="widget-title-bar"></div>
+                        </div>
+                        <div class="widget-body flex">
+                            <article class="news">
+                                <div class="news-data">
+                                    <div class="news-posted">01 DEC 20</div>
+                                    <div class="news-comments">2</div>
+                                </div>
+                                <div class="news-thumbnail">
+                                    <img src="assets/images/dr.jpg" alt="">
+                                </div>
+                                <div class="news-title">Silvio Santos Ipsum Santos Ipsum</div>
+                                <div class="news-resume">
+                                    Silvio Santos Ipsum Ma você, topa ou não topamm. Ma quem quer dinheiroam? O prêmio é em barras de ouro, que vale mais que dinheiroam. É namoro ou amizadeemm? É dinheiro ou não éam? Patríciaaammmm... Luiz Ricardouaaammmmmm. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam?
+                                </div>
+                            </article>
+                            <article class="news">
+                                <div class="news-data">
+                                    <div class="news-posted">01 DEC 20</div>
+                                    <div class="news-comments">2</div>
+                                </div>
+                                <div class="news-thumbnail">
+                                    <img src="assets/images/dr.jpg" alt="">
+                                </div>
+                                <div class="news-title">Silvio Santos Ipsum Santos Ipsum</div>
+                                <div class="news-resume">
+                                    Silvio Santos Ipsum Ma você, topa ou não topamm. Ma quem quer dinheiroam? O prêmio é em barras de ouro, que vale mais que dinheiroam. É namoro ou amizadeemm? É dinheiro ou não éam? Patríciaaammmm... Luiz Ricardouaaammmmmm. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam?
+                                </div>
+                            </article>
+                            <article class="news">
+                                <div class="news-data">
+                                    <div class="news-posted">01 DEC 20</div>
+                                    <div class="news-comments">2</div>
+                                </div>
+                                <div class="news-thumbnail">
+                                    <img src="assets/images/dr.jpg" alt="">
+                                </div>
+                                <div class="news-title">Silvio Santos Ipsum Santos Ipsum</div>
+                                <div class="news-resume">
+                                    Silvio Santos Ipsum Ma você, topa ou não topamm. Ma quem quer dinheiroam? O prêmio é em barras de ouro, que vale mais que dinheiroam. É namoro ou amizadeemm? É dinheiro ou não éam? Patríciaaammmm... Luiz Ricardouaaammmmmm. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam?
+                                </div>
+                            </article>
+                            <article class="news">
+                                <div class="news-data">
+                                    <div class="news-posted">01 DEC 20</div>
+                                    <div class="news-comments">2</div>
+                                </div>
+                                <div class="news-thumbnail">
+                                    <img src="assets/images/dr.jpg" alt="">
+                                </div>
+                                <div class="news-title">Silvio Santos Ipsum Santos Ipsum</div>
+                                <div class="news-resume">
+                                    Silvio Santos Ipsum Ma você, topa ou não topamm. Ma quem quer dinheiroam? O prêmio é em barras de ouro, que vale mais que dinheiroam. É namoro ou amizadeemm? É dinheiro ou não éam? Patríciaaammmm... Luiz Ricardouaaammmmmm. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam?
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <aside>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <div class="widget-title-text">Maoooee</div>
+                            <div class="widget-title-bar"></div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="departments">
+                                <div class="departments-item"></div>
+                                <div class="departments-item"></div>
+                                <div class="departments-item"></div>
+                                <div class="departments-item"></div>
+                                <div class="departments-item"></div>
+                                <div class="departments-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-title less-20">
+                            <div class="widget-title-text">Maoooee ihh ihh</div>
+                            <div class="widget-title-bar"></div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="appointment">
+                                <p>
+                                    Ma tem ou não tem o celular do milhãouamm? Mah você mora com o papai ou com a mamãem?
+                                </p>
+                            </div>
+                            <div class="appointment appointment-item"><img src="" width="50" height="50" alt=""><p> by phone <strong>1-400-443-4300</strong></p></div>
+                            <div class="appointment appointment-item"><img src="" width="50" height="50" alt=""><p> by e-mail: e-mail@e-mail.com</p></div>
+                            <div class="appointment appointment-item"><img src="" width="50" height="50" alt=""><p> preencha o formulário na página de contato</strong></p></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <footer class="flex">
+            <div class="container">
+                <div class="footer-banners">
+                    <div class="banner1">
+                        <div class="banner-title">
+                            Silvio Santos Ipsum
+                        </div>
+                        <div class="banner-desc">
+                            Ma tem ou não tem o celular do milhãouamm? 
+                        </div>
+                    </div>
+                    <div class="banner2">
+                        <div class="banner-title">
+                            Silvio Santos Ipsum
+                        </div>
+                        <div class="banner-desc">
+                            Ma tem ou não tem o celular do milhãouamm? 
+                        </div>
+                    </div>
+                    <div class="banner3">
+                        <div class="banner-title">
+                            Silvio Santos Ipsum
+                        </div>
+    
+                        <div class="banner-desc">
+                            Ma tem ou não tem o celular do milhãouamm? 
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-area">
+                    <div class="area-item">
+                        <div class="widget-title">
+                            <div class="widget-title-text">Maoooee</div>
+                            <div class="widget-title-bar"></div>
+                        </div>
+                        <div class="widget-body footer-gray">
+                            <p class="footer-gray">Ma tem ou não tem o celular do milhãouamm? Ma tem ou não tem o celular do milhãouamm? </p>
+                            <p class="corp-name">Medicenter Clinic</p>
+                            <div class="endereço">
+                                <p>33 Falene Streenet</p>
+                                <p>+123 655 655</p>
+                                <p>Keilor East</p>
+                                <p>+123 755 755</p>
+                            </div>
+                            <span>VIC 3033, Australia</span>
+                            <span class="footer-email">medicenter@mail.com</span>
+                            <div class="footer-social">
+                                <img src="" width="25px" height="25px" alt="">
+                                <img src="" width="25px" height="25px" alt="">
+                                <img src="" width="25px" height="25px" alt="">
+                                <img src="" width="25px" height="25px" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-item">
+                            <div class="widget-title">
+                                <div class="widget-title-text">Maoooee</div>
+                                <div class="widget-title-bar"></div>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="footer-post">
+                                <p>Ma tem ou não tem o celular do milhãouamm? Ma tem ou não tem o celular do milhãouamm?</p>
+                                <p class="post-time">6 years ago</p>
+                            </div>
+                            <div class="footer-post">
+                                <p>Ma tem ou não tem o celular do milhãouamm? Ma tem ou não tem o celular do milhãouamm?</p>
+                                <p class="post-time">6 years ago</p>
+                            </div>
+                            <div class="footer-post">
+                                <p>Ma tem ou não tem o celular do milhãouamm? Ma tem ou não tem o celular do milhãouamm?</p>
+                                <p class="post-time">6 years ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-item">
+                            <div class="widget-title">
+                                <div class="widget-title-text">Maoooee</div>
+                                <div class="widget-title-bar"></div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="footer-gray">
+                                    <p>Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?</p>
+                                    <p class="post-time">4 days ago</p>
+                                </div>
+                                <div class="footer-gray">
+                                    <p>Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?</p>
+                                    <p class="post-time">5 days ago</p>
+                                </div>
+                                <div class="footer-gray">
+                                    <p>Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?  Ma tem ou não tem o celular do milhãouamm?</p>
+                                    <p class="post-time">7 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copy">
+                    <span class="footer-gray"> Copyright -</span> Maoooheee ihih ah ahee
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
