@@ -1,0 +1,174 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header .container {
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+.container {
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+.flex   {
+    display: flex;
+}
+header i {
+    font-size: 1.25rem;
+}
+header li {
+    list-style: none;
+
+}
+header a {
+    text-decoration: none;
+    color: #5c5c5c;
+}
+.hamburguer a{
+    padding: 15px;
+}
+.hamburguer a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+nav ul {
+    padding-left: 0;
+}
+.hamburguer i {
+    color: #5c5c5c;
+    display: flex;
+    align-items: center;
+}
+.active {
+    color: royalblue;
+    border-bottom: 2px solid royalblue;
+}
+.icons {
+    color: #5c5c5c;
+    justify-content: space-around;
+    align-items: center;
+}
+.icons i, .icons img {
+    padding: 10px;
+}
+
+.icons img {
+    border-radius: 20px;
+}
+.buttons{
+    display: none;
+}
+.search input {
+    display: block;
+    width: 90vw;
+    max-width: 580px;
+    height: 30px;
+    border: 1px solid #CCC;
+    border-radius: 20px;
+    margin-top: 30px;
+
+}
+.search input:hover {
+    border: none;
+    box-shadow: 1px 1px 5px #CCC;
+}
+
+.main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.main img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #EFEFEF;
+    width: 100%;
+    border-top: 1px solid #ACACAC;
+    color: #5C5C5C;
+}
+.country {
+    border-bottom: 1px solid #ACACAC;
+}
+.country p {
+    margin: 5px;
+}
+.footer-menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    font-size: 15px;
+    margin: 15px 20px;
+}
+@media (min-height: 800px) {
+    .main {
+        margin-top: 200px;
+    }
+}
+@media (min-width: 600px) {
+    header .container {
+        justify-content: flex-end;
+    }
+    .hamburguer a{
+        text-decoration: none;
+        color: #5c5c5c;
+        font-weight: 500;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    .hamburguer a:hover{
+        text-decoration: underline;
+    }
+    .hamburguer i {
+        display: none;
+    }
+    .active {
+        border: none;
+    }
+    .footer-menu ul{
+        justify-content: start;
+    }
+    .country p {
+        margin-left: 30px;
+    }
+    .footer-menu li {
+        padding: 0 10px;
+    }
+    .main img {
+        width: 100%;
+    }
+    .search input {
+        height: 40px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .buttons button {
+        background-color: #EEE;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 3px;
+        color: #5c5c5c;
+        font-size: 15px;
+        height: 40px;
+        margin: 20px 5px;
+    }
+    .buttons button:hover {
+        border: 1px solid #ACACAC;
+        background-color: #EFEFEF;
+        color: #1c1c1c;
+        cursor: pointer;
+    }
+    .icons {
+        margin-right: 25px;
+    }
+}

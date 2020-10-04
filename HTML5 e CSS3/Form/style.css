@@ -1,9 +1,13 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 .teste {
     display: inline-block;
     width: 100px;
 }
 form {
     color: white;
+    font-weight: bold;
 }
 .algo {
     display: flex;
@@ -12,4 +16,7 @@ form {
     background-color: royalblue;
     width: 400px;
     height: 300px;
+    border-radius: 20px;
+    margin: 100px auto;
+    box-shadow: 1px 1px 10px rgb(43, 43, 43) inset, -1px -1px 10px  rgb(43, 43, 43) inset;
 }
