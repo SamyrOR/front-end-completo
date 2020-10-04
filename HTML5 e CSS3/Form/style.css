@@ -1,0 +1,15 @@
+.teste {
+    display: inline-block;
+    width: 100px;
+}
+form {
+    color: white;
+}
+.algo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: royalblue;
+    width: 400px;
+    height: 300px;
+}
