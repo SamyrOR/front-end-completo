@@ -116,11 +116,32 @@ header {
 }
 footer {
     background-color: #EEE;
+    border-top: 1px solid #acacac;
 }
-.adress {
+.line {
+    border-bottom: 1px solid #acacac;
+    width: 100%;
 }
 .footer-menu,
 .adress {
     display: flex;
     margin-left: 170px;
+    align-items:  center;
+    color: #5c5c5c;
+
+}
+.adress p,
+.adress a {
+    padding-right: 5px;
+}
+.cep {
+    color: #000;
+    margin-left: 25px;
+}
+.adress a, .footer-menu a {
+    text-decoration: none;
+    color: #5c5c5c;
+}
+.footer-menu a {
+    padding-right: 30px;
 }
