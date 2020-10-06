@@ -1,3 +1,6 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 @keyframes girando {
     0% {background: linear-gradient( -75deg, red , blue);  margin-left: 5;}
     10% {background: linear-gradient( -45deg, red , blue); margin-left: 10;}
@@ -11,9 +14,6 @@
     90% {background: linear-gradient( 165deg, red , blue); margin-left: 10;}
     95% {background: linear-gradient( 195deg, red , blue); margin-left: 5;}
     100% {background: linear-gradient( 225deg, red , blue);}
-
-
-
 }
 .girar{
     width: 50px;
@@ -42,4 +42,29 @@
 .transition:hover {
     background-color: blue;
     border-radius: 25px;
+}
+.pseudo {
+    color: #FFF;
+    font-weight: bold;
+    background-color: royalblue;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+.pseudo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: -3px;
+    left: 8px;
+    border: 10px solid;
+    border-color: royalblue transparent transparent transparent;
+}
+.rgba {
+    width: 50px;
+    height: 50px;
+    border: 2px;
+    background-color: rgba(255, 0, 0, 0.7);
 }

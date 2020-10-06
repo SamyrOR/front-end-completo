@@ -15,7 +15,7 @@
             <p>A tag < nav >, deve ser utilizada para identificar o nosso principal menu de navegação do site (geralmente utilizada aninhada a tag < header ></p>
             <p>A tag < footer > nos permite definir de forma semântica o rodapé da nossa página</p>
             <p>A tag < main > que define todo o conteúdo principal da página</p>
-            <p>A tag < article > que deve ser melhor utilizada em artigos, partes da página que são únicas e independentes e sem reslação com outras partes</p>
+            <p>A tag < article > que deve ser melhor utilizada em artigos, partes da página que são únicas e independentes e sem relação com outras partes</p>
             <p>A tag < section > por outro lado nos permite agrupa vários itens correlacionados e definir diversas secções da nossa página</p>
             <p>A tag < time > com o atributo datetime="ano/mes/dia hora", ajuda a traduzir tempos no nosso texto, para que a máquina saiba a data comentada.</p>
             <p>O HTML5 tambem nos permite a criação de TAGs personalizadas (nos mesmo colocamos o nome, basta abrir e fechar como qualquer outra tag )e que funcionam, tanto no navegador quanto a aplicação de destilo</p>
@@ -133,7 +133,7 @@
                 <p>100% {propriedade(s) a ser alterada}</p>
             }
             <p>E no elemento que devemos utilizar a animação, podemos atribuir a propriedade animation: nomedaanimação duração velocidadedaanimação delay repetições direção(pra frente, de trás pra frente ,etc)</p>
-            <p>animation: giratorio 2seg linear 3seg infinite normal</p>
+            <p>animation: giratorio 2s linear 3s infinite normal</p>
             <p>Caso uma das propriedades não sejam setadas, será tomado o valor padrão como base</p>
             <div class="girar" ></div>
             <hr>
@@ -208,6 +208,71 @@
             <p>
                 order: número; Por padrão a ordem dos itens do HTML é 0, caso seja definido um número maior que 0, o elemento com esta propriedade vira o ultimo elemento mesmo que este esteja escrito no meio do HTML, ja se for definido menor que o (-1...), fica na frente dos elementos com 0, passando a ser o primeiro elemento 
             </p>
+        </section>
+        <hr>
+        <section>
+            <article>
+                <h1>Novos Seletores</h1>
+                <section>
+                    <h4>Seletores por atributos</h4>
+                    <p>O CSS3 nos trouxe novos seletores, os por atributo</p>
+                    <p>elemento[atributo="valor"]</p>
+                    <p>Faz com que acessamos o elemento com o atributo especifico , com o atributo entre colchetes como padrão e o valor entre aspas</p>
+                    <p>O sinal de igual ( = ) sozinho, indica que buscamos o elemento com o valor exato do atributo</p>
+                    <p>O sinal de igual com um asterisco antes ( *= )indica que buscamos um elemento cujo o valor do atributo possa estar em qualquer parte do valor</p>
+                    <p>O sinal de igual com um circunflexo antes ( ^= )indica que buscamos todos elementos que começem com o valor informado</p>
+                    <p>O sinal de igual com um asterisco antes ( $= )indica que buscamos todos elementos que o valor informado esteja no final</p>
+                </section>
+                <section>
+                    <h4>Seletor de elemento vazio</h4>
+                    <p>Com o seletor :empty (div:empty) podemos selecionar elementos do html que não possuem conteúdo algum</p>
+                </section>
+                <section>
+                    <h4>Seletor de primeira letra e primeira linha</h4>
+                    <p>Para selecionarmos a primeira letra de um elemento que contem algum texto, utilizamos o seletor ::first-letter (p::first-letter) e adicionamos os estilos a ele.</p>
+                    <p>E para selecionarmos a toda primeira linha de e que funciona de forma resposiva, utilizamos o seletor ::first-line (p::first-line), podendo ambos serem utilizados simultaneamente</p>
+                </section>
+                <section>
+                    <h4>Seletor de primeiro e ultimo elemento</h4>
+                    <p>elemento:first-child; Seleciona o primeiro elemento informado encontrado</p>
+                    <p>elemento:last-child; Seleciona o último elemento informado encontrado</p>
+                </section>
+                <section>
+                    <h4>Seletor negativo</h4>
+                    <p>Este seletor nos permite negar um elemento, ou seja, aplicar um estilo a todos os elementos que não forma negados</p>
+                    <p>:not(elemento); Aplica efeitos em todos os elementos, exceto o informado em parâmetro</p>
+                </section>
+                <section>
+                    <h4>Seletor NTH</h4>
+                    <p>Este seletor permite selecionar um elemento especifico dentro de uma ordem:</p>
+                    <p>Se tivermos 5 divs dentro do código e quisermos selecionar a 3, basta adicionar ao css o seguinte elemento div:nth-child(número na ordem), sendo que diferente de JS, está ordem começa do 1</p>
+                    <p>E para selecionarmos de baixo para cima usamos elemento:nth-last-child(numero na ordem de trás para frente )</p>
+                </section>
+                <section>
+                    <h4>Pseudo elementos ::before e ::after</h4>
+                    <p>Seletores muito utilizados para criação de estilos mais avançados, nos permite adicionar elementos que só existem em css, não no html</p>
+                    <div class="pseudo">Olá</div>
+                    <p>Muito utilizado em menus e outros elementos, sempre acompanhado do atributo content: ''; podendo estar vazio ou não, position: absolute; e/ou display: block/inline-block;</p>
+                    <p>Atenção para adição de elementos no lado esquerdo e em cima, usar o ::before, para adição de elementos na direita e em baixo, usar o ::after</p>
+                </section>
+            </article>
+            <hr>
+        </section>
+        <section>
+            <h1>RGBA Cor com transparência</h1>
+            <p>Podemos criar elementos com cores com transparência:</p>
+            <div class="rgba"></div>
+            <p>rgba( red, green, blue, alpha)</p>
+            <p>Sendo as cores de 0 a 255, e o alpha de 0 a 1 em decimais ( 0 nada, 0.50 = 50%, 1 = 100% ) </p>
+            <hr>
+        </section>
+        <section>
+            <h1>Propriedade transform: ;</h1>
+            <p>Está propriedade, nos permite transformar completamente elementos, temos alguns atributos principais</p>
+            <p>scale(valor); de 0 a 1 em decimais igualmente o rgba, podendo receber dois números, um para a escala horizontal e outro para vertical (muito usado em fotos)</p>
+            <p>rotate(graus); rotaciona nosso elemento em graus deg</p>
+            <p>skew(graus); distorce nosso elemento horizontal Y, ou vertical X, ou ambos</p>
+
         </section>
     </article>
 </body>
