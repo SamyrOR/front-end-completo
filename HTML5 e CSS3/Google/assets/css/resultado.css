@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    margin-top: 15px;
+    border-bottom: 1px solid #CCC;
+
+}
+.main-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+}
+.right-bar {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+.right-bar form {
+    margin-bottom: 0;
+}
+.logo img,
+.right-bar input {
+    margin: 20px;
+}
+.right-bar input:hover {
+    border: none;
+    box-shadow: 1px 1px 5px #CCC;
+}
+.right-bar input {
+    width: 700px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #CCC;
+}
+.left-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    margin-right: 20px;
+}
+.left-bar i {
+    color: #5c5c5c;
+}
+.left-bar img {
+    border-radius: 20px;
+}
+.down-bar ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+.down-bar a {
+    color: #5C5C5C;
+    padding: 5px;
+    text-decoration: none;
+}
+.container {
+    margin-left: 170px;
+    width: 700px;
+}
+.datas {
+    font-size: 15px;
+    color: #7c7c7c;
+}
+.results {
+    margin: 30px 0;
+}
+.link, .title {
+    margin: 5px 0;
+}
+.title {
+    font-size: 22px;
+    color: royalblue;
+}
+.desc {
+    margin-bottom: 5px;
+    margin-top: 6px;
+    font-size: 15px;
+    color: #4c4c4c;
+}
+.duplo {
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+}
+.um {
+    padding: 0 50px;
+}
+.more {
+    color: royalblue;
+    font-size: 15px;
+    margin: 0;
+}
+.related-title {
+    font-weight: 500;
+}
+.related {
+    display: flex;
+}
+.related a {
+    text-decoration: none;
+    color: royalblue;
+}
+.related-col {
+    width: 200px;
+}
+footer {
+    background-color: #EEE;
+    border-top: 1px solid #acacac;
+}
+.line {
+    border-bottom: 1px solid #acacac;
+    width: 100%;
+}
+.footer-menu,
+.adress {
+    display: flex;
+    margin-left: 170px;
+    align-items:  center;
+    color: #5c5c5c;
+
+}
+.adress p,
+.adress a {
+    padding-right: 5px;
+}
+.cep {
+    color: #000;
+    margin-left: 25px;
+}
+.adress a, .footer-menu a {
+    text-decoration: none;
+    color: #5c5c5c;
+}
+.footer-menu a {
+    padding-right: 30px;
+}
