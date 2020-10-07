@@ -1,6 +1,7 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @keyframes girando {
     0% {background: linear-gradient( -75deg, red , blue);  margin-left: 5;}
     10% {background: linear-gradient( -45deg, red , blue); margin-left: 10;}
@@ -67,4 +68,7 @@
     height: 50px;
     border: 2px;
     background-color: rgba(255, 0, 0, 0.7);
+}
+.fonte {
+    font-family: 'Sansita Swashed';
 }

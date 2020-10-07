@@ -272,7 +272,28 @@
             <p>scale(valor); de 0 a 1 em decimais igualmente o rgba, podendo receber dois números, um para a escala horizontal e outro para vertical (muito usado em fotos)</p>
             <p>rotate(graus); rotaciona nosso elemento em graus deg</p>
             <p>skew(graus); distorce nosso elemento horizontal Y, ou vertical X, ou ambos</p>
-
+            <hr>
+        </sectio  n>
+        <section>
+            <h1>Google fonts</h1>
+            <p>Podemos utilizar esta ferramenta do google para adicionar fontes externas que desejamos no nosso site</p>
+            <p class="fonte">é bem simples, basta acessar o site da ferramenta e adicionar o link gerado após escolher as fontes, ou importa-las no seu css</p>
+            <hr>
+        </section>
+        <section>
+            <h1>Box sizing</h1>
+            <p>Quando não tinha esta pro propriedade, os devs tinham muita dor de cabeça, por padrão o valor desta propriedade é 'content-box' ou seja, o tamanho do meu elemento, vai ser de acordo com o conteúdo</p>
+            <p>box-sizing: content-box; significa que o tamanho definido para o elemento, é somente o de seu conteúdo, se adicionarmos padding e bordas, o tamanho do elemento no geral aumenta, pois o do conteúdo não muda, se quiséssemos manter um valor teríamos que redefinir o valor do conteúdo  fazendo cálculos junto ao padding e o border para que tivesse um padrão </p>
+            <p>Mas se adicionarmos o box-sizing: border-box, o valor definido do elemento será respeitado de maneira que o conteúdo se ajuste sem quebrar o layout ao ser adicionado padding e border, exclui o elemento margin pois é externo, o tamanho fica fixo para a caixa e não para o conteúdo.</p>
+            <p>
+                Para nos auxiliar no desenvolvimento de layouts, podemos incluir está propriedade para todos os elementos com o *, evitando assim quebrar o layout e ter que fazer cálculos para manter um padrão.
+            </p>
+            <hr>
+        </section>
+        <section>
+            <h1>Estilizando o placeholder:</h1>
+            <p>Para estilizar os placeholders dos inputs, podemos simplesmente utilizar o seletor: </p>
+            <p>input::placeholder ; e aplicar os estilo desejados!</p>
         </section>
     </article>
 </body>
