@@ -1,0 +1,23 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.tarja {
+    background-color: teal;
+    transform: rotate(-45deg);
+    margin-left: -80px;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0 0 10px #5c5c5c;
+}
+.tarja a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 55px 12px 55px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.577);
+    border-top: 1px solid rgba(255, 255, 255, 0.57);
+    height: 45px;
+    text-shadow: 0 2px 10px #5c5c5c;
+
+}
