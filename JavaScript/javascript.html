@@ -1,0 +1,112 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <article>
+        <section>
+            <h1>Javascript</h1>
+            <p>Linguagem de programação mais utilizadas em tecnologias web</p>
+        </section>
+        <hr>
+        <section>
+            <h1>Variáveis</h1>
+            <p>É a declaração de armazenamento de algum dado na memoria do computador, que pode ser reutilizado sendo chamado com o nome declarado, exemplo de declaração variável:</p>
+            <p>var nomaDaVariavel = "Algum valor"</p>
+            <p>Os valores podem ser strings que são declaradas entre aspas, números que não precisam de aspas, undefined valor não definido(razão de muitos bugs), null elemento vazio</p>
+            <p>Temos tambem a declaração de let, que é um tipo de variavel disponivel apenas em no escopo em que é declarada, e const, que recebe um valor e não pode/deve ser alterado</p>
+            <p>Podemos realizar operações matemáticas com as variaveis, com os operadores: </p>
+            <p> + para soma </p>
+            <p> - para subtração</p>
+            <p> * para multiplicação</p>
+            <p> / para divisão</p>
+            <p> % chamado de modulo para identificar o resto da divisão</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Objeto_literal" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Functions</h1>
+            <p>Funções são blocos de códigos que são executados assim que chamados, exemplo:</p>
+            <p>function somar () {código a ser executado}</p>
+            <p>Funções podem receber parametros (dados informados essenciais para execução do código)</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Arrays</h1>
+            <p>Array é uma variavel que carrega um conjunto de informações, ex: </p>
+            <p>var lista = ["Arroz" , "Feijão", "Salada", "Bife" , "Batata frita"]</p>
+            <p>Declarado com colchetes, cada item separado por virgula equivale a um dado, para obte-los podemos chamar a variavel informando em qual casa o item que desejamos se encontra, começando a contagem do 0</p>
+            <p>lista[0], retornará o "Arroz"</p>
+            <p>podemos manipular Arrays com algumas propriedades como</p>
+            <p>lista.push('item'), adiciona o item no final do array</p>
+            <p>lista.pop(), remove e retorna o ultimo item do array</p>
+            <p>lista.shift(), remove e retorna o primeiro item do array</p>
+            <p>lista.indexOf('item'), retorna a posição em que se encontra o item informado no parametro, caso o item não seja encontrado retorna -1</p>
+            <p>lista.join('/'), concatena todos os items do array com o caracter informado como parametro</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Arrays" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Condicionais</h1>
+            <p>Uma condicional, reage com condição imposta, o verdadeiro "se" e "se não", sintaxe: </p>
+            <p>if (condição) { </p>
+            <p>código a ser executado caso a condição seja verdadeira</p>
+            <p>} else {</p>
+            <p>Código a ser executado caso a condição seja falsa</p>
+            <p>}</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">Para mais informações</a></p>
+            <h4>Tambem temos o switch, que nos permite executar determinado código de acordo com o valor esperado do parametro:</h4>
+            <p>switch(x) {</p>
+                <p>case "valor1": </p>
+                <p>código a ser executado quando o caso é veradeiro</p>
+                <p>break</p>
+                <p>case "valor2": </p>
+                <p>código a ser executado quando o caso é veradeiro</p>
+                <p>break</p>
+                <p>case "valor3": </p>
+                <p>código a ser executado quando o caso é veradeiro</p>
+                <p>break</p>
+                <p>case "valor4": </p>
+                <p>código a ser executado quando o caso é veradeiro</p>
+                <p>break</p>
+                <p>default:</p>
+                <p>Código a ser executado caso nenuma das afirmações seja atendida</p>
+                <p>break;</p>
+            <p>É sempre acompanhado pelo break pois caso uma afirmação seja atendida o código é interrompido</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">Para mais informações</a></p>
+            <h4>Para validação de condições, temos diversos operadores como:</h4>
+            <p>< menor que </p>
+            <p>> maior que</p>
+            <p><= menor ou igual a</p>
+            <p>>= maior ou igual a</p>
+            <p>== dois simbolos de igual representam valor igual a, pois apenas um = , representa atribuição de valor</p>
+            <p>=== tres simbolos representam um valor identico, compara o tipo e o valor entre as variaveis </p>
+            <p>!=  diferente de </p>
+        </section>
+        <hr>
+        <section>
+            <h1>Laços de repetição</h1>
+            <p>Na linguagem de programação javascript, temos dois tipos de laços de repetição, o for e o while, os laços de repetição executam determinado bloco de código enquanto a condição for verdadeira:</p>
+            <p>O for recebe como parametro a variavel, a condição e a execução:</p>
+            <p>for(var x = 0; x < 10; x++) {</p>
+            <p>código a ser executado até que x seja > que 10.</p>
+            <p>}</p>
+            <p>O while executa a mesma operação, porem é declarado de forma diferente, ja temos que ter a variavel declarada antes</p>
+            <p>x = 0</p>
+            <p>Então executamos o código</p>
+            <p>while(x < 10) {</p>
+            <p>código a ser executado enquanto a condição seja verdadeira</p>
+            <p>}</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            
+        </section>
+    </article>
+
+</body>
+</html>
