@@ -16,8 +16,8 @@
             <p>É a declaração de armazenamento de algum dado na memoria do computador, que pode ser reutilizado sendo chamado com o nome declarado, exemplo de declaração variável:</p>
             <p>var nomaDaVariavel = "Algum valor"</p>
             <p>Os valores podem ser strings que são declaradas entre aspas, números que não precisam de aspas, undefined valor não definido(razão de muitos bugs), null elemento vazio</p>
-            <p>Temos tambem a declaração de let, que é um tipo de variavel disponivel apenas em no escopo em que é declarada, e const, que recebe um valor e não pode/deve ser alterado</p>
-            <p>Podemos realizar operações matemáticas com as variaveis, com os operadores: </p>
+            <p>Temos tambem a declaração de <strong> let</strong>, que é um tipo de variavel disponivel apenas no escopo em que é declarada, e <strong>const</strong>, que recebe um valor e não pode/deve ser alterado</p>
+            <p>Podemos realizar operações matemáticas com as variáveis, com os operadores: </p>
             <p> + para soma </p>
             <p> - para subtração</p>
             <p> * para multiplicação</p>
@@ -113,7 +113,7 @@
         <hr>
         <section>
             <h1>Programação orientada a eventos</h1>
-            <p>Em javascript programamos muito orientado a eventos, ou seja, se algo ocorrer estamos ouvindo o envento acontecer, e quanto contecer executamos determinada função</p>
+            <p>Em javascript programamos muito orientado a eventos, ou seja, se algo ocorrer estamos ouvindo o evento acontecer, e quanto acontecer executamos determinada função</p>
             <h4>Eventos de mouse:</h4>
             <p>click = quando o elemento é clicado</p>
             <p>dblclick = acionado quando se clica duas vezes rapidamente</p>
@@ -153,6 +153,107 @@
             <p>Entre outros getters</p>
             <p>Para fazer uma data completa, podemos concatenar a variavel com os getters de dia mes ano, e tambem setar a data com os setters.</p>
             <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Temporizadores</h1>
+            <p>Para executarmos uma tarefa a cada determinado tempo, ou apenas uma vez após um certo tempo, temos:</p>
+            <p>setInterval(código, tempo em milissegundos); este executa uma função em loop de acordo com o tempo definido como intervalo </p>
+            <p>setTimeout(código, tempo em milissegundos); este executa uma função apenas uma vez após o tempo informado</p>
+            <p>O que fazer quando queremos parar os temporizadores? o atribuímos a uma variavel, usamos a função clearInterval(variavel) ou clearTimeout(variavel)</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>sessionStorage() e localStorage()</h1>
+            <p>Estas duas funções, nos permite gravar dados no navegador, durante apenas na sessão (até o navegador ser fechado) e localmente (mesmo que feche o navegador, desligue, etc - até ser removido manualmente)</p>
+            <p>A sintaxe é simples:</p>
+            <p>localStorage.setItem("chave", valor); para adicionarmos itens no localStorage</p>
+            <p>localStorage.getItem("chave"); recupera o valor da chave informada</p>
+            <p>localStorage.removeItem("chave"); remove a chave e seu valor</p>
+            <p>Os mesmos métodos podem ser utilizados em sessionStorage.</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Template string</h1>
+            <p>Template string nos ajuda a concatenar de uma maneira muito mais eficaz usando a sintaxe:</p>
+            <p>`Abre e fecha com crase ${variavel} ${variavel}`</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Desestruturação de objetos e de arrays</h1>
+            <p>Conseguimos denscontruir objetos e arrays de maneira simples, e que nos permite atribuir o valor desejado em uma variável</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Spread e Rest Operator</h1>
+            <p>Ambos operadores são declarados da mesma forma, com  reticencias ...</p>
+            <h4>Spread</h4>
+            <p>O spread muito utilizado,  tem como objetivo desconstruir arrays e objetos, facilitando assim a integração em uma nova variavel</p>
+            <p>let lista2 = [...lista1, 3,4,5]</p>
+            <p>Neste case a lista2 tera os itens da lista 1 junto com os outros itens informados</p>
+            <h4>Rest operator</h4>
+            <p>Com a mesma sintaxe do spread, porem este é utilizado apenas como parametro de uma função:</p>
+            <p>function receberNumeros(...numeros) {</p>
+            <p>Quando temos uma function que nao sabemos, ou queremos deixar não fixo o número de parâmetros que desejamos receber, podemos utiliza-lo, e passar quantos parâmetros forem na chamada da função, que ao receber com rest irá transformar todos em uma array, podendo ser utilizado spread posteriormente para decomposição da array gerada pelo rest </p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Funções anónimas e arrow functions</h1>
+            <p>Funções anónimas basicamente são funções de callback onde somente aonde é declarada é executada, é uma função sem atribuição de nome:</p>
+            <p>function () {</p>
+            <h4>Arrow function</h4>
+            <p>Já a arrow function: </p>
+            <p>() => { </p>
+            <p>É um modo de declaração de função em que é menos verboso, e respeita o seu escopo léxico.</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Valor padrão como parâmetro</h1>
+            <p>Para evitar verificações de erros em valores na função, podemos definir um valor padrão para os parâmetros basta atribuir um valor b = valor, que caso não seja informado b terá o valor :</p>
+            <p>function somar(a , b = 5) {</p>
+            <p></p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Modules</h1>
+            <p>Módulos nos permite estruturar melhor o nosso projeto, pois com export, podemos exportar funções a serem executadas em outros arquivos javascript importados com import:</p>
+            <p>export function somar (a, b) {; sintaxe 'export' do arquivo de origem</p>
+            <p>import { somar } from './/somar.js'; sintaxe do arquivo de destino</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/M%C3%B3dulos" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Programação orientada a objeto: POO</h1>
+            <p>Podemos com javascript realizar programção orientada a obejto, um poderosos paradigma que estrutura o código e deixar uma manutenção e uma escrita muito mais elaborada</p>
+            <p>Para iniciarmos nesse paradigma, temos que entender as classes:</p>
+            <p>class Animal {</p>
+            <p>constructor(orelhas, pernas) {</p>
+            <p>this.orelhas = orelhas</p>
+            <p>this.pernas = pernas</p>
+            <p>}</p>
+            <p>falar(){</p>
+            <p>console.log('Hello there') </p>
+            <p>}</p>
+            <p>get qtdPernas() {</p>
+            <p>return this.pernas</p>
+            <p>}</p>
+            <p>set inserirPernas(quantidade) { </p>
+            <p>this.pernas = quantidade</p>
+            <p>}</p>
+            <p>Para definir uma classe, iniciamos com a palavra reservada 'class' antes do nome da classe e iniciamos com {</p>
+            <p>Após isso definimos a função construtora, construct () que pode receber parâmetros que vão ser definidos na instância da classe, e abrimos com {</p>
+            <p>Ainda dentro do constructor definimos os atributos com this.nomedoatributo que vão ser elementos do objeto</p>
+            <p>Fora do constructor podemos definir métodos, que basicamente são funções que ao serem invocadas executam o seu código</p>
+            <p>E ao final da classe definimos os getters e setters, que basicamente são propriedades do objeto instanciado que vai recuperar os dados da classe no getter e definir no setter</p>
+            <p>Junto com os módulos, o torna uma poderoso paradigma de programação avançada</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes" target="_blank">Para mais informações</a></p>
         </section>
     </article>
 

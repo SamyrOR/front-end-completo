@@ -189,13 +189,13 @@
             <h1>Flexbox!</h1>
             <p>Esta propriedade do CSS nos permite criar elementos flexíveis dentro de um container, se correlacionado sempre mantendo o padrão, com alguns atributos como opção: </p>
             <h4>Atributos para o container</h4>
+            <p>display: flex; inicia o nosso container flex</p>
             <p>flex-direction: row || column;  Nos permite dispor os elementos em linha, ou coluna, se não declarado será o padrão em linha</p>
             <p>
                 flex-wrap: wrap || nowrap; Quando conteúdo dos elementos é maior do que o container pode suportar, os elementos por padrão tendem a não respeitar o valor definido dele, para que possa se enquadrar no container este atributo com valor wrap, faz com que os elementos respeitem o seu valor definido, quebrando a linha para que possa preencher o seu conteúdo, ja o nowrap é o comportamento padrão, quando os elementos ultrapassam o valor do container, eles nao quebra e ficam com o valor menor para que possa caber no container
             </p>
             <p>
-                justify-content:flex-start || center || flex-end || space-around || space-between; Nos permite alinhar os elementos no inicio, meio ou final do container de acordo com a direção, column ou row ja os spaces, around e between, permite que justificamos os elementos com espaçamento em torno deles igual em todas as bordas, ou entre eles iguais entre os elementos porem sem bordas com o container no primeiro e no ultimo elemento
-
+                justify-content:flex-start || center || flex-end || space-around || space-between || space-evenly; Nos permite alinhar os elementos no inicio, meio ou final do container de acordo com a direção, column ou row ja os spaces, around e between, permite que justificamos os elementos com espaçamento em torno deles igual em todas as bordas, ou entre eles iguais entre os elementos porem sem bordas com o container no primeiro e no ultimo elemento
             </p>
             <p>
                 align-items:flex-start || center || flex-end; Nos permite alinhar os items pela direção contrária definida, ou seja, se estiver padrão(row), alinha a direção vertical, porem se tiver column(coluna), alinha a direção horizontal
@@ -203,11 +203,38 @@
             <p>align-content: flex-start || center || flex-end || space-around || space-between; Quando temos "wrap" dentro do container quebrando os elementos para mais de uma linha, podemos alinhar todo o conteúdo com esta propriedade  </p>
             <h4>Atributos para elementos</h4>
             <p>Para os elementos, temos atributos como os:</p>
-            <p>flex: número; Que nos permite definir o quanto do container o elemento deve utilizar</p>
+            <p>flex-grow: número; Que nos permite definir o quanto do container o elemento deve utilizar</p>
             <p>align-self: flex-start || center || flex-end; faz com que o elemento com o atributo declarado possa alinhar por si só de acordo com o valor, independente do alinhamento do container. Subscreve o alinhamento do container.</p>
             <p>
                 order: número; Por padrão a ordem dos itens do HTML é 0, caso seja definido um número maior que 0, o elemento com esta propriedade vira o ultimo elemento mesmo que este esteja escrito no meio do HTML, ja se for definido menor que o (-1...), fica na frente dos elementos com 0, passando a ser o primeiro elemento 
             </p>
+            <p>flex-shrink: 1 || 0; propriedade que define se o elemento pode encolher quando a página diminui, o valor padrão é 1 para encolher, e 0 para não encolher</p>
+        </section>
+        <hr>
+        <section>
+            <h1>Template Grid</h1>
+            <p>O template grid junto com o flexbox são as propriedades do CSS que nos permitem criar flexiveis, o grid permite criar um grid como quisermos, e tanto o flexbox quanto o template grid devem ser utilizado para criação dos sites</p>
+            <h4>Atributos para o container</h4>
+            <p>display: grid; inicia o grid do nosso container</p>
+            <p>grid-template-row: % || px || auto; define quantas linhas teremos no template, basta adicionar um valor para cada linha</p>
+            <p>grid-template-columns: 1fr; unico elemento do css que nos permite usar o fr (fração) definindo quanto de fração do elemento cada coluna terá, basta adicionar as frações para cada coluna</p>
+            <p>grid-template: linhas / colunas; com apenas uma linha de código definimos as linhas e colunas do template</p>
+            <p>grid-row-gap: valorpx; adiciona um gap entre as linhas</p>
+            <p>grid-column-gap: valorpx; adiciona um gap entre as colunas</p>
+            <p>grid-gap: valorpx; adiciona um gap entre as linhas e tambem entre as colunas</p>
+            <p>justify-items: flex-start || center || flex-end || stretch (padrão); nos permite alinhas os itens do nosso container na vertical sendo que o padrão (strecth) faça com que o elemento ocupe todo o espaço disponivel de onde está posicionado.</p>
+            <p>align-items: flex-start || center || flex-end || stretch (padrão); nos permite alinhas os itens do nosso container na horizontal sendo que o padrão (strecth) faça com que o elemento ocupe todo o espaço disponivel de onde está posicionado.</p>
+            <p>Ambos -items alinham os elementos no espaço que tem dentro do grid.</p>
+            <p>Ja o aling e justify-content alinham os grids no container fazendo com que ocupem o espaço de acordo com o valor,e meio que ignora o items</p>
+            <p>justify-content:flex-start || center || flex-end || space-around || space-between || space-evenly; alinha os grids dentro do container de acordo com a posição na vertical </p>
+            <p>align-content:flex-start || center || flex-end || space-around || space-between || space-evenly; alinha os grids dentro do container de acordo com a posição horizontal</p>
+            <p>O item mais importante que define o grid, é a liberdade para dispor os elementos, colocando no lugar, jeito qe tamanho que desejamos de acordo com o diagrama do template areas</p>
+            <p>grid-template-areas: "a1 a1 a1" </p>
+            <p>"a1 a2 a2" </p>
+            <p>"a1 a3 a3"; </p>
+            <h4>Atributos para elementos</h4>
+            <p>E nomeamos cada elemento com:</p>
+            <p>grid-area: nome da area;</p>
         </section>
         <hr>
         <section>

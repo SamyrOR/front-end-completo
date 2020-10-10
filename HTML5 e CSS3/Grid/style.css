@@ -1,0 +1,41 @@
+.container {
+    height: 500px;
+    color: white;
+    padding: 10px;
+    background-color: gray;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: "a1 a1 a1 a1 a1 a1"
+                         "a2 a3 a3 a3 a3 a3"
+                         "a2 a4 a4 a4 a4 a4"
+                         "a2 a4 a4 a4 a4 a4"
+                         "a5 a4 a4 a4 a4 a4"
+                         "a6 a6 a6 a6 a6 a6";
+}                        
+.r1 {
+    background-color: red;
+}
+.r2 {
+    background-color: blue;
+}
+.r3 {
+    background-color: green;
+}
+.rect1 {
+    grid-area: a1;
+}
+.rect2 {
+    grid-area: a2;
+}
+.rect3 {
+    grid-area: a3;
+}
+.rect4 {
+    grid-area: a4;
+}
+.rect5 {
+    grid-area: a5;
+}
+.rect6 {
+    grid-area: a6;
+}
