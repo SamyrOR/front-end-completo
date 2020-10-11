@@ -31,6 +31,8 @@
             <p>Funções são blocos de códigos que são executados assim que chamados, exemplo:</p>
             <p>function somar () {código a ser executado}</p>
             <p>Funções podem receber parametros (dados informados essenciais para execução do código)</p>
+            <h4>Escopo léxico</h4>
+            <p>Em qualquer lugar do código, ao chamar uma função, ela se lembra da onde ela está e quem são seus parentes</p>
             <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es" target="_blank">Para mais informações</a></p>
         </section>
         <hr>
@@ -77,6 +79,9 @@
                 <p>break;</p>
             <p>É sempre acompanhado pelo break pois caso uma afirmação seja atendida o código é interrompido</p>
             <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">Para mais informações</a></p>
+            <h4>Operações ternarias</h4>
+            <p>em casos que temos apenas uma condição (somente um if else), podemos utilizar a operação ternaria</p>
+            <p>(condição) ? 'Valor se verdadeiro' : 'Valor se falso' </p>
             <h4>Para validação de condições, temos diversos operadores como:</h4>
             <p>< menor que </p>
             <p>> maior que</p>
@@ -253,6 +258,8 @@
             <p>Fora do constructor podemos definir métodos, que basicamente são funções que ao serem invocadas executam o seu código</p>
             <p>E ao final da classe definimos os getters e setters, que basicamente são propriedades do objeto instanciado que vai recuperar os dados da classe no getter e definir no setter</p>
             <p>Junto com os módulos, o torna uma poderoso paradigma de programação avançada</p>
+            <h4>This</h4>
+            <p>o this.variavel, muito utilizado, o this sempre se refere ao escopo de quem chama o this.</p>
             <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes" target="_blank">Para mais informações</a></p>
         </section>
         <hr>
@@ -271,7 +278,29 @@
             <p>}).catch((erro) => {</p>
             <p>console.error(erro) </p>
             <p>})</p>
-            
+        </section>
+        <hr>
+        <section>
+            <h1>Fetch</h1>
+            <p>A function fetch é mais uma das ferramentas que fazem a diferença para requisições ajax</p>
+            <p>Requisições ajax nos permitem fazer requisições em api e adquirir seus dados</p>
+            <p>Com o fetch podemos realizar as requisições e tambem enviar os cabeçalhos http, nos retorna uma promessa, por isso usamos .then</p>
+            <p>fetch('url', cabeçalhos (opcional)).then((resposta) => {resposta.json()}).then((json) => {console.log(json)}</p>
+            <p>E tambem devemos tratar as respostas para ficar "legível".</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">Para mais informações</a></p>
+        </section>
+        <hr>
+        <section>
+            <h1>Async e Await</h1>
+            <p>
+                Ferramenta que nos permite rodar um código de forma assíncrona, similar ao promise.
+            </p>
+            <p>async function acao(){</p>
+                <p>const resposta = await fecth(url) </p>
+                <p>console.log(faz um ação)</p>
+                <p>}</p>
+                <p>acao()</p>
+            <p>Declarando que a função  assíncrona e o seu dado depende de uma promise e informamos os sistema que ele deve aguardar a resposta com await</p>
         </section>
     </article>
 
