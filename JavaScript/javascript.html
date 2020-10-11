@@ -255,6 +255,24 @@
             <p>Junto com os módulos, o torna uma poderoso paradigma de programação avançada</p>
             <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes" target="_blank">Para mais informações</a></p>
         </section>
+        <hr>
+        <section>
+            <h1>Promises</h1>
+            <p>Outra poderosa ferramenta são as promises, que como diz o nome, é um promessa, que retorna um valor caso a promessa seja cumprida, e o erro caso ocorra algum problema</p>
+            <p>Geralmente instanciada como return de uma function que tem que aguardar a resposta de alguma requisição</p>
+            <p>functino fazerAlgo(){</p>
+            <p>return new Promise((resolve, reject) => { </p>
+            <p>bloco de código a ser executado</p>
+            <p>resolve(parametro da resposta)</p>
+            <p>if (error) reject(error)</p>
+            <p>})}</p>
+            <p>fazerAlgo().then((resposta) => {</p>
+            <p>código para quando a promisse retorne um resultado sem erro</p>
+            <p>}).catch((erro) => {</p>
+            <p>console.error(erro) </p>
+            <p>})</p>
+            
+        </section>
     </article>
 
 </body>
