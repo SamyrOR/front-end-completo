@@ -33,6 +33,15 @@
             <p>Funções podem receber parametros (dados informados essenciais para execução do código)</p>
             <h4>Escopo léxico</h4>
             <p>Em qualquer lugar do código, ao chamar uma função, ela se lembra da onde ela está e quem são seus parentes</p>
+            <h4>Function Geradora</h4>
+            <p>Função que permite controlar as etapas de execução da função</p>
+            <p>function* nomeDaFuncao () {</p>
+                <p>yield campo 1 </p>
+                <p>yield campo 2 </p>
+                <p>yield campo 3 </p>
+            <p>}</p>
+            <p>Declaramos com um * após a palavra reservada function. e para campo (yield), chamaos com .next()</p>
+            <p>nomeDaFuncao().next(), que nos retorna o valor e done, que é um boolean, que indica o fim da função quando ela nao possui mais yields</p>
             <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es" target="_blank">Para mais informações</a></p>
         </section>
         <hr>
@@ -48,7 +57,12 @@
             <p>lista.shift(), remove e retorna o primeiro item do array</p>
             <p>lista.indexOf('item'), retorna a posição em que se encontra o item informado no parametro, caso o item não seja encontrado retorna -1</p>
             <p>lista.join('/'), concatena todos os items do array com o caracter informado como parametro</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Arrays" target="_blank">Para mais informações</a></p>
+            <h4>Com o ES6 foram introduzidos mais alguns métodos para arrays</h4>
+            <p>forEach( (param) => { função de callback }; Executa para cada item dentro do array, o código na função</p>
+            <p>map( (param) => { função de callback }; Executa tambem uma função para cada elemento, porem retorna um novo array</p>
+            <p>filter( (param) => { função de callback }; Filtra os elementos do array, de acordo com a instrução passada na função de callback e retorna um novo array</p>
+            <p>reduce( (acumulador, valor atual) => { função de callback }; Reduz o array e retorna somente um número, recebe como parâmetro o acumulador e o valor que se deve iniciar a soma</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#" target="_blank">Para mais informações</a></p>
         </section>
         <hr>
         <section>
@@ -260,6 +274,8 @@
             <p>Junto com os módulos, o torna uma poderoso paradigma de programação avançada</p>
             <h4>This</h4>
             <p>o this.variavel, muito utilizado, o this sempre se refere ao escopo de quem chama o this.</p>
+            <h4>Polimorfismo</h4>
+            <p>Polimorfismo e quando sobrescrevemos algum método da classe pai, dentro de uma classe filho, sem alterar assim o método para outras classes parentes </p>
             <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes" target="_blank">Para mais informações</a></p>
         </section>
         <hr>
