@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SASS</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <article>
+            <section>
+                <h1>SASS</h1>
+                <p>Pre processador que facilita e muito a escrita de arquivos css com uma sintaxe bem elaborada, com variáveis, loops, condicionais. funções, mixins (muito importante)</p>
+                <p>Com o SASS podemos escrever tanto em SASS quanto SCSS, está ultima mais utilizada pois se parece mais com o próprio CSS.</p>
+            </section>
+            <section>
+                <h1>Criando o arquivo</h1>
+                <p>Para criação do arquivo, basta adicionar a extensão .sass ou .scss e usarmos a sintaxe</p>
+                <p>Porem o navegador lê apenas arquivos CSS, então devemos sempre compilar o arquivo .scss para CSS</p>
+                <p>Para que o próprio SASS gere o arquivo CSS quando modificamos o arquivo SCSS, é bem simples, basta adicionar o seguinte comando ao terminal: </p>
+                <p>sass --watch arquivo-origem.scss:arquivo-destino.css</p>
+                <p>Que para cada mudança no arquivo, o próprio SASS irá compilar para o CSS, podemos tambem utilizar o mesmo comando para monitorar pastas inteiras com varios arquivos SCSS param serem compilados CSS</p>
+                <p>sass --watch pasta-origem:pasta-destino</p>
+            </section>
+        </article>
+    </body>
+</html>
