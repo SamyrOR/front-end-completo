@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BEM</title>
+    </head>
+    <body>
+        <h1>Arquitetura de CSS BEM</h1>
+        <p>BEM é uma arquitetura de CSS que traz diversos benefícios, a convenção de nomeação das classes, modularização, reusabilidade, facil leitura e entendimento e um css bem estruturado</p>
+        <p>BEM = Block Element Modifier</p>
+        <p>Para a arquitetura temos algumas convenções</p>
+        <h4>Block</h4>
+        <p>Significa o bloco, onde os elementos são dispostos, como um menu que tem diversos items</p>
+        <p>.bloco</p>
+        <p>Em blocos nao podemos usar dependência hierárquica, e tambem devemos apenas usar CLASS (.), sem id ou tag</p>
+        <h4>Element</h4>
+        <p>O elemento que se encontra dentro deu um bloco</p>
+        <p>.bloco__elemento</p>
+        <p>Todo elemento é tem sua class com o primeiro nome ao bloco que se refere, seguido de 2 underlines identificando um elemento</p>
+        <p> Se temos elemento dentro de elementos em um bloco, utilizamos sempre apenas o nome do bloco e do elemento em questão .bloco_elemento-filho e não .bloco__elemento-pai__elemento--filho</p>
+        <h4>Modifier</h4>
+        <p>Significa o modificador, como uma cor, um estado, um tamanho, etc, tudo que modifica o elemento ou o bloco para um outro estado alem do natural</p>
+        <p>.bloco--modificador</p>
+        <p>ou</p>
+        <p>.bloco__elemento--modificador</p>
+        <p>O modificador é sempre precedido por dos hifens -- identificando como um modificador</p>
+        <h4>Considerações</h4>
+        <p>Todo identificador deve ser independente e não extremamente especifico</p>
+        <p>
+            <a target="_blank" href="https://medium.com/trainingcenter/bem-em-5min-f5c80fd23439">https://medium.com/trainingcenter/bem-em-5min-f5c80fd23439</a>
+        </p>
+        <p>
+            <a target="_blank" href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/</a>
+        </p>
+        <p>
+            <a target="_blank" href="http://getbem.com/naming/">http://getbem.com/naming/</a>
+        </p>
+    </body>
+</html>
