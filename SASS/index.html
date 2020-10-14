@@ -21,6 +21,22 @@
                 <p>sass --watch arquivo-origem.scss:arquivo-destino.css</p>
                 <p>Que para cada mudança no arquivo, o próprio SASS irá compilar para o CSS, podemos tambem utilizar o mesmo comando para monitorar pastas inteiras com varios arquivos SCSS param serem compilados CSS</p>
                 <p>sass --watch pasta-origem:pasta-destino</p>
+                <h4>Tipos de saída</h4>
+                <p>Temos como definir o estilo de saída do CSS com a flag --style estilo sendo eles:</p>
+                <p>--style nested - que aninha os elementos, quase nenhum diferença, apenas na indentação</p>
+                <p>--style expanded - respeita os espaços e pula linha entre as regras do arquivo salvo</p>
+                <p>--style compact - as propriedades ficam todas na mesma linha</p>
+                <p>--style compressed - minifica o arquivo de saída CSS</p>
+                <h4>Comentários</h4>
+                <p>Para comentar os arquivos SASS  é utilizado a mesma sintaxe do CSS /* Comentario */</p>
+                <p>
+                    Será gerado no arquivo CSS e exibido normalmente, mas para os casos  em que usamos outputs minificados para o scss (--style compressed) a seção comentada desaparece, para resolver isto basta adicionar um ! logo após o /*
+                </p>
+                <p>Ficando /*! Comentario */</p>
+                <p> E para que o comentario não apareça no arquivo CSS gerado, basta comentar com // Comentario</p>
+            </section>
+            <section>
+
             </section>
         </article>
     </body>
