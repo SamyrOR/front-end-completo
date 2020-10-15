@@ -1,0 +1,51 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  width: 1024px;
+  justify-content: space-between;
+  margin: auto;
+  padding: 10px;
+  height: 50px;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+.menu-list li {
+  list-style: none;
+}
+.menu-list li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #909d1f;
+}
+.menu-list li a:hover {
+  background-color: #909d1f;
+  color: #b536ff;
+}
+
+/* Exemplo de código BEM usando SASS
+.menu {
+    background-color: #000;
+    &__title{
+        background-color: #000;
+        &--underline {
+            background-color: #000;
+        }
+    }
+}
+*/
+
+/*# sourceMappingURL=style.css.map */

@@ -28,12 +28,37 @@
                 <p>--style compact - as propriedades ficam todas na mesma linha</p>
                 <p>--style compressed - minifica o arquivo de saída CSS</p>
                 <h4>Comentários</h4>
-                <p>Para comentar os arquivos SASS  é utilizado a mesma sintaxe do CSS /* Comentario */</p>
+                <p>Para comentar os arquivos SASS  é utilizado a mesma sintaxe do CSS /* Comentário */</p>
                 <p>
-                    Será gerado no arquivo CSS e exibido normalmente, mas para os casos  em que usamos outputs minificados para o scss (--style compressed) a seção comentada desaparece, para resolver isto basta adicionar um ! logo após o /*
+                    Será gerado no arquivo CSS e exibido normalmente, mas para os casos  em que usamos outputs minificados para o scss (--style compressed) a sessão comentada desaparece, para resolver isto basta adicionar um ! logo após o /*
                 </p>
-                <p>Ficando /*! Comentario */</p>
-                <p> E para que o comentario não apareça no arquivo CSS gerado, basta comentar com // Comentario</p>
+                <p>Ficando /*! Comentário */</p>
+                <p> E para que o comentário não apareça no arquivo CSS gerado, basta comentar com // Comentário</p>
+                <h4>Aninhamento</h4>
+                <p>Com o SASS para escrita de CSS em que usamos seletores descendentes ( div p { }), podemos realizar a escrita de forma aninhada</p>
+                <p>.minhaclasse {</p>
+                <p>propriedade: valor;</p>
+                <p>elemento-descendente {</p>
+                <p>propriedade: valor;</p>
+                <p>}</p>
+                <p>}</p>
+                <p>Que o CSS gerado será separado colocando os elementos descendentes de acordo com a sintaxe CSS</p>
+                <p>Dentro do aninhamento, não precisamos escrever novamente os seletores pai, basta adicionar &:hover por exemplo</p>
+                <h4>Interpolação</h4>
+                <p>Comparável ao eval do JS, a interpolação, transforma sempre irá exibir o conteúdo da variável e não o seu nome em certos casos. #{$variável}</p>
+                <h4>Namespace</h4>
+                <p>Quando temos propriedades como o font, onde temos, size, weight, family, etc. Para evitar declarar como o CSS comum onde nomeados cada item, podemos criar algo semelhante a:</p>
+                <p>font:{</p>
+                <p>size: 10px;</p>
+                <p>weight: bold;</p>
+                <p>family: 'Arial';</p>
+                <p>}</p>
+                <h4>Variáveis</h4>
+                <p>Podemos declarar variáveis em SASS usando $nome-da-variavel, assim como qualquer linguagem, a variável respeita o escopo em que é gerada</p>
+                <p>Devemos evitar utilizar nomes muito específicos como cores $red: red; quando quisermos mudar a cor, teremos que mexer em toda a estrutura pois, utilizamos o nome red e em outra cor dificultara a a leitura do código, devemos utilizar nomes mais globais como, $primary-color: blue;</p>
+                <h4>Terminal SASS</h4>
+                <p>Podemos interagir com o SASS através do próprio terminal, para criação de variáveis e cálculos com cores etc, basta digitar: </p>
+                <p>sass -i</p>
             </section>
             <section>
 

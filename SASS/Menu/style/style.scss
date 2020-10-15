@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+$cor-primaria:  rgb(181, 54, 255);
+$cor-secundaria: rgb(144, 157, 31);
+$container-largura: 1024px;
+header {
+    display: flex;
+    width: $container-largura;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+}
+.menu-list {
+    display: flex;
+    align-items: center;
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            padding: 10px;
+            color: $cor-secundaria;
+            &:hover {
+                background: {
+                    color: $cor-secundaria;
+                }
+                color: $cor-primaria;
+            }
+        }
+    }
+}
+/* Exemplo de código BEM usando SASS
+.menu {
+    background-color: #000;
+    &__title{
+        background-color: #000;
+        &--underline {
+            background-color: #000;
+        }
+    }
+}
+*/
