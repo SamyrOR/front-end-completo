@@ -59,6 +59,23 @@
                 <h4>Terminal SASS</h4>
                 <p>Podemos interagir com o SASS através do próprio terminal, para criação de variáveis e cálculos com cores etc, basta digitar: </p>
                 <p>sass -i</p>
+                <h4>Tipos de dados</h4>
+                <p>Podemos armazenar em variaveis, os seguintes tipos de dados:</p>
+                <p>$variavel: 'string'; que armazena textos</p>
+                <p>$variavel: 10; números, que representa quantidade e podendo ter medidas (px, em, etc.</p>
+                <p>$variavel: #FFF; cores em qualquer </p>
+                <p>$variavel: boolean; true ou false</p>
+                <p>$variavel: '10px 10px, 25px 25px'; que armazena textos</p>
+                <p>$variavel: ('key1': value1, 'key2': value2); que se comportam basicamente como literals do js, recebendo chave e valor, para resgatar o valor informamos map-get($mapa, chave1)</p>
+                <p>Para identificarmos o tipo da váriavel podemos utilizar type-of($variavel)</p>
+                <h4>Imports</h4>
+                <p>Com a sintaxe @import, podemos importar e utilizar outros arquivos scss, css e urls dentro do nosso arquivo</p>
+                <p>@import 'variaveis.scss';</p>
+                <p>@import url('https://fonts.googleapis.com/css?family=Roboto');<p>
+                <h4>Uses</h4>
+                <p>Devido a problemas com os imports, a equipe do sass recomenda atualmente o uso de @use, basicamente faz a mesma função, mas com limitações de escopo</p>
+                <p>Basta usar @use "src/variaveis"</p>
+                <p>functions, mixins e variaveis recebem o namespace do module que foi importado, como variaveis.nome-da-variavel na declaração.</p>
             </section>
             <section>
 

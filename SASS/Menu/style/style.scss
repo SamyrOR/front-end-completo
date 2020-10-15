@@ -9,7 +9,7 @@ body {
 $cor-primaria:  rgb(181, 54, 255);
 $cor-secundaria: rgb(144, 157, 31);
 $container-largura: 1024px;
-header {
+.cabecalho {
     display: flex;
     width: $container-largura;
     justify-content: space-between;
@@ -18,24 +18,28 @@ header {
     height: 50px;
     align-items: center;
 }
-.menu-list {
-    display: flex;
-    align-items: center;
-    li {
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
         list-style: none;
-        a {
-            text-decoration: none;
-            padding: 10px;
-            color: $cor-secundaria;
-            &:hover {
-                background: {
-                    color: $cor-secundaria;
-                }
-                color: $cor-primaria;
+
+    }
+    &__link {
+        text-decoration: none;
+        padding: 10px;
+        color: $cor-secundaria;
+        &:hover {
+            background: {
+                color: $cor-secundaria;
             }
+            color: $cor-primaria;
         }
     }
 }
+
 /* Exemplo de código BEM usando SASS
 .menu {
     background-color: #000;

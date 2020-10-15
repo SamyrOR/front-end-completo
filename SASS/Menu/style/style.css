@@ -9,7 +9,7 @@ body {
   padding: 0;
 }
 
-header {
+.cabecalho {
   display: flex;
   width: 1024px;
   justify-content: space-between;
@@ -19,19 +19,19 @@ header {
   align-items: center;
 }
 
-.menu-list {
+.menu__list {
   display: flex;
   align-items: center;
 }
-.menu-list li {
+.menu__item {
   list-style: none;
 }
-.menu-list li a {
+.menu__link {
   text-decoration: none;
   padding: 10px;
   color: #909d1f;
 }
-.menu-list li a:hover {
+.menu__link:hover {
   background-color: #909d1f;
   color: #b536ff;
 }
