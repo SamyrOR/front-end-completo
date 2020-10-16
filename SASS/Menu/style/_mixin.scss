@@ -1,0 +1,40 @@
+@use './variables';
+@mixin radius-left ($radius:variables.$radius){
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+@mixin radius-right ($radius:variables.$radius){
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+@mixin menu ($cor-primaria: variables.$cor-primaria, $cor-secundaria:variables.$cor-secundaria){
+    .menu {
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+        &__item {
+            list-style: none;
+            &:nth-child(1) .menu__link {
+                background-color: blue ;
+                @include radius-left()
+            }
+            &:last-child .menu__link {
+                background-color: red ;
+                @include radius-right()
+            }
+            
+        }
+        &__link {
+            text-decoration: none;
+            padding: 10px;
+            color: $cor-secundaria;
+            &:hover {
+                background: {
+                    color: $cor-secundaria;
+                }
+                color: $cor-primaria;
+            }
+        }
+    }
+}

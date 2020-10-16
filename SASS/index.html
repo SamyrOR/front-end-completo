@@ -76,6 +76,22 @@
                 <p>Devido a problemas com os imports, a equipe do sass recomenda atualmente o uso de @use, basicamente faz a mesma função, mas com limitações de escopo</p>
                 <p>Basta usar @use "src/variaveis"</p>
                 <p>functions, mixins e variaveis recebem o namespace do module que foi importado, como variaveis.nome-da-variavel na declaração.</p>
+                <h4>Partials</h4>
+                <p>Partials são arquivos parciais de SCSS, ou seja, um scss com mixins, um scss com as variaveis, etc, declaramos um partial com um _ antes do nome, ex: _mixins.scss</p>
+                <p>A vantagem é que ao ser importado no código principal, eles são ignorados e não geram arquivos CSS separados.</p>
+                <h4>Mixins</h4>
+                <p>Outro item extremamente importante do SASS são os mixins, conjuntos de códigos de estilo pre definidos que para usar em uma regra basta adicionar @include, que o SASS trata de repassar as informações corretamente </p>
+                <p>Temos o mixin sem parâmetros que retorna apenas os dados informados @mixin colorir { propriedade: valor; propriedade: valor; }</p>
+                <p>Temos o mixin com parâmetros que é bastante utilizados pois deixa ainda mais versátil @mixin colorir (parametro, parametro) {propriedade: parametro, propriedade: parametro;</p>
+                <p>Temos o mixin com parâmetros e valores default, caso o parâmetro não seja informado terá um valor padrão, sempre valores default devem estar no ultimo item do parametro @mixin colorir (parametro, parametro: valor) {propriedade: parametro, propriedade: parametro;</p>
+                <p>Temos o mixin com parâmetros infinitos, retornando uma lista assim como o operador rest do JS, @mixin colorir, tambem deve ser sempre o ultimo elemento(parametros...) {propriedade: parametro, propriedade: parametro;</p>
+                <h4>Extends</h4>
+                <p>@extend é como o do JS em POO, ele estende a classe pai adicionando as usas propriedades.</p>
+                <h5>Mixin ou Extend?</h5>
+                <p>Como ambos são bem parecidos, devemos utilizar mixins quando recebemos parametros, e extend para deixar o código semântico, quando herdo propriedades entre classes ligadas, caso contrario tambem podemos utilizar mixin. </p>
+                <p>Operações com números</p>
+                <p>Os operadores são os aritméticos e relacionais como os de JS</p>
+                <p>Salves algumas observações: 1-) Não podemos fazer operações com medidas diferentes. 2-)Não podemos fazer divisão fora dos parenteses (20px / 4); 3-) Não devemos multiplicar os números pelas próprias medidas ex: 20px * 20px, devemos utilizar o multiplicador apenas número, ex 20px * 20  </p>
             </section>
             <section>
 

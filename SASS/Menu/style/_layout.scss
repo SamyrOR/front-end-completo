@@ -1,0 +1,10 @@
+@use './variables';
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: variables.$container-largura;
+    margin: auto;
+    padding: 10px;
+    height: 50px;
+}

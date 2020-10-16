@@ -11,12 +11,12 @@ body {
 
 .cabecalho {
   display: flex;
-  width: 1024px;
   justify-content: space-between;
+  align-items: center;
+  width: 1024px;
   margin: auto;
   padding: 10px;
   height: 50px;
-  align-items: center;
 }
 
 .menu__list {
@@ -26,14 +26,24 @@ body {
 .menu__item {
   list-style: none;
 }
+.menu__item:nth-child(1) .menu__link {
+  background-color: blue;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.menu__item:last-child .menu__link {
+  background-color: red;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .menu__link {
   text-decoration: none;
   padding: 10px;
-  color: #909d1f;
+  color: #CCC;
 }
 .menu__link:hover {
-  background-color: #909d1f;
-  color: #b536ff;
+  background-color: #CCC;
+  color: #FFF;
 }
 
 /* Exemplo de código BEM usando SASS

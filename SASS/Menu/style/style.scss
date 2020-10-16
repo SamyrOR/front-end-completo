@@ -1,45 +1,9 @@
-*{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-$cor-primaria:  rgb(181, 54, 255);
-$cor-secundaria: rgb(144, 157, 31);
-$container-largura: 1024px;
-.cabecalho {
-    display: flex;
-    width: $container-largura;
-    justify-content: space-between;
-    margin: auto;
-    padding: 10px;
-    height: 50px;
-    align-items: center;
-}
-.menu {
-    &__list {
-        display: flex;
-        align-items: center;
-    }
-    &__item {
-        list-style: none;
+@use './base';
 
-    }
-    &__link {
-        text-decoration: none;
-        padding: 10px;
-        color: $cor-secundaria;
-        &:hover {
-            background: {
-                color: $cor-secundaria;
-            }
-            color: $cor-primaria;
-        }
-    }
-}
+@use './layout';
 
+@use './mixin';
+@include mixin.menu(#FFF, #CCC);
 /* Exemplo de código BEM usando SASS
 .menu {
     background-color: #000;
