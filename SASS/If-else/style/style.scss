@@ -1,0 +1,58 @@
+@mixin tema($horario) {
+    @if ($horario == manha) {
+        background-color: #FFF;
+        color: blue;
+    } @else if ($horario == tarde) {
+        background-color: blue;
+        color: yellow;
+    } @else if ($horario == noite) {
+        background-color: black;
+        color: white;
+    } @else {
+        background-color: yellow;
+        color: #FFF;
+    }
+}
+@mixin colorir ($cor, $propriedade, $tom) {
+    @if ($tom == 1) {
+        #{$propriedade}: lighten($cor, 20%)
+    } @else if ($tom == 2) {
+        #{$propriedade}: lighten($cor, 10%)
+    } @else if ($tom == 3) {
+        #{$propriedade}: lighten($cor, 0%)
+    } @else if ($tom == 4) {
+        #{$propriedade}: darken($cor, 10%)
+    } @else if ($tom == 5) {
+        #{$propriedade}: darken($cor, 20%)
+    } 
+}
+@for $i from 1 through 4{
+    .div-item#{$i} { width: 12px * $i;}
+}
+$redes-sociais: (facebook, twitter, youtube);
+@each $rede in $redes-sociais{
+    .#{$rede}-icon { background-image: url('./#{$rede}-icon.png');;
+} 
+}
+%col-l {
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    float: left;
+}
+$count: 1;
+$colunas: 12;
+$tam-coluna: 100% / $colunas;
+$aux: $colunas;
+@while $count <= $aux {
+    .col-l#{$colunas}{
+        width: $tam-coluna * $colunas;
+        @extend %col-l;
+        background-color: grey;
+    }
+    $count: $count + 1;
+    $colunas: $colunas - 1;
+}
+body{
+    @include colorir(rgb(27, 196, 32),color, 1)
+}
