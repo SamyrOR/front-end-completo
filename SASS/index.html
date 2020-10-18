@@ -94,13 +94,7 @@
                 <p>Salves algumas observações: 1-) Não podemos fazer operações com medidas diferentes. 2-)Não podemos fazer divisão fora dos parenteses (20px / 4); 3-) Não devemos multiplicar os números pelas próprias medidas ex: 20px * 20px, devemos utilizar o multiplicador apenas número, ex 20px * 20  </p>
                 <h4>Operadores com cores</h4>
                 <p>Podemos usar com cores alguns operadores aritméticos como +, - e *, atenção que para cores rgba, o alpha deve sempre ser o mesmo</p>
-                <p>E temos também algumas opções com funções:</p>
-                <p>darken(cor, percentagem), pare escurecer uma cor</p>
-                <p>lighten(cor, percentagem), pare clarear uma cor</p>
-                <p>saturate(cor, percentagem), pare aumentar a saturação de uma cor</p>
-                <p>desaturate(cor, percentagem), pare diminuir a saturação de uma cor</p>
-                <p>adjust-hue(cor, percentagem), aumenta ou diminui a tonaldade de uma cor</p>
-                <p>hls(grau-da-cor, sautração-%<, brilho-%; função para escrever cores através do hls</p>
+                
                 <h4>Operadores com string</h4>
                 <p>Para string temos apenas o + que serve para concatena-las</p>
                 <h4>Diretivas de controle</h4>
@@ -109,6 +103,40 @@
                 <p>O @each seria como o forEach de arrays, pega listas e itera sobre cada item @each $item in @lista {font-size: item;} </p>
                 <p>O @for é exatamente como for de JS @for $i from 1 through 3 {código} </p>
                 <p>O @while tambem é exatamente como em JS, @while condição { código }</p>
+                <h4>Funções</h4>
+                <p>As @function, tambem funcionam igualmente em JS, porem deve sempre terem um return:</p>
+                <h4>Funções nativas</p>
+                <h5>Funções nativas para cores:</h4>
+                <p>darken(cor, percentagem), pare escurecer uma cor</p>
+                <p>lighten(cor, percentagem), pare clarear uma cor</p>
+                <p>saturate(cor, percentagem), pare aumentar a saturação de uma cor</p>
+                <p>desaturate(cor, percentagem), pare diminuir a saturação de uma cor</p>
+                <p>adjust-hue(cor, percentagem), aumenta ou diminui a tonaldade de uma cor</p>
+                <p>hls(grau-da-cor, sautração-%<, brilho-%; função para escrever cores através do hls</p>
+                <p>complement(cor); identifica o complemento de uma cor</p>
+                <p>invert(cor); identifica a cor inversa de uma cor</p>
+                <p>alpha(cor); retorna o alpha de uma cor</p>
+                <p>opacify(cor, valor) ou fade-in(cor, valor); retorna a cor mais opaca</p>
+                <p>transparentize(cor, valor) ou fade-out(cor, valor); retorna a cor mais transparente</p>
+                <h5>Funções nativas para strings:</h4>
+                <p>unquote(string) e quote(string), remove e adiciona aspas respectivamente</p>
+                <p>str-length(string), retorna o tamanho da string</p>
+                <p>to-upper-case(string) e to-lower-case(string), transforma a string em maiúscula ou minúscula respectivamente</p>
+                <h5>Funções nativas para números:</h4>
+                <p>percentage(número), retorna a percentagem do número</p>
+                <p>roud(número), arredonda o número</p>
+                <p>ceil(número), sempre arredondará o número para cima</p>
+                <p>floor(número), sempre arredondará o número para baixo</p>
+                <p>min(números) e max(números), retorna o menor e o maior valor de um número respectivamente</p>
+                <p>random(limite)</p>
+                <h5>Funções nativas para listas(arrays)</h5>
+                <p>length($lista); retorna o tamanho da lista</p>
+                <p>nth(lista, posição); retorna a posição do item.</p>
+                <p>set-nth(lista, posição); retorna a posição do item.</p>
+                <h5>Funções nativas para listas(arrays)</h5>
+                <p>map-get(mapa, chave) retorna o valor da chave passada no parâmetro</p>
+                <p>map-merge(mapa1, mapa2) retorna retorna um novo mapa a partir da junção dos dois passados no parâmetro</p>
+                <p>map-remove(mapa, chave)s remove as chaves informadas</p>
             </section>
             <section>
 
