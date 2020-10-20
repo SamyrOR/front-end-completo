@@ -1,0 +1,10 @@
+h1 {
+    color: blue;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/webpack-1-1174980.png');
+    background-position: center center;
+    background-size: cover;
+}
