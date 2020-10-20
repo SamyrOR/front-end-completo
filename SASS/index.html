@@ -59,6 +59,9 @@
                 <h4>Terminal SASS</h4>
                 <p>Podemos interagir com o SASS através do próprio terminal, para criação de variáveis e cálculos com cores etc, basta digitar: </p>
                 <p>sass -i</p>
+                <h4>Placeholders</h4>
+                <p>Placeholder são blocos de regras definida no SASS, que não transpilam para CSS devido ao % que o precede</p>
+                <p>É uma "pseudo-classe", que  ao ser usado com @extend, é muito util para declarar propriedades em comum</p>
                 <h4>Tipos de dados</h4>
                 <p>Podemos armazenar em variaveis, os seguintes tipos de dados:</p>
                 <p>$variavel: 'string'; que armazena textos</p>
@@ -94,7 +97,6 @@
                 <p>Salves algumas observações: 1-) Não podemos fazer operações com medidas diferentes. 2-)Não podemos fazer divisão fora dos parenteses (20px / 4); 3-) Não devemos multiplicar os números pelas próprias medidas ex: 20px * 20px, devemos utilizar o multiplicador apenas número, ex 20px * 20  </p>
                 <h4>Operadores com cores</h4>
                 <p>Podemos usar com cores alguns operadores aritméticos como +, - e *, atenção que para cores rgba, o alpha deve sempre ser o mesmo</p>
-                
                 <h4>Operadores com string</h4>
                 <p>Para string temos apenas o + que serve para concatena-las</p>
                 <h4>Diretivas de controle</h4>
@@ -105,6 +107,7 @@
                 <p>O @while tambem é exatamente como em JS, @while condição { código }</p>
                 <h4>Funções</h4>
                 <p>As @function, tambem funcionam igualmente em JS, porem deve sempre terem um return:</p>
+                <p>@function cubo($valor) {código, return $resulado}</p>
                 <h4>Funções nativas</p>
                 <h5>Funções nativas para cores:</h4>
                 <p>darken(cor, percentagem), pare escurecer uma cor</p>

@@ -1,0 +1,17 @@
+@function cubo($valor) {
+    $resultado: $valor * $valor * $valor;
+    $und: 'px';
+    @return unquote($resultado + $und);
+}
+@function potencia($base, $expoente, $und: px) {
+    $count: 1   ;
+    @while $count <= $expoente {
+        $base: $base * $expoente;
+        $count: $count + $count;    
+    }
+    @return unquote($base + $und);
+}
+h1 {
+    font-size: cubo(5);
+    font-weight: potencia(1, 1, em);
+}
