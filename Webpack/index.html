@@ -1,0 +1,22 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack</title>
+</head>
+<body>
+    <h1>Webpack</h1>
+    <p>É uma ferramenta amplamente utilizada para criação de bundles, ele organiza vários arquivos em um só junto de todas as suas dependências</p>
+    <h4>Os 5 principais elementos do webpack:</h4>
+    <p>Entry: sãos os arquivos de entradas, que possui as árvores de dependências</p>
+    <p>Output: são os arquivos de saída, local e nome do arquivo</p>
+    <p>Loaders: nativamente o webpack suporta apenas arquivos JS e JSON, porem com loaders, ele pode suportar inúmeros outros arquivos</p>
+    <p>Plugins: traz funcionalidades extras para o webpack</p>
+    <p>Mode: Desenvolvimento ou produção , diferencia o retorno dos arquivos se devem ser ja minificados como produção, ou se deve ser indentado como desenvolvimento</p>
+    <h4>Estrutura</h4>
+    <p>Por convenção criamos a pasta src que contem os recursos para desenvolvimento, e a pasta dist, que será o destino para os arquivos gerados pelo webpack</p>
+    <p>O principal arquivo gerado é o main.js, e na pasta raiz devemos sempre ter o arquivo webpack.config.js</p>
+    <p>Para rodar o webpack com o arquivo de configuração criado, basta rodar <i> npx webpack --config webpack.config.js</i></p>
+    <p>Ou tambem podemos adicionar dentro dos scripts do package.json como "build": webpack --config webpack.config.js, e sempre que rodarmos <i> npm run build </i> nosso código será executado pelo webpack e criado os arquivos para produção ou desenvolvimento como descrito no arquivo de configuração</p>
+</body>
+</html>
