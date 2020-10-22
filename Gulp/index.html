@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gulp</title>
+    </head>
+    <body>
+        <h1>Gulp</h1>
+        <p>Gulp é um task runner que serve para facilitar tarefas do dia a dia como minificar arquivos, converter arquivos,e reduzir tamanho de imagens</p>
+        <p>Sua sintaxe é bem simples, basta instalar o gulp-cli globalmente e na pasta de seu projeto instalar o gulp localmente com --save-dev</p>
+        <p>Após instalado basta adicionar uma arquivo chamado gulpfile.js, dentro iremos adicionar as task, com functions, e para poder rodar a task, basta exporta-la com export.nome-da-task = task</p>
+        <p>Para rodar, informamos no terminal apenas gulp nome-da-task, caso o nome nao seja informado, o mesmo sempre procura-ra pela </p>
+        <p>Como podemos ter diversas tasks, temos como roda-las em paralelo ou em serie</p>
+        <p>Para utiliza-los, devemos antes de tudo importa-los com, const {series, parallel} = require('gulp')</p>
+        <h5>Series</h5>
+        <p>exports.nome-da-task = series(tasks, tasks, task), faz com a chamada de uma task, rode tasks definidas em sequencia </p>
+        <h5>Parallel</h5>
+        <p>exports.nome-da-task = parallel(tasks, tasks, task), faz com a chamada de uma task, rode tasks definidas em paralelo, todas ao mesmo tempo </p>
+        <p>Podemos tambem utilizar ambos aninhados, como dentro de uma series, rodar uma parallel</p>
+        <h4>src pipe e dest</h4>
+        <p>A função src(caminho/dos/arquivos), é a função responsável por localizar os arquivos</p>
+        <p>As funções pipe(...), são as funções responsáveis realizar as atividades e utilizar os plugins dentro de uma task, podendo ser mais de um pipe</p>
+        <p>A função dest, é a função responsável salvar os arquivos no desttino, é utilizada dentro de um pipe (.pipe(dest(destino/dos/arquivos)))</p>
+    </body>
+</html>
