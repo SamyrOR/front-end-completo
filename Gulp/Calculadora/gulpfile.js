@@ -1,10 +1,11 @@
-const {src, dest, parallel, series} = require('gulp');
+const {src, dest, parallel, series, watch} = require('gulp');
 const rename = require('gulp-rename');
 const minifyJs = require('gulp-uglify');
 const minifyCss = require('gulp-clean-css');
+const cssConcat = require('gulp-concat-css');
+const optImg = require('gulp-image');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
-const cssConcat = require('gulp-concat-css');
 
 function html(){
     return src('./src/html/*')
@@ -19,7 +20,7 @@ function css(){
     return src('./src/style/bundle/bundle.css')
         .pipe(minifyCss())
         .pipe(rename({extname: '.min.css'}))
-        .pipe(dest('./dist/assets/css'))
+        .pipe(dest('./dist/assets/style/'))
 }
 function js(){
     return src('./src/js/*')
@@ -30,6 +31,18 @@ function js(){
         .pipe(rename({extname: '.min.js'}))
         .pipe(dest('./dist/assets/js'))
 }
+function otimizeImg(){
+    return src('./src/images/*')
+        .pipe(optImg())
+        .pipe(dest('./dist/assets/image/'))
+}
 
-exports.default = parallel(html, series(concat, css), js)
-exports.css = series(concat, css)
+
+
+//exports.default = parallel(html, series(concat, css), js, otimizeImg)
+exports.default = () => {
+    watch('./src/html/*', html)
+    watch('./src/style/*.css', series(concat, css))
+    watch('./src/js/*', js)
+    watch('./src/images/*', otimizeImg)
+}

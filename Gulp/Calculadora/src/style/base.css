@@ -2,4 +2,10 @@ body {
     background-color: #555;
     color: #FFF;
     font-size: 15px;
+    font-family: sans-serif;
+}
+
+a {
+    color: #FFF;
+    font-size: 15px;
 }

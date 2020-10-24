@@ -3,6 +3,7 @@ const rename = require('gulp-rename');
 const minifyJs = require('gulp-uglify');
 const minifyCss = require('gulp-clean-css');
 const minifyImage = require('gulp-image');
+const gulpSass = require('gulp-sass');
 const babel = require('gulp-babel');
 
 function javaScript(){
@@ -20,6 +21,12 @@ function css(){
     .pipe(rename({extname: '.min.css'}))
     .pipe(dest('dist/assets/style/'))
 }
+function sass(){
+    return src('src/style/*.scss')
+    .pipe(gulpSass({outputStyle:'compressed'}))
+    .pipe(rename({extname:'.min.css'}))
+    .pipe(dest('dist/assets/style/'))
+}
 function images(){
     return src('src/images/*')
     .pipe(minifyImage())
@@ -27,5 +34,6 @@ function images(){
 }
 exports.js = javaScript;
 exports.css = css;
+exports.sass = sass;
 exports.images =  images;
-exports.minify = parallel(javaScript, css, images)
+exports.minify = parallel(javaScript, css, images, sass)
