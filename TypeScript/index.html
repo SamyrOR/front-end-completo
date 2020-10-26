@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF=8">
-        <meta content="width=device-width, initial-scale=1.0">
-        <title>TypeScript</title>
-    </head>
-    <body>
-        <h1>TypeScript</h1>
-        <p>TypeScript é um superset para JavaScript, adiciona tipagem, interface, e inúmeros outros recursos deixando a linguagem JavaScript ainda mais robusta e completa</p>
-    </body>
+  <head>
+    <meta charset="UTF=8" />
+    <meta content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript</title>
+  </head>
+  <body>
+    <h1>TypeScript</h1>
+    <p>
+      TypeScript é um superset para JavaScript, adiciona tipagem, interface, e
+      inúmeros outros recursos deixando a linguagem JavaScript ainda mais
+      robusta e completa
+    </p>
+    <h4>Modules</h4>
+    <p>
+      O TypeScript nativamente roda em <strong>script mode</strong> , considera
+      todos arquivos de type e javascript como um só, e o outro é o
+      <strong>module mode</strong>, que considera cada arquivo como um modulo, e
+      basta ter algum export em seu código que mudará automaticamente de mode.
+    </p>
+    <h4>Type Anotation</h4>
+    <p>
+      É a notação que utilizamos para identificar o tipo da variavel com
+      typescript
+    </p>
+    <h4>Tipos</h4>
+    <p>
+      Dentro do TypeScript temos os mesmo tipos que me JS, mas tambem podemos
+      criar tipos personalizados
+    </p>
+    <p>:string</p>
+    <p>:number</p>
+    <p>:boolean</p>
+    <p>:symbol</p>
+    <p>Devemos sempre evitar o tipo :any</p>
+    <p>:void, define que a função não terá retorno</p>
+    <p>undefined</p>
+    <p>null</p>
+    <p>:never, define que uma função nunca terá um retorno, usado em loops infinitos e criação de erros</p>
+    <p>:unknown, afirmo que o valor é desconhecido podendo ser atribuído um valor de qualquer tipo, porem uma vez atribuído a inferência serpa realizada e a variável passa a ser daquele tipo, e para utilização da variável devemos checar o tipo.</p>
+    <p>
+      Temos que ficar atentos a inerência, na declaração de variaveis não é
+      necessário declarar o tipo, pois ao ser adicionado valor irá aderir a
+      inerência, porem em funções, arrays e objetos literais devemos declarar o
+      tipo
+    </p>
+    <p>
+     <strong>// Funções</strong> 
+         function soma(x: number, y: number): number { return x + y; }
+    </p>
+    <p>
+        <strong>// Arrays</strong>
+        let arrayDeNumeros: Array<number> = [1, 2, 3];
+    </p>
+    <p>
+        let arrayDeNumeros2: number[] = [1, 2, 3];
+    </p>
+    <p>Em arrays tambem podemos utilizar readonly para definir arrays imutáveiss</p>
+    <p><strong>//Tuples</strong></p>
+    <p>São como arrays, porem definimos a quantidade de elementos e o tipo de cada elemento especificamente</p>
+    <p>const tupla1: [number, string] = [1, 'Samyr']</p>
+    <p>const tupla2: readonly [number, string] = [1, 'Samyr'], podemos deixa-las imutáveis com o readonly</p>
+    <p>const tupla3: [number, string, ...number[]] = [1, 'Samyr'], ou deixar mais próxima de uma array, informando que todos os outros elementos serão do tipo definido</p>
+    <p>
+        <strong>// Objetos</strong>
+        <p>
+            let pessoa: {nome: string, idade: number, adulto?: boolean} = {
+        </p>
+        idade: 30,
+        nome: 'Luiz'
+        };
+        <p>readonly chave: valor, priva nossa chave de ser alterada, é apenas leitura</p>
+        <p>[key: string]: unknown || objeto: Record< string, unknown>, deixa nosso objeto aberto para adicionar chaves em tempo de execução</p>
+    </p>
+    <p>
+        <strong>//Enum</strong>
+        <p>Estrutura de dados que permite adicionar um índice aos valores, enumerando meus items</p>
+        enum Cores { Vermelho //0, Azul //1 , Verde  //2 }
+    </p>
+  </body>
 </html>
