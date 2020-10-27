@@ -38,13 +38,21 @@
     <p>undefined</p>
     <p>null</p>
     <p>:never, define que uma função nunca terá um retorno, usado em loops infinitos e criação de erros</p>
-    <p>:unknown, afirmo que o valor é desconhecido podendo ser atribuído um valor de qualquer tipo, porem uma vez atribuído a inferência serpa realizada e a variável passa a ser daquele tipo, e para utilização da variável devemos checar o tipo.</p>
     <p>
-      Temos que ficar atentos a inerência, na declaração de variaveis não é
+      :unknown, afirmo que o valor é desconhecido podendo ser atribuído um valor de qualquer tipo, porem uma vez atribuído a inferência serpa realizada e a variável passa a ser daquele tipo, e para utilização da variável devemos checar o tipo.
+    </p>
+    <p> <strong>Union Type</strong> podemos definir mais de um tipo para variável ou parâmetro, adicionando o operador | entre cada tipo, ex: number | string | boolean</p>
+    <p> <strong>Alias</strong> podemos criar tipos com a palavra reservada type, ex: type Pessoa = { nome: 'string', sobrenome: 'string' }; type Cores = 'Vermelho' | 'Azul' | 'Amarelo'; type TypeParaFunction = (item: string(parametro tipado)) => string(tipo do retorno), por convenção sempre utilizar a primeira letra maiúscula em tipos personalizados</p>
+    <p> <strong>Structural Type</strong> significa que o TypeScript não é preso ao tipo do dado, se eu uso algum tipo personalizado, apenas a estrutura é exigida e não a declaração do tipo</p>
+    <p> <strong>Type Assertions</strong> quando trabalhos com items como o DOM que pode nos retornar um elemento ou null, devemos refinar a variável para garantir que há um dado, podendo ser com if() caso possa ou não ter, ou a palavra reservada 'as Elemento' quando temos certeza que existe o elemento</p>
+    <p>
+      Temos que ficar atentos a inerência, na declaração de variáveis não é
       necessário declarar o tipo, pois ao ser adicionado valor irá aderir a
       inerência, porem em funções, arrays e objetos literais devemos declarar o
       tipo
     </p>
+    <h4>Tipos literais</h4>
+    <p>São tipos definidos a partir de uma const, quando usamos let, podemos re atribuir valores para a variável com um tipo mais aberto, porem com const, o valor da variável se torna o seu tipo, nao podendo então ser trocado</p>
     <p>
      <strong>// Funções</strong> 
          function soma(x: number, y: number): number { return x + y; }
