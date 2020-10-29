@@ -86,5 +86,24 @@
         <p>Estrutura de dados que permite adicionar um índice aos valores, enumerando meus items</p>
         enum Cores { Vermelho //0, Azul //1 , Verde  //2 }
     </p>
+    <h4>Validando formulário com TS</h4>
+    <p><a href="./Estudo/front-end/index.html"></a></p>
+    <h4>Classes</h4>
+    <p>export class Empresa {</p>
+    <p>public readonly nome: string;</p>
+    <p>private readonly colaboradores: Colaborador[] = []</p>
+    <p>protected readonly cnpj: string;</p>
+    <p>constructor(nome: string, cnpj: string) {</p>
+    <p>this.nome = nome;</p>
+    <p>this.cnpj = cnpj; </p>
+    <p>adicionaColaboradores(colaborador: Colaborador): void{</p>
+    <p>this.colaboradores.push(colaborador);</p>
+    <p>}</p>
+    <p>Estrutura básica de uma class em TypeScript, declarando o tipo dos atributos antes da atribuição de valores no constructor</p>
+    <p>Para evitar ser tão verboso, podemos dentro do constructor informar os parâmetros e valores</p>
+    <h5>Modificadores de acesso public e private</h5>
+    <p>Com typescript conseguimos modificar o acesso dos atributos e métodos com a palavra reservada private e public</p>
+    <p>public: é o padrão quando não definimos o modificador, caso nao informamos ele sempre será public</p>
+    <p>private: priva o atributo ou método para que seja inacessível  fora da classe, muito util para segurança e proteção de dados que nao precisam ser acessíveis fora da classe, podendo anda assim serem modificados através de métodos públicos .</p>
   </body>
 </html>
