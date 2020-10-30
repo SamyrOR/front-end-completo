@@ -1,17 +1,21 @@
 //Classe
 export class Pessoa {
-  constructor(public nome: string, public sobrenome: string, private idade: number, protected cpf: string) {}
-  getIdade(): number {
-    return this.idade;
+  constructor(public nome: string, public sobrenome: string, private _idade: number, protected _cpf: string) {}
+  set idade(idade: number) {
+    // setter
+    this._idade = idade;
   }
-  getCpf(): string {
+  set cpf(cpf: string) {
+    this._cpf = cpf;
+  }
+  get cpf(): string {
+    //getter
     return this.cpf;
   }
   getNomeCompleto(): string {
     return `${this.nome} ${this.sobrenome}`;
   }
 }
-
 export class Aluno extends Pessoa {
   // extends = Herança
   constructor(nome: string, sobrenome: string, idade: number, cpf: string, public sala: number) {
