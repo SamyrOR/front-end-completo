@@ -45,6 +45,15 @@
     <p> <strong>Alias</strong> podemos criar tipos com a palavra reservada type, ex: type Pessoa = { nome: 'string', sobrenome: 'string' }; type Cores = 'Vermelho' | 'Azul' | 'Amarelo'; type TypeParaFunction = (item: string(parametro tipado)) => string(tipo do retorno), por convenção sempre utilizar a primeira letra maiúscula em tipos personalizados</p>
     <p> <strong>Structural Type</strong> significa que o TypeScript não é preso ao tipo do dado, se eu uso algum tipo personalizado, apenas a estrutura é exigida e não a declaração do tipo</p>
     <p> <strong>Type Assertions</strong> quando trabalhos com items como o DOM que pode nos retornar um elemento ou null, devemos refinar a variável para garantir que há um dado, podendo ser com if() caso possa ou não ter, ou a palavra reservada 'as Elemento' quando temos certeza que existe o elemento</p>
+    <p><strong>typeof e keyof</strong>, podemos pegar o typo de um objeto literal com typeof, e tambem podemos pegar todas as chaves de um objeto literal com keyof </p>
+    <p>Podemos usar chaves como para espelhar o mesmo tipo em outro type.</p>
+    <p>type tipo2 = {chave1 = Tipo1['chave1']</p>
+    <p><strong> this como tipo</strong>, podemos utilizar 'this' de um objeto como retorno de algum método, possibilitado assim que uma classe execute métodos em cadeia</p>
+    <p>calculadora(5).subtrai(1).dividir(2) //retorna 2 </p>
+    <p><strong>Generic Types</strong>: tipos genéricos assumem a forma através da inferência o tipo passado como argumento, para utilizar tipos genéricos em funções, adicionamos < T > logo após a declaração da função que ela assumirá o tipo inferido, podendo ser utilizado em diversos locais</p>
+    <p>meuArray< T > (items: T) : T ; se chamado passando um number ele terá um tipo number e um retorno do tipo number, se passado string agirá da mesma forma</p>
+    <p>podemos ter tipos genéricos em promisses e arrays, interfaces, e types, e tambem podemos definir um valor padrão < T = string></p>
+    <p>restrição em generics: constraints</p>
     <p>
       Temos que ficar atentos a inerência, na declaração de variáveis não é
       necessário declarar o tipo, pois ao ser adicionado valor irá aderir a
@@ -57,6 +66,7 @@
      <strong>// Funções</strong> 
          function soma(x: number, y: number): number { return x + y; }
     </p>
+      <p><strong>Overload com funções</strong>, overload de funções é quando deixamos dinâmico como os parâmetros são passados, e para cada parâmetro passado de forma diferente, temos uma saída diferente para a função</p>
     <p>
         <strong>// Arrays</strong>
         let arrayDeNumeros: Array<number> = [1, 2, 3];
@@ -89,7 +99,7 @@
     <h4>Validando formulário com TS</h4>
     <p><a href="./Estudo/front-end/index.html"></a></p>
     <h4>POO TypeScript</h4>
-    <h5>Classes</h5>
+    <h4>Classes</h4>
     <p>export class Empresa {</p>
     <p>public readonly nome: string;</p>
     <p>private readonly colaboradores: Colaborador[] = []</p>
@@ -107,24 +117,31 @@
     <p>public: é o padrão quando não definimos o modificador, caso nao informamos ele sempre será public</p>
     <p>private: priva o atributo ou método para que seja inacessível  fora da classe, muito util para segurança e proteção de dados que nao precisam ser acessíveis fora da classe, podendo anda assim serem modificados através de métodos públicos .</p>
     <p>protected: em private o atributo ou metodo é privado pro completo fora da classe, porem caso desejemos utilizar em uma subclasse, tambem não estára disponível, para que esteja disponível em subclasses mas não fora da classe podemos utilizar o protected</p>
-    <h5>Getter e setter</h5>
+    <h4>Getter e setter</h4>
     <p>Metodos para recueprar e setar valores em atributos privados</p>
     <p>get nome() { return this._nome}; retorna o valor do atributo privado</p>
     <p>set nome(nome: string) { this._nome = nome}; altera o valor do atributo privado</p>
     <p>Por convenção, atributos privados deve ter um _ no inicio do nome</p>
-    <h5>Métodos e atributos estáticos</h5>
+    <h4>Métodos e atributos estáticos</h4>
     <p>Podemos definir métodos e atributos estáticos, para que nao seja preciso instanciar a classe criando um objeto, basta adicionar <strong>static</strong> antes do método ou atributo</p>
     <p>static somar (x: number, y: number ): number { return x + y }</p>
     <p>Calculadora.somar(1, 1);</p>
     <h4>Padrões de projeto</h4>
     <p><strong>Singleton</strong> quando colocamos atributo privado no construtor e podemos instanciar apenas um objeto dessa classe</p>7
     <p><strong>Factory</strong> métodos que criam objetos dentro de classes</p>
-    <h5>Classes, métodos e atributos abstratos</h5>
+    <h4>Classes, métodos e atributos abstratos</h4>
     <p>Classe abstrata: export abstract class Personagem; é uma classe que nao pode ser instanciada, mas que pode ser estendida </p>
     <p>Método ou atributo abstrato: abstract metodo(); são elementos da classe que nao precisão ter corpo, mas que se definido na classe pai, a classe que herda deve obrigatoriamente criar o método ou atributo</p>
-    <h5>Associação de classes</h5>
+    <h4>Associação de classes</h4>
     <p>É quando uma classe nao depende diretamente uma da outra e atá funciona sem a outra, mas que eventualmente um item de outra classe incorpora algum método de outra classe</p>
-    <h5>Inversão de dependências</h5>
-    <p>É quando temos um classe que depende de outra para algo, mas para nao gerar margem para bugs, não realizamos a solicitação diretamente para outra classe, solicitamos de uma classe abstrata , e que suas subclasses instanciando a classe abstrata possa ser utilizada</p>
+    <h4>Inversão de dependências = usa outro objeto </h4>
+    <p>É quando temos um classe que depende de outra para algo, mas para nao gerar margem para bugs, não realizamos a solicitação diretamente para outra classe, solicitamos de uma classe abstrata , e que suas subclasses instanciando a classe abstrata possa ser utilizada </p>
+    <h4>Agregação entre classes  = precisa de outro objeto</h4>
+    <p>É quando uma classe depende essencialmente de outra, como um carrinho de compras depende da classe produto, ou a classe carro, depende da classe rodas</p>
+    <h4>Composição = um objeto faz parte do outro</h4>
+    <p>Um objeto que tem outro como composto, o ser humano tem o coração e sem ele nao funciona. O carro não existe sem motor. Uma classe é instanciada dentro da outra </p>
+    <h4>Types alias e Interface com classes</h4>
+    <p>Ambos fazem a mesma função, não necessita a escrita de uma nova classe abstrata, mas exigem que os dados que estão sejam implementados e para usar basta usar a palavra implements</p>
+    <p>é como um contrato que quem utiliza deve obrigatoriamente seguir os dados da interface, como chave e tipo do valor, types mais usada em programação funcional e interface em POO</p>
   </body>
 </html>

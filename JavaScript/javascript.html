@@ -1,324 +1,681 @@
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript</title>
-</head>
-<body>
+  </head>
+  <body>
     <article>
-        <section>
-            <h1>Javascript</h1>
-            <p>Linguagem de programação mais utilizadas em tecnologias web</p>
-        </section>
-        <hr>
-        <section>
-            <h1>Variáveis</h1>
-            <p>É a declaração de armazenamento de algum dado na memoria do computador, que pode ser reutilizado sendo chamado com o nome declarado, exemplo de declaração variável:</p>
-            <p>var nomaDaVariavel = "Algum valor"</p>
-            <p>Os valores podem ser strings que são declaradas entre aspas, números que não precisam de aspas, undefined valor não definido(razão de muitos bugs), null elemento vazio</p>
-            <p>Temos tambem a declaração de <strong> let</strong>, que é um tipo de variavel disponivel apenas no escopo em que é declarada, e <strong>const</strong>, que recebe um valor e não pode/deve ser alterado</p>
-            <p>Podemos realizar operações matemáticas com as variáveis, com os operadores: </p>
-            <p> + para soma </p>
-            <p> - para subtração</p>
-            <p> * para multiplicação</p>
-            <p> / para divisão</p>
-            <p> % chamado de modulo para identificar o resto da divisão</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Objeto_literal" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Functions</h1>
-            <p>Funções são blocos de códigos que são executados assim que chamados, exemplo:</p>
-            <p>function somar () {código a ser executado}</p>
-            <p>Funções podem receber parametros (dados informados essenciais para execução do código)</p>
-            <h4>Escopo léxico</h4>
-            <p>Em qualquer lugar do código, ao chamar uma função, ela se lembra da onde ela está e quem são seus parentes</p>
-            <h4>Function Geradora</h4>
-            <p>Função que permite controlar as etapas de execução da função</p>
-            <p>function* nomeDaFuncao () {</p>
-                <p>yield campo 1 </p>
-                <p>yield campo 2 </p>
-                <p>yield campo 3 </p>
-            <p>}</p>
-            <p>Declaramos com um * após a palavra reservada function. e para campo (yield), chamaos com .next()</p>
-            <p>nomeDaFuncao().next(), que nos retorna o valor e done, que é um boolean, que indica o fim da função quando ela nao possui mais yields</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Arrays</h1>
-            <p>Array é uma variavel que carrega um conjunto de informações, ex: </p>
-            <p>var lista = ["Arroz" , "Feijão", "Salada", "Bife" , "Batata frita"]</p>
-            <p>Declarado com colchetes, cada item separado por virgula equivale a um dado, para obte-los podemos chamar a variavel informando em qual casa o item que desejamos se encontra, começando a contagem do 0</p>
-            <p>lista[0], retornará o "Arroz"</p>
-            <p>podemos manipular Arrays com algumas propriedades como</p>
-            <p>lista.push('item'), adiciona o item no final do array</p>
-            <p>lista.pop(), remove e retorna o ultimo item do array</p>
-            <p>lista.shift(), remove e retorna o primeiro item do array</p>
-            <p>lista.indexOf('item'), retorna a posição em que se encontra o item informado no parametro, caso o item não seja encontrado retorna -1</p>
-            <p>lista.join('/'), concatena todos os items do array com o caracter informado como parametro</p>
-            <h4>Com o ES6 foram introduzidos mais alguns métodos para arrays</h4>
-            <p>forEach( (param) => { função de callback }; Executa para cada item dentro do array, o código na função</p>
-            <p>map( (param) => { função de callback }; Executa tambem uma função para cada elemento, porem retorna um novo array</p>
-            <p>filter( (param) => { função de callback }; Filtra os elementos do array, de acordo com a instrução passada na função de callback e retorna um novo array</p>
-            <p>reduce( (acumulador, valor atual) => { função de callback }; Reduz o array e retorna somente um número, recebe como parâmetro o acumulador e o valor que se deve iniciar a soma</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Condicionais</h1>
-            <p>Uma condicional, reage com condição imposta, o verdadeiro "se" e "se não", sintaxe: </p>
-            <p>if (condição) { </p>
-            <p>código a ser executado caso a condição seja verdadeira</p>
-            <p>} else {</p>
-            <p>Código a ser executado caso a condição seja falsa</p>
-            <p>}</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">Para mais informações</a></p>
-            <h4>Tambem temos o switch, que nos permite executar determinado código de acordo com o valor esperado do parametro:</h4>
-            <p>switch(x) {</p>
-                <p>case "valor1": </p>
-                <p>código a ser executado quando o caso é veradeiro</p>
-                <p>break</p>
-                <p>case "valor2": </p>
-                <p>código a ser executado quando o caso é veradeiro</p>
-                <p>break</p>
-                <p>case "valor3": </p>
-                <p>código a ser executado quando o caso é veradeiro</p>
-                <p>break</p>
-                <p>case "valor4": </p>
-                <p>código a ser executado quando o caso é veradeiro</p>
-                <p>break</p>
-                <p>default:</p>
-                <p>Código a ser executado caso nenuma das afirmações seja atendida</p>
-                <p>break;</p>
-            <p>É sempre acompanhado pelo break pois caso uma afirmação seja atendida o código é interrompido</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">Para mais informações</a></p>
-            <h4>Operações ternarias</h4>
-            <p>em casos que temos apenas uma condição (somente um if else), podemos utilizar a operação ternaria</p>
-            <p>(condição) ? 'Valor se verdadeiro' : 'Valor se falso' </p>
-            <h4>Para validação de condições, temos diversos operadores como:</h4>
-            <p>< menor que </p>
-            <p>> maior que</p>
-            <p><= menor ou igual a</p>
-            <p>>= maior ou igual a</p>
-            <p>== dois simbolos de igual representam valor igual a, pois apenas um = , representa atribuição de valor</p>
-            <p>=== tres simbolos representam um valor identico, compara o tipo e o valor entre as variaveis </p>
-            <p>!=  diferente de </p>
-        </section>
-        <hr>
-        <section>
-            <h1>Laços de repetição</h1>
-            <p>Na linguagem de programação javascript, temos dois tipos de laços de repetição, o for e o while, os laços de repetição executam determinado bloco de código enquanto a condição for verdadeira:</p>
-            <p>O for recebe como parametro a variavel, a condição e a execução:</p>
-            <p>for(var x = 0; x < 10; x++) {</p>
-            <p>código a ser executado até que x seja > que 10.</p>
-            <p>}</p>
-            <p>O while executa a mesma operação, porem é declarado de forma diferente, ja temos que ter a variavel declarada antes</p>
-            <p>x = 0</p>
-            <p>Então executamos o código</p>
-            <p>while(x < 10) {</p>
-            <p>código a ser executado enquanto a condição seja verdadeira</p>
-            <p>}</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Manipular o HTML</h1>
-            <p>Com javascript é possível manipular dados do HTML da página, como adicionar e remover elementos, alterar o conteúdo de elementos etc </p>
-            <p>Basta atribuir o elemento como valor a uma variavel, usando document.querySelector('seletor css (podendo ser tag 'div', id #, e class ., e qualquer outro seletor css porem sempre entre aspas) ')</p>
-            <p>ex: let button = document.querySelector('.button')</p>
-            <p>Após selecionado podemos utilizar propriedades como innerHTML, etc.</p>
-        </section>
-        <hr>
-        <section>
-            <h1>Programação orientada a eventos</h1>
-            <p>Em javascript programamos muito orientado a eventos, ou seja, se algo ocorrer estamos ouvindo o evento acontecer, e quanto acontecer executamos determinada função</p>
-            <h4>Eventos de mouse:</h4>
-            <p>click = quando o elemento é clicado</p>
-            <p>dblclick = acionado quando se clica duas vezes rapidamente</p>
-            <p>contextmenu = menu disposto no botão direito</p>
-            <p>mousedown = quando botão esquerdo é clicado</p>
-            <p>mouseup = quando se solta o click do botão esquerdo</p>
-            <p>mouseover = quando o mouse passar pelo elemento</p>
-            <p>mouseout = quando o mouse passa por cima e sai do elemento</p>
-            <p>mousemove = captura o movimento do mouse em cima do elemento</p>
-            <h4>Eventos de teclado</h4>
-            <p>Para eventos de teclado temos apenas 3 opções</p>
-            <p>keydown = quando o botão é apertado</p>
-            <p>keyup = quando eu solto o botão</p>
-            <p>keypress = enquanto o botão é pressionado (segurado)</p>
-            <p>Mas devemos capturar o botão que foi apertado para executar determinadas ações, fazemos isso passando o evento como paramentro, e usando propriedades com event.key para identificar a tecla</p>
-            <p>Podemos tambem saber se o shift, ctrl ou alt estavam pressionadas com as propriedades event.shiftKey, .ctrlKey, .altKey, todas retornam um valor booslean</p>
-            <h4>Evento de página</h4>
-            <p>Evento roda quando algo ocorre na página</p>
-            <p>onload = quando a página termina de ser carregada</p>
-            <p>unload = quando a página é fechada</p>
-            <h4>Eventos de formulário</h4>
-            <p>submit = quando o formulário é enviado</p>
-            <p>focus = quando um elemento é selecionado</p>
-            <p>blur = quando um perde a seleção</p>
-            <p>change = quando o elemento tem o sue valor trocado</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/Events#Categorias_comuns" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Manipulação de datas</h1>
-            <p>Podemos manipular datas, atribuindo o construtor new Date para uma variavel, e com ela manipular a data com os métodos: </p>
-            <p>.getDate(), que retorna o dia e o mes</p>
-            <p>.getDay(), retorna o número do dia na semana começado do domingo com 0</p>
-            <p>.getHours(), retorna a hora</p>
-            <p>.getFullYear(), retorna o ano</p>
-            <p>.getMonth(), retorna o mes tambem de 0 a 11</p>
-            <p>Entre outros getters</p>
-            <p>Para fazer uma data completa, podemos concatenar a variavel com os getters de dia mes ano, e tambem setar a data com os setters.</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Temporizadores</h1>
-            <p>Para executarmos uma tarefa a cada determinado tempo, ou apenas uma vez após um certo tempo, temos:</p>
-            <p>setInterval(código, tempo em milissegundos); este executa uma função em loop de acordo com o tempo definido como intervalo </p>
-            <p>setTimeout(código, tempo em milissegundos); este executa uma função apenas uma vez após o tempo informado</p>
-            <p>O que fazer quando queremos parar os temporizadores? o atribuímos a uma variavel, usamos a função clearInterval(variavel) ou clearTimeout(variavel)</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>sessionStorage() e localStorage()</h1>
-            <p>Estas duas funções, nos permite gravar dados no navegador, durante apenas na sessão (até o navegador ser fechado) e localmente (mesmo que feche o navegador, desligue, etc - até ser removido manualmente)</p>
-            <p>A sintaxe é simples:</p>
-            <p>localStorage.setItem("chave", valor); para adicionarmos itens no localStorage</p>
-            <p>localStorage.getItem("chave"); recupera o valor da chave informada</p>
-            <p>localStorage.removeItem("chave"); remove a chave e seu valor</p>
-            <p>Os mesmos métodos podem ser utilizados em sessionStorage.</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Template string</h1>
-            <p>Template string nos ajuda a concatenar de uma maneira muito mais eficaz usando a sintaxe:</p>
-            <p>`Abre e fecha com crase ${variavel} ${variavel}`</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Desestruturação de objetos e de arrays</h1>
-            <p>Conseguimos denscontruir objetos e arrays de maneira simples, e que nos permite atribuir o valor desejado em uma variável</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Spread e Rest Operator</h1>
-            <p>Ambos operadores são declarados da mesma forma, com  reticencias ...</p>
-            <h4>Spread</h4>
-            <p>O spread muito utilizado,  tem como objetivo desconstruir arrays e objetos, facilitando assim a integração em uma nova variavel</p>
-            <p>let lista2 = [...lista1, 3,4,5]</p>
-            <p>Neste case a lista2 tera os itens da lista 1 junto com os outros itens informados</p>
-            <h4>Rest operator</h4>
-            <p>Com a mesma sintaxe do spread, porem este é utilizado apenas como parametro de uma função:</p>
-            <p>function receberNumeros(...numeros) {</p>
-            <p>Quando temos uma function que nao sabemos, ou queremos deixar não fixo o número de parâmetros que desejamos receber, podemos utiliza-lo, e passar quantos parâmetros forem na chamada da função, que ao receber com rest irá transformar todos em uma array, podendo ser utilizado spread posteriormente para decomposição da array gerada pelo rest </p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Funções anónimas e arrow functions</h1>
-            <p>Funções anónimas basicamente são funções de callback onde somente aonde é declarada é executada, é uma função sem atribuição de nome:</p>
-            <p>function () {</p>
-            <h4>Arrow function</h4>
-            <p>Já a arrow function: </p>
-            <p>() => { </p>
-            <p>É um modo de declaração de função em que é menos verboso, e respeita o seu escopo léxico.</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Valor padrão como parâmetro</h1>
-            <p>Para evitar verificações de erros em valores na função, podemos definir um valor padrão para os parâmetros basta atribuir um valor b = valor, que caso não seja informado b terá o valor :</p>
-            <p>function somar(a , b = 5) {</p>
-            <p></p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Modules</h1>
-            <p>Módulos nos permite estruturar melhor o nosso projeto, pois com export, podemos exportar funções a serem executadas em outros arquivos javascript importados com import:</p>
-            <p>export function somar (a, b) {; sintaxe 'export' do arquivo de origem</p>
-            <p>import { somar } from './/somar.js'; sintaxe do arquivo de destino</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/M%C3%B3dulos" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Programação orientada a objeto: POO</h1>
-            <p>Podemos com javascript realizar programção orientada a obejto, um poderosos paradigma que estrutura o código e deixar uma manutenção e uma escrita muito mais elaborada</p>
-            <p>Para iniciarmos nesse paradigma, temos que entender as classes:</p>
-            <p>class Animal {</p>
-            <p>constructor(orelhas, pernas) {</p>
-            <p>this.orelhas = orelhas</p>
-            <p>this.pernas = pernas</p>
-            <p>}</p>
-            <p>falar(){</p>
-            <p>console.log('Hello there') </p>
-            <p>}</p>
-            <p>get qtdPernas() {</p>
-            <p>return this.pernas</p>
-            <p>}</p>
-            <p>set inserirPernas(quantidade) { </p>
-            <p>this.pernas = quantidade</p>
-            <p>}</p>
-            <p>Para definir uma classe, iniciamos com a palavra reservada 'class' antes do nome da classe e iniciamos com {</p>
-            <p>Após isso definimos a função construtora, construct () que pode receber parâmetros que vão ser definidos na instância da classe, e abrimos com {</p>
-            <p>Ainda dentro do constructor definimos os atributos com this.nomedoatributo que vão ser elementos do objeto</p>
-            <p>Fora do constructor podemos definir métodos, que basicamente são funções que ao serem invocadas executam o seu código</p>
-            <p>E ao final da classe definimos os getters e setters, que basicamente são propriedades do objeto instanciado que vai recuperar os dados da classe no getter e definir no setter</p>
-            <p>Junto com os módulos, o torna uma poderoso paradigma de programação avançada</p>
-            <h4>This</h4>
-            <p>o this.variavel, muito utilizado, o this sempre se refere ao escopo de quem chama o this.</p>
-            <h4>Polimorfismo</h4>
-            <p>Polimorfismo e quando sobrescrevemos algum método da classe pai, dentro de uma classe filho, sem alterar assim o método para outras classes parentes </p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Promises</h1>
-            <p>Outra poderosa ferramenta são as promises, que como diz o nome, é um promessa, que retorna um valor caso a promessa seja cumprida, e o erro caso ocorra algum problema</p>
-            <p>Geralmente instanciada como return de uma function que tem que aguardar a resposta de alguma requisição</p>
-            <p>functino fazerAlgo(){</p>
-            <p>return new Promise((resolve, reject) => { </p>
-            <p>bloco de código a ser executado</p>
-            <p>resolve(parametro da resposta)</p>
-            <p>if (error) reject(error)</p>
-            <p>})}</p>
-            <p>fazerAlgo().then((resposta) => {</p>
-            <p>código para quando a promisse retorne um resultado sem erro</p>
-            <p>}).catch((erro) => {</p>
-            <p>console.error(erro) </p>
-            <p>})</p>
-        </section>
-        <hr>
-        <section>
-            <h1>Fetch</h1>
-            <p>A function fetch é mais uma das ferramentas que fazem a diferença para requisições ajax</p>
-            <p>Requisições ajax nos permitem fazer requisições em api e adquirir seus dados</p>
-            <p>Com o fetch podemos realizar as requisições e tambem enviar os cabeçalhos http, nos retorna uma promessa, por isso usamos .then</p>
-            <p>fetch('url', cabeçalhos (opcional)).then((resposta) => {resposta.json()}).then((json) => {console.log(json)}</p>
-            <p>E tambem devemos tratar as respostas para ficar "legível".</p>
-            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">Para mais informações</a></p>
-        </section>
-        <hr>
-        <section>
-            <h1>Async e Await</h1>
-            <p>
-                Ferramenta que nos permite rodar um código de forma assíncrona, similar ao promise.
-            </p>
-            <p>async function acao(){</p>
-                <p>const resposta = await fecth(url) </p>
-                <p>console.log(faz um ação)</p>
-                <p>}</p>
-                <p>acao()</p>
-            <p>Declarando que a função  assíncrona e o seu dado depende de uma promise e informamos os sistema que ele deve aguardar a resposta com await</p>
-        </section>
+      <section>
+        <h1>Javascript</h1>
+        <p>Linguagem de programação mais utilizadas em tecnologias web</p>
+      </section>
+      <hr />
+      <section>
+        <h1>Variáveis</h1>
+        <p>
+          É a declaração de armazenamento de algum dado na memoria do
+          computador, que pode ser reutilizado sendo chamado com o nome
+          declarado, exemplo de declaração variável:
+        </p>
+        <p>var nomaDaVariavel = "Algum valor"</p>
+        <p>
+          Os valores podem ser strings que são declaradas entre aspas, números
+          que não precisam de aspas, undefined valor não definido(razão de
+          muitos bugs), null elemento vazio
+        </p>
+        <p>
+          Temos tambem a declaração de <strong> let</strong>, que é um tipo de
+          variavel disponivel apenas no escopo em que é declarada, e
+          <strong>const</strong>, que recebe um valor e não pode/deve ser
+          alterado
+        </p>
+        <p>
+          Podemos realizar operações matemáticas com as variáveis, com os
+          operadores:
+        </p>
+        <p>+ para soma</p>
+        <p>- para subtração</p>
+        <p>* para multiplicação</p>
+        <p>/ para divisão</p>
+        <p>% chamado de modulo para identificar o resto da divisão</p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Objeto_literal"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Functions</h1>
+        <p>
+          Funções são blocos de códigos que são executados assim que chamados,
+          exemplo:
+        </p>
+        <p>function somar () {código a ser executado}</p>
+        <p>
+          Funções podem receber parametros (dados informados essenciais para
+          execução do código)
+        </p>
+        <h4>Escopo léxico</h4>
+        <p>
+          Em qualquer lugar do código, ao chamar uma função, ela se lembra da
+          onde ela está e quem são seus parentes
+        </p>
+        <h4>Function Geradora</h4>
+        <p>Função que permite controlar as etapas de execução da função</p>
+        <p>function* nomeDaFuncao () {</p>
+        <p>yield campo 1</p>
+        <p>yield campo 2</p>
+        <p>yield campo 3</p>
+        <p>}</p>
+        <p>
+          Declaramos com um * após a palavra reservada function. e para campo
+          (yield), chamaos com .next()
+        </p>
+        <p>
+          nomeDaFuncao().next(), que nos retorna o valor e done, que é um
+          boolean, que indica o fim da função quando ela nao possui mais yields
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Arrays</h1>
+        <p>Array é uma variavel que carrega um conjunto de informações, ex:</p>
+        <p>
+          var lista = ["Arroz" , "Feijão", "Salada", "Bife" , "Batata frita"]
+        </p>
+        <p>
+          Declarado com colchetes, cada item separado por virgula equivale a um
+          dado, para obte-los podemos chamar a variavel informando em qual casa
+          o item que desejamos se encontra, começando a contagem do 0
+        </p>
+        <p>lista[0], retornará o "Arroz"</p>
+        <p>podemos manipular Arrays com algumas propriedades como</p>
+        <p>lista.push('item'), adiciona o item no final do array</p>
+        <p>lista.pop(), remove e retorna o ultimo item do array</p>
+        <p>lista.shift(), remove e retorna o primeiro item do array</p>
+        <p>
+          lista.indexOf('item'), retorna a posição em que se encontra o item
+          informado no parametro, caso o item não seja encontrado retorna -1
+        </p>
+        <p>
+          lista.join('/'), concatena todos os items do array com o caracter
+          informado como parametro
+        </p>
+        <h4>Com o ES6 foram introduzidos mais alguns métodos para arrays</h4>
+        <p>
+          forEach( (param) => { função de callback }; Executa para cada item
+          dentro do array, o código na função
+        </p>
+        <p>
+          map( (param) => { função de callback }; Executa tambem uma função para
+          cada elemento, porem retorna um novo array
+        </p>
+        <p>
+          filter( (param) => { função de callback }; Filtra os elementos do
+          array, de acordo com a instrução passada na função de callback e
+          retorna um novo array
+        </p>
+        <p>
+          reduce( (acumulador, valor atual) => { função de callback }; Reduz o
+          array e retorna somente um número, recebe como parâmetro o acumulador
+          e o valor que se deve iniciar a soma
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Condicionais</h1>
+        <p>
+          Uma condicional, reage com condição imposta, o verdadeiro "se" e "se
+          não", sintaxe:
+        </p>
+        <p>if (condição) {</p>
+        <p>código a ser executado caso a condição seja verdadeira</p>
+        <p>} else {</p>
+        <p>Código a ser executado caso a condição seja falsa</p>
+        <p>}</p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+        <h4>
+          Tambem temos o switch, que nos permite executar determinado código de
+          acordo com o valor esperado do parametro:
+        </h4>
+        <p>switch(x) {</p>
+        <p>case "valor1":</p>
+        <p>código a ser executado quando o caso é veradeiro</p>
+        <p>break</p>
+        <p>case "valor2":</p>
+        <p>código a ser executado quando o caso é veradeiro</p>
+        <p>break</p>
+        <p>case "valor3":</p>
+        <p>código a ser executado quando o caso é veradeiro</p>
+        <p>break</p>
+        <p>case "valor4":</p>
+        <p>código a ser executado quando o caso é veradeiro</p>
+        <p>break</p>
+        <p>default:</p>
+        <p>Código a ser executado caso nenuma das afirmações seja atendida</p>
+        <p>break;</p>
+        <p>
+          É sempre acompanhado pelo break pois caso uma afirmação seja atendida
+          o código é interrompido
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+        <h4>Operações ternarias</h4>
+        <p>
+          em casos que temos apenas uma condição (somente um if else), podemos
+          utilizar a operação ternaria
+        </p>
+        <p>(condição) ? 'Valor se verdadeiro' : 'Valor se falso'</p>
+        <h4>Para validação de condições, temos diversos operadores como:</h4>
+        <p>< menor que</p>
+        <p>> maior que</p>
+        <p><= menor ou igual a</p>
+        <p>>= maior ou igual a</p>
+        <p>
+          == dois simbolos de igual representam valor igual a, pois apenas um =
+          , representa atribuição de valor
+        </p>
+        <p>
+          === tres simbolos representam um valor identico, compara o tipo e o
+          valor entre as variaveis
+        </p>
+        <p>!= diferente de</p>
+      </section>
+      <hr />
+      <section>
+        <h1>Laços de repetição</h1>
+        <p>
+          Na linguagem de programação javascript, temos dois tipos de laços de
+          repetição, o for e o while, os laços de repetição executam determinado
+          bloco de código enquanto a condição for verdadeira:
+        </p>
+        <p>O for recebe como parametro a variavel, a condição e a execução:</p>
+        <p>for(var x = 0; x < 10; x++) {</p>
+        <p>código a ser executado até que x seja > que 10.</p>
+        <p>}</p>
+        <p>
+          O while executa a mesma operação, porem é declarado de forma
+          diferente, ja temos que ter a variavel declarada antes
+        </p>
+        <p>x = 0</p>
+        <p>Então executamos o código</p>
+        <p>while(x < 10) {</p>
+        <p>código a ser executado enquanto a condição seja verdadeira</p>
+        <p>}</p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Manipular o HTML</h1>
+        <p>
+          Com javascript é possível manipular dados do HTML da página, como
+          adicionar e remover elementos, alterar o conteúdo de elementos etc
+        </p>
+        <p>
+          Basta atribuir o elemento como valor a uma variavel, usando
+          document.querySelector('seletor css (podendo ser tag 'div', id #, e
+          class ., e qualquer outro seletor css porem sempre entre aspas) ')
+        </p>
+        <p>ex: let button = document.querySelector('.button')</p>
+        <p>
+          Após selecionado podemos utilizar propriedades como innerHTML, etc.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Programação orientada a eventos</h1>
+        <p>
+          Em javascript programamos muito orientado a eventos, ou seja, se algo
+          ocorrer estamos ouvindo o evento acontecer, e quanto acontecer
+          executamos determinada função
+        </p>
+        <h4>Eventos de mouse:</h4>
+        <p>click = quando o elemento é clicado</p>
+        <p>dblclick = acionado quando se clica duas vezes rapidamente</p>
+        <p>contextmenu = menu disposto no botão direito</p>
+        <p>mousedown = quando botão esquerdo é clicado</p>
+        <p>mouseup = quando se solta o click do botão esquerdo</p>
+        <p>mouseover = quando o mouse passar pelo elemento</p>
+        <p>mouseout = quando o mouse passa por cima e sai do elemento</p>
+        <p>mousemove = captura o movimento do mouse em cima do elemento</p>
+        <h4>Eventos de teclado</h4>
+        <p>Para eventos de teclado temos apenas 3 opções</p>
+        <p>keydown = quando o botão é apertado</p>
+        <p>keyup = quando eu solto o botão</p>
+        <p>keypress = enquanto o botão é pressionado (segurado)</p>
+        <p>
+          Mas devemos capturar o botão que foi apertado para executar
+          determinadas ações, fazemos isso passando o evento como paramentro, e
+          usando propriedades com event.key para identificar a tecla
+        </p>
+        <p>
+          Podemos tambem saber se o shift, ctrl ou alt estavam pressionadas com
+          as propriedades event.shiftKey, .ctrlKey, .altKey, todas retornam um
+          valor booslean
+        </p>
+        <h4>Evento de página</h4>
+        <p>Evento roda quando algo ocorre na página</p>
+        <p>onload = quando a página termina de ser carregada</p>
+        <p>unload = quando a página é fechada</p>
+        <h4>Eventos de formulário</h4>
+        <p>submit = quando o formulário é enviado</p>
+        <p>focus = quando um elemento é selecionado</p>
+        <p>blur = quando um perde a seleção</p>
+        <p>change = quando o elemento tem o sue valor trocado</p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/Events#Categorias_comuns"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Manipulação de datas</h1>
+        <p>
+          Podemos manipular datas, atribuindo o construtor new Date para uma
+          variavel, e com ela manipular a data com os métodos:
+        </p>
+        <p>.getDate(), que retorna o dia e o mes</p>
+        <p>
+          .getDay(), retorna o número do dia na semana começado do domingo com 0
+        </p>
+        <p>.getHours(), retorna a hora</p>
+        <p>.getFullYear(), retorna o ano</p>
+        <p>.getMonth(), retorna o mes tambem de 0 a 11</p>
+        <p>Entre outros getters</p>
+        <p>
+          Para fazer uma data completa, podemos concatenar a variavel com os
+          getters de dia mes ano, e tambem setar a data com os setters.
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Temporizadores</h1>
+        <p>
+          Para executarmos uma tarefa a cada determinado tempo, ou apenas uma
+          vez após um certo tempo, temos:
+        </p>
+        <p>
+          setInterval(código, tempo em milissegundos); este executa uma função
+          em loop de acordo com o tempo definido como intervalo
+        </p>
+        <p>
+          setTimeout(código, tempo em milissegundos); este executa uma função
+          apenas uma vez após o tempo informado
+        </p>
+        <p>
+          O que fazer quando queremos parar os temporizadores? o atribuímos a
+          uma variavel, usamos a função clearInterval(variavel) ou
+          clearTimeout(variavel)
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>sessionStorage() e localStorage()</h1>
+        <p>
+          Estas duas funções, nos permite gravar dados no navegador, durante
+          apenas na sessão (até o navegador ser fechado) e localmente (mesmo que
+          feche o navegador, desligue, etc - até ser removido manualmente)
+        </p>
+        <p>A sintaxe é simples:</p>
+        <p>
+          localStorage.setItem("chave", valor); para adicionarmos itens no
+          localStorage
+        </p>
+        <p>
+          localStorage.getItem("chave"); recupera o valor da chave informada
+        </p>
+        <p>localStorage.removeItem("chave"); remove a chave e seu valor</p>
+        <p>Os mesmos métodos podem ser utilizados em sessionStorage.</p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Template string</h1>
+        <p>
+          Template string nos ajuda a concatenar de uma maneira muito mais
+          eficaz usando a sintaxe:
+        </p>
+        <p>`Abre e fecha com crase ${variavel} ${variavel}`</p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Desestruturação de objetos e de arrays</h1>
+        <p>
+          Conseguimos denscontruir objetos e arrays de maneira simples, e que
+          nos permite atribuir o valor desejado em uma variável
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Spread e Rest Operator</h1>
+        <p>
+          Ambos operadores são declarados da mesma forma, com reticencias ...
+        </p>
+        <h4>Spread</h4>
+        <p>
+          O spread muito utilizado, tem como objetivo desconstruir arrays e
+          objetos, facilitando assim a integração em uma nova variavel
+        </p>
+        <p>let lista2 = [...lista1, 3,4,5]</p>
+        <p>
+          Neste case a lista2 tera os itens da lista 1 junto com os outros itens
+          informados
+        </p>
+        <h4>Rest operator</h4>
+        <p>
+          Com a mesma sintaxe do spread, porem este é utilizado apenas como
+          parametro de uma função:
+        </p>
+        <p>function receberNumeros(...numeros) {</p>
+        <p>
+          Quando temos uma function que nao sabemos, ou queremos deixar não fixo
+          o número de parâmetros que desejamos receber, podemos utiliza-lo, e
+          passar quantos parâmetros forem na chamada da função, que ao receber
+          com rest irá transformar todos em uma array, podendo ser utilizado
+          spread posteriormente para decomposição da array gerada pelo rest
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Funções anónimas e arrow functions</h1>
+        <p>
+          Funções anónimas basicamente são funções de callback onde somente
+          aonde é declarada é executada, é uma função sem atribuição de nome:
+        </p>
+        <p>function () {</p>
+        <h4>Arrow function</h4>
+        <p>Já a arrow function:</p>
+        <p>() => {</p>
+        <p>
+          É um modo de declaração de função em que é menos verboso, e respeita o
+          seu escopo léxico.
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Valor padrão como parâmetro</h1>
+        <p>
+          Para evitar verificações de erros em valores na função, podemos
+          definir um valor padrão para os parâmetros basta atribuir um valor b =
+          valor, que caso não seja informado b terá o valor :
+        </p>
+        <p>function somar(a , b = 5) {</p>
+        <p></p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Modules</h1>
+        <p>
+          Módulos nos permite estruturar melhor o nosso projeto, pois com
+          export, podemos exportar funções a serem executadas em outros arquivos
+          javascript importados com import:
+        </p>
+        <p>
+          export function somar (a, b) {; sintaxe 'export' do arquivo de origem
+        </p>
+        <p>
+          import { somar } from './/somar.js'; sintaxe do arquivo de destino
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/M%C3%B3dulos"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Programação orientada a objeto: POO</h1>
+        <p>
+          Podemos com javascript realizar programção orientada a obejto, um
+          poderosos paradigma que estrutura o código e deixar uma manutenção e
+          uma escrita muito mais elaborada
+        </p>
+        <p>Para iniciarmos nesse paradigma, temos que entender as classes:</p>
+        <p>class Animal {</p>
+        <p>constructor(orelhas, pernas) {</p>
+        <p>this.orelhas = orelhas</p>
+        <p>this.pernas = pernas</p>
+        <p>}</p>
+        <p>falar(){</p>
+        <p>console.log('Hello there')</p>
+        <p>}</p>
+        <p>get qtdPernas() {</p>
+        <p>return this.pernas</p>
+        <p>}</p>
+        <p>set inserirPernas(quantidade) {</p>
+        <p>this.pernas = quantidade</p>
+        <p>}</p>
+        <p>
+          Para definir uma classe, iniciamos com a palavra reservada 'class'
+          antes do nome da classe e iniciamos com {
+        </p>
+        <p>
+          Após isso definimos a função construtora, construct () que pode
+          receber parâmetros que vão ser definidos na instância da classe, e
+          abrimos com {
+        </p>
+        <p>
+          Ainda dentro do constructor definimos os atributos com
+          this.nomedoatributo que vão ser elementos do objeto
+        </p>
+        <p>
+          Fora do constructor podemos definir métodos, que basicamente são
+          funções que ao serem invocadas executam o seu código
+        </p>
+        <p>
+          E ao final da classe definimos os getters e setters, que basicamente
+          são propriedades do objeto instanciado que vai recuperar os dados da
+          classe no getter e definir no setter
+        </p>
+        <p>
+          Junto com os módulos, o torna uma poderoso paradigma de programação
+          avançada
+        </p>
+        <h4>This</h4>
+        <p>
+          o this.variavel, muito utilizado, o this sempre se refere ao escopo de
+          quem chama o this.
+        </p>
+        <h4>Polimorfismo</h4>
+        <p>
+          Polimorfismo e quando sobrescrevemos algum método da classe pai,
+          dentro de uma classe filho, sem alterar assim o método para outras
+          classes parentes
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Promises</h1>
+        <p>
+          Outra poderosa ferramenta são as promises, que como diz o nome, é um
+          promessa, que retorna um valor caso a promessa seja cumprida, e o erro
+          caso ocorra algum problema
+        </p>
+        <p>
+          Geralmente instanciada como return de uma function que tem que
+          aguardar a resposta de alguma requisição
+        </p>
+        <p>functino fazerAlgo(){</p>
+        <p>return new Promise((resolve, reject) => {</p>
+        <p>bloco de código a ser executado</p>
+        <p>resolve(parametro da resposta)</p>
+        <p>if (error) reject(error)</p>
+        <p>})}</p>
+        <p>fazerAlgo().then((resposta) => {</p>
+        <p>código para quando a promisse retorne um resultado sem erro</p>
+        <p>}).catch((erro) => {</p>
+        <p>console.error(erro)</p>
+        <p>})</p>
+      </section>
+      <hr />
+      <section>
+        <h1>Fetch</h1>
+        <p>
+          A function fetch é mais uma das ferramentas que fazem a diferença para
+          requisições ajax
+        </p>
+        <p>
+          Requisições ajax nos permitem fazer requisições em api e adquirir seus
+          dados
+        </p>
+        <p>
+          Com o fetch podemos realizar as requisições e tambem enviar os
+          cabeçalhos http, nos retorna uma promessa, por isso usamos .then
+        </p>
+        <p>
+          fetch('url', cabeçalhos (opcional)).then((resposta) =>
+          {resposta.json()}).then((json) => {console.log(json)}
+        </p>
+        <p>E tambem devemos tratar as respostas para ficar "legível".</p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch"
+            target="_blank"
+            >Para mais informações</a
+          >
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Async e Await</h1>
+        <p>
+          Ferramenta que nos permite rodar um código de forma assíncrona,
+          similar ao promise.
+        </p>
+        <p>async function acao(){</p>
+        <p>const resposta = await fecth(url)</p>
+        <p>console.log(faz um ação)</p>
+        <p>}</p>
+        <p>acao()</p>
+        <p>
+          Declarando que a função assíncrona e o seu dado depende de uma promise
+          e informamos os sistema que ele deve aguardar a resposta com await
+        </p>
+      </section>
+      <section>
+        <h1>Encadeamento opcional e coalescência nula</h1>
+        <p>
+          Para chaves opcionais em objetos em qual desejamos utilizar algum
+          metodo, para evitar erros podemos utilizar o operador de encadeamento
+          opcional
+        </p>
+        <p>
+          documento.data?.toDateString(); ou seja, se eu tiver uma data ele
+          transforma em string caso nao tenha uma data ele nao opera
+        </p>
+        <p>
+          Ja o operador de coalescência nula, ele opera em cima de variaveis em
+          que se eu tenho um valor não falsy, e sim um nao valor (null |
+          undefined).
+        </p>
+        <p>
+          documento.data?.toDateString() ?? 'novo valor'; ou seja, meu atributo
+          opcional existe? se sim tranforma em string, se nao adiciona um novo
+          valor com ??
+        </p>
+      </section>
     </article>
-
-</body>
+  </body>
 </html>
