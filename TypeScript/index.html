@@ -6,142 +6,489 @@
     <title>TypeScript</title>
   </head>
   <body>
-    <h1>TypeScript</h1>
-    <p>
-      TypeScript é um superset para JavaScript, adiciona tipagem, interface, e
-      inúmeros outros recursos deixando a linguagem JavaScript ainda mais
-      robusta e completa
-    </p>
-    <h4>Modules</h4>
-    <p>
-      O TypeScript nativamente roda em <strong>script mode</strong> , considera
-      todos arquivos de type e javascript como um só, e o outro é o
-      <strong>module mode</strong>, que considera cada arquivo como um modulo, e
-      basta ter algum export em seu código que mudará automaticamente de mode.
-    </p>
-    <h4>Type Anotation</h4>
-    <p>
-      É a notação que utilizamos para identificar o tipo da variavel com
-      typescript
-    </p>
-    <h4>Tipos</h4>
-    <p>
-      Dentro do TypeScript temos os mesmo tipos que me JS, mas tambem podemos
-      criar tipos personalizados
-    </p>
-    <p>:string</p>
-    <p>:number</p>
-    <p>:boolean</p>
-    <p>:symbol</p>
-    <p>Devemos sempre evitar o tipo :any</p>
-    <p>:void, define que a função não terá retorno</p>
-    <p>undefined</p>
-    <p>null</p>
-    <p>:never, define que uma função nunca terá um retorno, usado em loops infinitos e criação de erros</p>
-    <p>
-      :unknown, afirmo que o valor é desconhecido podendo ser atribuído um valor de qualquer tipo, porem uma vez atribuído a inferência serpa realizada e a variável passa a ser daquele tipo, e para utilização da variável devemos checar o tipo.
-    </p>
-    <p> <strong>Union Type</strong> podemos definir mais de um tipo para variável ou parâmetro, adicionando o operador | entre cada tipo, ex: number | string | boolean</p>
-    <p> <strong>Alias</strong> podemos criar tipos com a palavra reservada type, ex: type Pessoa = { nome: 'string', sobrenome: 'string' }; type Cores = 'Vermelho' | 'Azul' | 'Amarelo'; type TypeParaFunction = (item: string(parametro tipado)) => string(tipo do retorno), por convenção sempre utilizar a primeira letra maiúscula em tipos personalizados</p>
-    <p> <strong>Structural Type</strong> significa que o TypeScript não é preso ao tipo do dado, se eu uso algum tipo personalizado, apenas a estrutura é exigida e não a declaração do tipo</p>
-    <p> <strong>Type Assertions</strong> quando trabalhos com items como o DOM que pode nos retornar um elemento ou null, devemos refinar a variável para garantir que há um dado, podendo ser com if() caso possa ou não ter, ou a palavra reservada 'as Elemento' quando temos certeza que existe o elemento</p>
-    <p><strong>typeof e keyof</strong>, podemos pegar o typo de um objeto literal com typeof, e tambem podemos pegar todas as chaves de um objeto literal com keyof </p>
-    <p>Podemos usar chaves como para espelhar o mesmo tipo em outro type.</p>
-    <p>type tipo2 = {chave1 = Tipo1['chave1']</p>
-    <p><strong> this como tipo</strong>, podemos utilizar 'this' de um objeto como retorno de algum método, possibilitado assim que uma classe execute métodos em cadeia</p>
-    <p>calculadora(5).subtrai(1).dividir(2) //retorna 2 </p>
-    <p><strong>Generic Types</strong>: tipos genéricos assumem a forma através da inferência o tipo passado como argumento, para utilizar tipos genéricos em funções, adicionamos < T > logo após a declaração da função que ela assumirá o tipo inferido, podendo ser utilizado em diversos locais</p>
-    <p>meuArray< T > (items: T) : T ; se chamado passando um number ele terá um tipo number e um retorno do tipo number, se passado string agirá da mesma forma</p>
-    <p>podemos ter tipos genéricos em promisses e arrays, interfaces, e types, e tambem podemos definir um valor padrão < T = string></p>
-    <p>restrição em generics: constraints</p>
-    <p>
-      Temos que ficar atentos a inerência, na declaração de variáveis não é
-      necessário declarar o tipo, pois ao ser adicionado valor irá aderir a
-      inerência, porem em funções, arrays e objetos literais devemos declarar o
-      tipo
-    </p>
-    <h4>Tipos literais</h4>
-    <p>São tipos definidos a partir de uma const, quando usamos let, podemos re atribuir valores para a variável com um tipo mais aberto, porem com const, o valor da variável se torna o seu tipo, nao podendo então ser trocado</p>
-    <p>
-     <strong>// Funções</strong> 
-         function soma(x: number, y: number): number { return x + y; }
-    </p>
-      <p><strong>Overload com funções</strong>, overload de funções é quando deixamos dinâmico como os parâmetros são passados, e para cada parâmetro passado de forma diferente, temos uma saída diferente para a função</p>
-    <p>
-        <strong>// Arrays</strong>
-        let arrayDeNumeros: Array<number> = [1, 2, 3];
-    </p>
-    <p>
-        let arrayDeNumeros2: number[] = [1, 2, 3];
-    </p>
-    <p>Em arrays tambem podemos utilizar readonly para definir arrays imutáveiss</p>
-    <p><strong>//Tuples</strong></p>
-    <p>São como arrays, porem definimos a quantidade de elementos e o tipo de cada elemento especificamente</p>
-    <p>const tupla1: [number, string] = [1, 'Samyr']</p>
-    <p>const tupla2: readonly [number, string] = [1, 'Samyr'], podemos deixa-las imutáveis com o readonly</p>
-    <p>const tupla3: [number, string, ...number[]] = [1, 'Samyr'], ou deixar mais próxima de uma array, informando que todos os outros elementos serão do tipo definido</p>
-    <p>
-        <strong>// Objetos</strong>
+    <section>
+      <h1>TypeScript</h1>
+      <p>
+        TypeScript é um superset para JavaScript, adiciona tipagem, interface, e
+        inúmeros outros recursos deixando a linguagem JavaScript ainda mais
+        robusta e completa
+      </p>
+    </section>
+    <section>
+      <h4>Modules</h4>
+      <p>
+        O TypeScript nativamente roda em <strong>script mode</strong> ,
+        considera todos arquivos de type e javascript como um só, e o outro é o
+        <strong>module mode</strong>, que considera cada arquivo como um modulo,
+        e basta ter algum export em seu código que mudará automaticamente de
+        mode.
+      </p>
+      <h4>Introdução Aula 1</h4>
+    </section>
+    <section>
+      <h1>Tipos básicos</h1>
+      <section>
+        <h1>Type Anotation</h1>
         <p>
-            let pessoa: {nome: string, idade: number, adulto?: boolean} = {
+          É a notação que utilizamos para identificar o tipo da variavel com
+          typescript
         </p>
-        idade: 30,
-        nome: 'Luiz'
-        };
-        <p>readonly chave: valor, priva nossa chave de ser alterada, é apenas leitura</p>
-        <p>[key: string]: unknown || objeto: Record< string, unknown>, deixa nosso objeto aberto para adicionar chaves em tempo de execução</p>
-    </p>
-    <p>
-        <strong>//Enum</strong>
-        <p>Estrutura de dados que permite adicionar um índice aos valores, enumerando meus items</p>
-        enum Cores { Vermelho //0, Azul //1 , Verde  //2 }
-    </p>
-    <h4>Validando formulário com TS</h4>
-    <p><a href="./Estudo/front-end/index.html"></a></p>
-    <h4>POO TypeScript</h4>
-    <h4>Classes</h4>
-    <p>export class Empresa {</p>
-    <p>public readonly nome: string;</p>
-    <p>private readonly colaboradores: Colaborador[] = []</p>
-    <p>protected readonly cnpj: string;</p>
-    <p>constructor(nome: string, cnpj: string) {</p>
-    <p>this.nome = nome;</p>
-    <p>this.cnpj = cnpj; </p>
-    <p>adicionaColaboradores(colaborador: Colaborador): void{</p>
-    <p>this.colaboradores.push(colaborador);</p>
-    <p>}</p>
-    <p>Estrutura básica de uma class em TypeScript, declarando o tipo dos atributos antes da atribuição de valores no constructor</p>
-    <p>Para evitar ser tão verboso, podemos dentro do constructor informar os parâmetros e valores</p>
-    <h5>Modificadores de acesso public e private</h5>
-    <p>Com typescript conseguimos modificar o acesso dos atributos e métodos com a palavra reservada private e public</p>
-    <p>public: é o padrão quando não definimos o modificador, caso nao informamos ele sempre será public</p>
-    <p>private: priva o atributo ou método para que seja inacessível  fora da classe, muito util para segurança e proteção de dados que nao precisam ser acessíveis fora da classe, podendo anda assim serem modificados através de métodos públicos .</p>
-    <p>protected: em private o atributo ou metodo é privado pro completo fora da classe, porem caso desejemos utilizar em uma subclasse, tambem não estára disponível, para que esteja disponível em subclasses mas não fora da classe podemos utilizar o protected</p>
-    <h4>Getter e setter</h4>
-    <p>Metodos para recueprar e setar valores em atributos privados</p>
-    <p>get nome() { return this._nome}; retorna o valor do atributo privado</p>
-    <p>set nome(nome: string) { this._nome = nome}; altera o valor do atributo privado</p>
-    <p>Por convenção, atributos privados deve ter um _ no inicio do nome</p>
-    <h4>Métodos e atributos estáticos</h4>
-    <p>Podemos definir métodos e atributos estáticos, para que nao seja preciso instanciar a classe criando um objeto, basta adicionar <strong>static</strong> antes do método ou atributo</p>
-    <p>static somar (x: number, y: number ): number { return x + y }</p>
-    <p>Calculadora.somar(1, 1);</p>
-    <h4>Padrões de projeto</h4>
-    <p><strong>Singleton</strong> quando colocamos atributo privado no construtor e podemos instanciar apenas um objeto dessa classe</p>7
-    <p><strong>Factory</strong> métodos que criam objetos dentro de classes</p>
-    <h4>Classes, métodos e atributos abstratos</h4>
-    <p>Classe abstrata: export abstract class Personagem; é uma classe que nao pode ser instanciada, mas que pode ser estendida </p>
-    <p>Método ou atributo abstrato: abstract metodo(); são elementos da classe que nao precisão ter corpo, mas que se definido na classe pai, a classe que herda deve obrigatoriamente criar o método ou atributo</p>
-    <h4>Associação de classes</h4>
-    <p>É quando uma classe nao depende diretamente uma da outra e atá funciona sem a outra, mas que eventualmente um item de outra classe incorpora algum método de outra classe</p>
-    <h4>Inversão de dependências = usa outro objeto </h4>
-    <p>É quando temos um classe que depende de outra para algo, mas para nao gerar margem para bugs, não realizamos a solicitação diretamente para outra classe, solicitamos de uma classe abstrata , e que suas subclasses instanciando a classe abstrata possa ser utilizada </p>
-    <h4>Agregação entre classes  = precisa de outro objeto</h4>
-    <p>É quando uma classe depende essencialmente de outra, como um carrinho de compras depende da classe produto, ou a classe carro, depende da classe rodas</p>
-    <h4>Composição = um objeto faz parte do outro</h4>
-    <p>Um objeto que tem outro como composto, o ser humano tem o coração e sem ele nao funciona. O carro não existe sem motor. Uma classe é instanciada dentro da outra </p>
-    <h4>Types alias e Interface com classes</h4>
-    <p>Ambos fazem a mesma função, não necessita a escrita de uma nova classe abstrata, mas exigem que os dados que estão sejam implementados e para usar basta usar a palavra implements</p>
-    <p>é como um contrato que quem utiliza deve obrigatoriamente seguir os dados da interface, como chave e tipo do valor, types mais usada em programação funcional e interface em POO</p>
+        <h4>Tipos</h4>
+        <p>
+          Dentro do TypeScript temos os mesmo tipos que me JS, mas tambem
+          podemos criar tipos personalizados
+        </p>
+        <p>:string</p>
+        <p>:number</p>
+        <p>:boolean</p>
+        <p>:symbol</p>
+        <p>Devemos sempre evitar o tipo :any</p>
+        <p>:void, define que a função não terá retorno</p>
+        <p>undefined</p>
+        <p>null</p>
+        <p>
+          :never, define que uma função nunca terá um retorno, usado em loops
+          infinitos e criação de erros
+        </p>
+        <p>
+          :unknown, afirmo que o valor é desconhecido podendo ser atribuído um
+          valor de qualquer tipo, porem uma vez atribuído a inferência serpa
+          realizada e a variável passa a ser daquele tipo, e para utilização da
+          variável devemos checar o tipo.
+        </p>
+        <h4>Tipos básicos: Aula 1 a 10</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Objetos</h1>
+        <p>let pessoa: {nome: string, idade: number, adulto?: boolean} = {</p>
+        <p>idade: 30, nome: 'Luiz' };</p>
+        <p>
+          readonly chave: valor, priva nossa chave de ser alterada, é apenas
+          leitura
+        </p>
+        <p>
+          [key: string]: unknown || objeto: Record< string, unknown>, deixa
+          nosso objeto aberto para adicionar chaves em tempo de execução
+        </p>
+        <h4>Tipos básicos: Aula 4</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Funções</h1>
+        <p>function soma(x: number, y: number): number { return x + y; }</p>
+        <h4>Tipos básicos: Aula 3</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Arrays</h1>
+        <p>let arrayDeNumeros: Array< number > = [1, 2, 3];</p>
+        <p>let arrayDeNumeros2: number[] = [1, 2, 3];</p>
+        <p>
+          Em arrays tambem podemos utilizar readonly para definir arrays
+          imutáveiss
+        </p>
+        <h4>Tipos básicos: Aula 5</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Tuples</h1>
+        <p>
+          São como arrays, porem definimos a quantidade de elementos e o tipo de
+          cada elemento especificamente
+        </p>
+        <p>const tupla1: [number, string] = [1, 'Samyr']</p>
+        <p>
+          const tupla2: readonly [number, string] = [1, 'Samyr'], podemos
+          deixa-las imutáveis com o readonly
+        </p>
+        <p>
+          const tupla3: [number, string, ...number[]] = [1, 'Samyr'], ou deixar
+          mais próxima de uma array, informando que todos os outros elementos
+          serão do tipo definido
+        </p>
+        <h4>Tipos básicos: Aula 6</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Enum</h1>
+        <p>
+          Estrutura de dados que permite adicionar um índice aos valores,
+          enumerando meus items
+        </p>
+        <p>enum Cores { Vermelho //0, Azul //1 , Verde //2 }</p>
+        <h4>Tipos básicos: Aula 09</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Union Type</h1>
+        <p>
+          podemos definir mais de um tipo para variável ou parâmetro,
+          adicionando o operador | entre cada tipo, ex: number | string |
+          boolean
+        </p>
+        <h4>Tipos básicos: Aula 11</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Tipos literais</h1>
+        <p>
+          São tipos definidos a partir de uma const, quando usamos let, podemos
+          re atribuir valores para a variável com um tipo mais aberto, porem com
+          const, o valor da variável se torna o seu tipo, nao podendo então ser
+          trocado
+        </p>
+        <h4>Tipos básicos: Aula 12</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Alias</h1>
+        <p>
+          Podemos criar tipos com a palavra reservada type, ex: type Pessoa = {
+          nome: 'string', sobrenome: 'string' }; type Cores = 'Vermelho' |
+          'Azul' | 'Amarelo'; type TypeParaFunction = (item: string(parametro
+          tipado)) => string(tipo do retorno), por convenção sempre utilizar a
+          primeira letra maiúscula em tipos personalizados
+        </p>
+        <h4>Tipos básicos: Aula 13</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Structural Type</h1>
+        <p>
+          Significa que o TypeScript não é preso ao tipo do dado, se eu uso
+          algum tipo personalizado, apenas a estrutura é exigida e não a
+          declaração do tipo
+        </p>
+        <h4>Tipos básicos: Aula 16</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Type Assertions</h1>
+        <p>
+          Quando trabalhos com items como o DOM que pode nos retornar um
+          elemento ou null, devemos refinar a variável para garantir que há um
+          dado, podendo ser com if() caso possa ou não ter, ou a palavra
+          reservada 'as Elemento' quando temos certeza que existe o elemento
+        </p>
+        <h4>Tipos básicos: Aula 17</h4>
+      </section>
+      <hr />
+      <p>
+        Temos que ficar atentos a inerência, na declaração de variáveis não é
+        necessário declarar o tipo, pois ao ser adicionado valor irá aderir a
+        inerência, porem em funções, arrays e objetos literais devemos declarar
+        o tipo
+      </p>
+      <hr />
+      <section>
+        <h1>Validando formulário com TS</h1>
+        <p>
+          <a href="./Estudo/front-end/index.html" target="_blank">Página</a>
+        </p>
+      </section>
+    </section>
+    <hr />
+    <hr />
+    <section>
+      <h1>POO em TypeScript</h1>
+      <section>
+        <h1>Classes</h1>
+        <p>export class Empresa {</p>
+        <p>public readonly nome: string;</p>
+        <p>private readonly colaboradores: Colaborador[] = []</p>
+        <p>protected readonly cnpj: string;</p>
+        <p>constructor(nome: string, cnpj: string) {</p>
+        <p>this.nome = nome;</p>
+        <p>this.cnpj = cnpj;</p>
+        <p>adicionaColaboradores(colaborador: Colaborador): void{</p>
+        <p>this.colaboradores.push(colaborador);</p>
+        <p>}</p>
+        <p>
+          Estrutura básica de uma class em TypeScript, declarando o tipo dos
+          atributos antes da atribuição de valores no constructor
+        </p>
+        <p>
+          Para evitar ser tão verboso, podemos dentro do constructor informar os
+          parâmetros e valores
+        </p>
+        <h4>Classes e interfaces: Aula 2</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Modificadores de acesso public e private</h1>
+        <p>
+          Com typescript conseguimos modificar o acesso dos atributos e métodos
+          com a palavra reservada private e public
+        </p>
+        <p>
+          <strong>public:</strong> é o padrão quando não definimos o
+          modificador, caso nao informamos ele sempre será public
+        </p>
+        <p>
+          <strong>private:</strong> priva o atributo ou método para que seja
+          inacessível fora da classe, muito util para segurança e proteção de
+          dados que nao precisam ser acessíveis fora da classe, podendo anda
+          assim serem modificados através de métodos públicos .
+        </p>
+        <p>
+          <strong>protected:</strong> em private o atributo ou metodo é privado
+          pro completo fora da classe, porem caso desejemos utilizar em uma
+          subclasse, tambem não estára disponível, para que esteja disponível em
+          subclasses mas não fora da classe podemos utilizar o protected
+        </p>
+        <h4>Classes e interfaces: Aula 4-7</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Getter e setter</h1>
+        <p>Metodos para recueprar e setar valores em atributos privados</p>
+        <p>
+          get nome() { return this._nome}; retorna o valor do atributo privado
+        </p>
+        <p>
+          set nome(nome: string) { this._nome = nome}; altera o valor do
+          atributo privado
+        </p>
+        <h4>Classes e interfaces: Aula 8</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Métodos e atributos estáticos</h1>
+        <p>
+          Podemos definir métodos e atributos estáticos, para que nao seja
+          preciso instanciar a classe criando um objeto, basta adicionar
+          <strong>static</strong> antes do método ou atributo
+        </p>
+        <p>static somar (x: number, y: number ): number { return x + y }</p>
+        <p>Calculadora.somar(1, 1);</p>
+        <h4>Classes e interfaces: Aula 9</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Padrões de projeto</h1>
+        <p>
+          <strong>Singleton</strong> quando colocamos atributo privado no
+          construtor e podemos instanciar apenas um objeto dessa classe
+        </p>
+        7
+        <p>
+          <strong>Factory</strong> métodos que criam objetos dentro de classes
+        </p>
+        <h4>Classes e interfaces: Aula 10</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Classes, métodos e atributos abstratos</h1>
+        <p>
+          Classe abstrata: export abstract class Personagem; é uma classe que
+          nao pode ser instanciada, mas que pode ser estendida
+        </p>
+        <p>
+          Método ou atributo abstrato: abstract metodo(); são elementos da
+          classe que nao precisão ter corpo, mas que se definido na classe pai,
+          a classe que herda deve obrigatoriamente criar o método ou atributo
+        </p>
+        <h4>Classes e interfaces: Aula 11</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Associação de classes</h1>
+        <p>
+          É quando uma classe nao depende diretamente uma da outra e atá
+          funciona sem a outra, mas que eventualmente um item de outra classe
+          incorpora algum método de outra classe
+        </p>
+        <h4>Classes e interfaces: Aula 12</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Inversão de dependências = usa outro objeto</h1>
+        <p>
+          É quando temos um classe que depende de outra para algo, mas para nao
+          gerar margem para bugs, não realizamos a solicitação diretamente para
+          outra classe, solicitamos de uma classe abstrata , e que suas
+          subclasses instanciando a classe abstrata possa ser utilizada
+        </p>
+        <h4>Classes e interfaces: Aula 13</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Agregação entre classes = precisa de outro objeto</h1>
+        <p>
+          É quando uma classe depende essencialmente de outra, como um carrinho
+          de compras depende da classe produto, ou a classe carro, depende da
+          classe rodas
+        </p>
+        <h4>Classes e interfaces: Aula 14</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Composição = um objeto faz parte do outro</h1>
+        <p>
+          Um objeto que tem outro como composto, o ser humano tem o coração e
+          sem ele nao funciona. O carro não existe sem motor. Uma classe é
+          instanciada dentro da outra
+        </p>
+        <h4>Classes e interfaces: Aula 15</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Types alias e Interface com classes</h1>
+        <p>
+          Ambos fazem a mesma função, não necessita a escrita de uma nova classe
+          abstrata, mas exigem que os dados que estão sejam implementados e para
+          usar basta usar a palavra implements
+        </p>
+        <p>
+          é como um contrato que quem utiliza deve obrigatoriamente seguir os
+          dados da interface, como chave e tipo do valor, types mais usada em
+          programação funcional e interface em POO
+        </p>
+        <h4>Classes e interfaces: Aula 16-19</h4>
+      </section>
+    </section>
+    <hr />
+    <hr />
+    <section>
+      <h1>Tipos avançados TypeScript</h1>
+      <section>
+        <h1>Typeof e Keyof</h1>
+        <p>
+          podemos pegar o typo de um objeto literal com typeof, e tambem podemos
+          pegar todas as chaves de um objeto literal com keyof
+        </p>
+        <h4>Tipos avançados: Aula 2</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Chaves como tipos</h1>
+        <p>
+          Podemos usar chaves como para espelhar o mesmo tipo em outro type.
+        </p>
+        <p>type tipo2 = {chave1 = Tipo1['chave1']</p>
+        <h4>Tipos avançados: Aula 3</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>this como tipo</h1>
+        <p>
+          podemos utilizar 'this' de um objeto como retorno de algum método,
+          possibilitado assim que uma classe execute métodos em cadeia
+        </p>
+        <p>calculadora(5).subtrai(1).dividir(2) //retorna 2</p>
+        <h4>Tipos avançados: Aula 4</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Overload com funções</h1>
+        <p>
+          Overload de funções é quando deixamos dinâmico como os parâmetros são
+          passados, e para cada parâmetro passado de forma diferente, temos uma
+          saída diferente para a função
+        </p>
+        <h4>Tipos avançados: Aula 5</h4>
+      </section>
+    </section>
+    <hr />
+    <hr />
+    <section>
+      <h1>Generic Types</h1>
+      <p>
+        Tipos genéricos assumem a forma através da inferência o tipo passado
+        como argumento, para utilizar tipos genéricos em funções, adicionamos <
+        T > logo após a declaração da função que ela assumirá o tipo inferido,
+        podendo ser utilizado em diversos locais
+      </p>
+      <p>
+        meuArray< T > (items: T) : T ; se chamado passando um number ele terá um
+        tipo number e um retorno do tipo number, se passado string agirá da
+        mesma forma
+      </p>
+      <p>
+        Podemos ter tipos genéricos em promisses e arrays, interfaces, e types,
+        e tambem podemos definir um valor padrão < T = string>
+      </p>
+      <h4>Generic Type: Aula 1-3</h4>
+      <section>
+        <h1>Constraints</h1>
+        <p>restrição em generics: constraints</p>
+        <h4>Generic Type: Aula 4</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Type predicate</h1>
+        <p>
+          É quando ao retornar um boolean, caso seja true, afirmamos o tipo do
+          retorno da variável com value is tipo
+        </p>
+        <h4>Generic Type: Aula 7</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Generics padrão do TypeScript</h1>
+        <h4>Record</h4>
+        <p>
+          Record< tipo1, tipo2 | tipo3 >, grava no objeto o tipo que eu quero
+          que seja implícito
+        </p>
+        <h4>Required</h4>
+        <p>
+          Required < tipo >, se há alguma chave opcional no tipo estendido, ele
+          faz com que seja obrigatória
+        </p>
+        <h4>Partial</h4>
+        <p>
+          Partial< tipo >, ao contrário de required, o partial estende outro
+          tipo fazendo com que as chaves sejam opcionais
+        </p>
+        <h4>Pick</h4>
+        <p>
+          Pick< tipo, 'chave1' | 'chave2'>, resgata apenas as chaves definidas
+          de algum outro tipo
+        </p>
+        <h4>Exclude</h4>
+        <p>
+          Exclude< ABC, CDE>, verifica quais tipos não estão no segundo tipo e
+          retorna somente eles (neste caso A e B)/p>
+        </p>
+        <h4>Extract</h4>
+        <p>
+          Extract< ABC, CDE>, extrai somente os itens que estão sendo repetidos
+          em ambos os tipos
+        </p>
+        <h4>Generic Type: Aula 8</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Exercicio app de votação</h1>
+        <p>
+          <a href="./Estudo/src/back/exercicio-votacao.ts">Com 3 perguntas</a>
+        </p>
+        <p>
+          <a href="./Estudo/src/back/teste2.ts">Com quantas perguntas quiser</a>
+        </p>
+      </section>
+    </section>
+    <hr />
+    <hr />
+    <section>
+      <h1>Decorators</h1>
+      <p>
+        São funções que se apropriam de uma classe a manipulam sem tem que mexer
+        nelas
+      </p>
+      <h4>Decorators: Aula 1</h4>
+      <hr />
+      <section>
+        <h1>Decorator factories</h1>
+        <p>
+          Para recebermos parâmetros em nosso decorator, devemos utilizar um
+          outra função que receba os parâmetros e retornar nessa função uma
+          outra função anônima que seria o código do decorator
+        </p>
+        <h4>Decorators: Aula 3</h4>
+      </section>
+    </section>
   </body>
 </html>
