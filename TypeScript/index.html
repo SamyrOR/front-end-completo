@@ -489,6 +489,121 @@
         </p>
         <h4>Decorators: Aula 3</h4>
       </section>
+      <section>
+        <h1>Decorator de métodos</h1>
+        <p>
+          Decoradores de métodos, tem como objetivo observar ou alterar o método
+          de uma classe, como parâmetro podemos receber o prototype da classe, o
+          nome do método e o propertyDescriptor, utilizamos usando o
+          @nomeDoDecorator logo antes do método
+        </p>
+        <p>
+          function decorador(classProtoype: any, nomeMetodo: string, descriptor:
+          PropertyDescriptor) {}
+        </p>
+        <p>
+          Podemo ter cmo retorno o propertyDescriptor como objeto para que
+          alteremos o value e assim modificamos a função
+        </p>
+        <h4>Decorators: Aula 5</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Decorador de parâmetro</h1>
+        <p>
+          Servem apenas para decorar o valor e não pode ser alterado, utilizando
+          logo antes do parâmetro o @ e com a mesma base de um decorator de
+          método
+        </p>
+        <h4>Decorators: Aula 6</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Decorators de propriedade</h1>
+        <p>
+          Podemos tambem decorar propriedades utilizando getter setter para
+          alterar os valores
+        </p>
+        <h4>Decorators: Aula 6</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Todos os decorators</h1>
+        <h4>Decorators: Aula 8</h4>
+        <p>
+          <a
+            href="https://github.com/luizomf/cursojstypescript/blob/master/src/A0058-todos-os-decorators/A0058-todos-os-decorators.ts"
+            target="_blank"
+            >Todos os decorators</a
+          >
+        </p>
+      </section>
+    </section>
+    <hr />
+    <hr />
+    <section>
+      <h1>Namespaces</h1>
+      <p>
+        Funcionam quase como os module do ES2015, criam um escopo a ser
+        trabalho, o eslint inclusive relata que é preferível vc usar o module.
+      </p>
+      <p>
+        Para criar o namespace basta adicionar a palavra reservada namespace e o
+        nome, ex: namespace MeuNameSpace {}
+      </p>
+      <h4>Namespaces e o Modules: Aula 1</h4>
+      <hr />
+      <section>
+        <h1>Reference para imports</h1>
+        <p>Para importar outros arquivos e namespace podemos utilizar o:</p>
+        <p>< reference path="modulo/module.ts" /></p>
+        <p>
+          Lembrando que o arquivo deve ser inteiro e que importamos todos os
+          dados do arquivo.
+        </p>
+        <h4>Namespaces e o Modules: Aula 2</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Import de arquivos JS</h1>
+        <p>
+          Para importamos arquivos JS, devemos no tsconfig.ts deixar a opção de
+          allowJS = true e atenção para o strict mode pois pode alegar problemas
+          em códigos grandes.
+        </p>
+        <h4>Namespaces e o Modules: Aula 4</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Utilizando bibliotecas de terceiros</h1>
+        <p>
+          Para utilizarmos bibliotecas de terceiros com o typescript tambem
+          devemos instalar o type da biblioteca
+        </p>
+        <p>npm i lodash @types/lodash</p>
+        <p>
+          Para que seja reconhecido o type da biblioteca e tenha todas as suas
+          funcionalidades.
+        </p>
+        <h4>Namespaces e o Modules: Aula 5</h4>
+      </section>
+      <hr />
+      <section>
+        <h1>Estendendo types das bibliotecas de terceiros</h1>
+        <p>
+          Podemos criar métodos e atributos para bibliotecas de terceiros, com
+          os arquivos de declaration (.d.ts), para isso devemos criar um arquivo
+          .d.ts referente a biblioteca que queremos estender, após isso devemos
+          informar o namespace com o mesmo nome de namespace da biblioteca que
+          vamos estender e tambem a interface que vamos estender, sendo assim
+          haverá o declaration merge, a junção dos namespaces adicionando o seu
+          item dentro da biblioteca.
+        </p>
+        <p>declare namespace _ { (lodash)</p>
+        <p>interface LoDashStatic {</p>
+        <p>mul(array: number[]): number</p>
+        <h4>Namespaces e o Modules: Aula 6</h4>
+      </section>
     </section>
   </body>
 </html>
